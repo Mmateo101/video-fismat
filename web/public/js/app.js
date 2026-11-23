@@ -169,12 +169,14 @@
     const p = Math.max(0, Math.min(1, v)) * (PALETA.length - 1), i = Math.min(PALETA.length - 2, Math.floor(p)), r = p - i;
     return PALETA[i].map((c, k) => Math.round(c + (PALETA[i + 1][k] - c) * r));
   }
+  let VMIN = -100, VMAX = 0;
+  function rangoSg(M) { const v = M.flat().sort((a, b) => a - b); VMIN = v[Math.floor(v.length * 0.03)]; VMAX = v[v.length - 1]; }
   function pintarSg(c, M) {
     const nf = M.length, nt = M[0].length;
     const off = document.createElement("canvas"); off.width = nt; off.height = nf;
     const ox = off.getContext("2d"), img = ox.createImageData(nt, nf);
     for (let i = 0; i < nf; i++) for (let j = 0; j < nt; j++) {
-      const [r, g, b] = color((M[i][j] + 70) / 70), k = ((nf - 1 - i) * nt + j) * 4;
+      const [r, g, b] = color((M[i][j] - VMIN) / (VMAX - VMIN)), k = ((nf - 1 - i) * nt + j) * 4;
       img.data[k] = r; img.data[k + 1] = g; img.data[k + 2] = b; img.data[k + 3] = 255;
     }
     ox.putImageData(img, 0, 0);
@@ -260,7 +262,7 @@
     gsap.to(estado, { crudo: 1, sismo: 1, ruido: 1, duration: 1.6, ease: "power2.out", onUpdate: pintarOndas });
     const e = { v: 0 };
     gsap.to(e, { v: 1, duration: 1.4, ease: "power2.out", delay: 0.2, onUpdate: () => pintarEspectro(e.v) });
-    pintarSg($("#sg-antes"), q.sg_antes); pintarSg($("#sg-despues"), q.sg_despues);
+    rangoSg(q.sg_antes); pintarSg($("#sg-antes"), q.sg_antes); pintarSg($("#sg-despues"), q.sg_despues);
     verSg(0, false);
     gsap.delayedCall(1.6, () => verSg(1));
     cifras(q);

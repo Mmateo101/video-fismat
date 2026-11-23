@@ -59,8 +59,10 @@
       return tl;
     },
     show(tl, els, at, o = {}) {
-      return tl.fromTo(els, { autoAlpha: 0, y: o.y != null ? o.y : 30, x: o.x || 0, scale: o.scale != null ? o.scale : 1 },
-        { autoAlpha: 1, y: 0, x: 0, scale: 1, duration: o.dur || 0.6, ease: o.ease || "back.out(1.6)", stagger: o.stagger || 0, transformOrigin: o.origin || "50% 50%" }, at);
+      const de = { autoAlpha: 0, y: o.y != null ? o.y : 30, scale: o.scale != null ? o.scale : 1 };
+      const a = { autoAlpha: 1, y: 0, scale: 1, duration: o.dur || 0.6, ease: o.ease || "back.out(1.6)", stagger: o.stagger || 0, transformOrigin: o.origin || "50% 50%" };
+      if (o.x != null) { de.x = o.x; a.x = 0; }
+      return tl.fromTo(els, de, a, at);
     },
     pop(tl, els, at, o = {}) {
       return tl.fromTo(els, { autoAlpha: 0, scale: 0 }, { autoAlpha: 1, scale: 1, duration: o.dur || 0.55, ease: o.ease || "back.out(2.2)", stagger: o.stagger || 0, transformOrigin: o.origin || "50% 50%", svgOrigin: o.svgOrigin }, at);
@@ -125,7 +127,7 @@
     const t = def.t0, tipo = def.entrada || "fundido";
     if (tipo === "iris") {
       const [x, y] = def.irisEn || [960, 540], D = 1.1, col = def.irisColor || C.sol;
-      const anillo = h("div", { class: "iris", style: { left: x + "px", top: y + "px", borderColor: col } }, mundo);
+      const anillo = h("div", { class: "iris", style: { left: x + "px", top: y + "px", borderColor: col, opacity: 0 } }, mundo);
       M.set(def.el, { autoAlpha: 1, zIndex: 6 }, t - D * 0.55);
       M.fromTo(def.el, { clipPath: `circle(0px at ${x}px ${y}px)` }, { clipPath: `circle(2300px at ${x}px ${y}px)`, duration: D, ease: "power3.in", immediateRender: false }, t - D * 0.55);
       M.fromTo(anillo, { width: 0, height: 0, opacity: 1 }, { width: 4600, height: 4600, opacity: 1, duration: D, ease: "power3.in", immediateRender: false }, t - D * 0.55);
@@ -136,6 +138,7 @@
       // tres franjas de color cruzan en diagonal y destapan la escena nueva
       const D = 1.2, cols = def.barridoColores || [C.sismo, C.sol, C.ruido];
       const fr = cols.map((c, i) => h("div", { class: "franja", style: { background: c, zIndex: 20 + i } }, mundo));
+      gsap.set(fr, { xPercent: -160 });
       fr.forEach((f, i) => {
         M.fromTo(f, { xPercent: -160 }, { xPercent: 0, duration: D / 2, ease: "power3.in", immediateRender: false }, t - D / 2 + i * 0.06);
         M.to(f, { xPercent: 160, duration: D / 2, ease: "power3.out" }, t + i * 0.06);

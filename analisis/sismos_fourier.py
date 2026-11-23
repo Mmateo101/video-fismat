@@ -361,7 +361,7 @@ def exportar_web(sis, meta, res, d):
     S0, fb = espectrograma_reducido(P0, d["f_stft"])
     S1, _ = espectrograma_reducido(P1, d["f_stft"])
     ref = np.max(S0)
-    db = lambda S: np.round(np.clip(10 * np.log10(S / ref + 1e-12), -80, 0), 1).tolist()
+    db = lambda S: np.round(np.clip(10 * np.log10(S / ref + 1e-15), -120, 0), 1).tolist()
     # espectro: puntos con espaciado logaritmico
     fl = np.geomspace(0.02, 8, 160)
     As = np.interp(fl, d["f"], d["A_senal"]) * esc
