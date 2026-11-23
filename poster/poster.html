@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Póster · Análisis espectral de Fourier para alertas sísmicas</title>
+<style>
+@font-face { font-family: "Fraunces"; font-weight: 600; src: url("fonts/fraunces-latin-600-normal.woff2") format("woff2"); }
+@font-face { font-family: "Fraunces"; font-weight: 700; src: url("fonts/fraunces-latin-700-normal.woff2") format("woff2"); }
+@font-face { font-family: "Fraunces"; font-weight: 400; font-style: italic; src: url("fonts/fraunces-latin-400-italic.woff2") format("woff2"); }
+@font-face { font-family: "Nunito"; font-weight: 400; src: url("fonts/nunito-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "Nunito"; font-weight: 700; src: url("fonts/nunito-latin-700-normal.woff2") format("woff2"); }
+@font-face { font-family: "Nunito"; font-weight: 800; src: url("fonts/nunito-latin-800-normal.woff2") format("woff2"); }
+@page { size: 841mm 1189mm; margin: 0; }
+:root { --tinta: #1D2440; --tinta2: #4A5170; --sismo: #E4572E; --ruido: #2E86AB; --sol: #F6AE2D; --morado: #7B5EA7; --verde: #3BB273; --cielo: #CFE8F3; --crema: #FBF6EC; }
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body { width: 841mm; height: 1189mm; background: var(--crema); color: var(--tinta); font: 400 27.5pt/1.34 "Nunito", sans-serif; overflow: hidden; position: relative; display: flex; flex-direction: column; }
+h1, h2, h3 { font-family: "Fraunces", serif; margin: 0; line-height: 1.05; }
+.cab { background: var(--tinta); color: #fff; padding: 22mm 26mm 18mm; display: grid; grid-template-columns: 1fr 120mm; gap: 18mm; align-items: center; position: relative; overflow: hidden; }
+.cab h1 { font-size: 92pt; font-weight: 700; }
+.cab h1 span { color: var(--sol); }
+.cab .sub { font-size: 30pt; margin-top: 8mm; color: #DDE3F2; }
+.cab .gente { margin-top: 9mm; font-size: 24pt; font-weight: 700; color: #fff; }
+.cab .gente small { display: block; font-weight: 400; color: #B8C0D8; font-size: 21pt; margin-top: 2mm; }
+.qr { background: #fff; border-radius: 8mm; padding: 6mm; text-align: center; color: var(--tinta); font: 800 18pt "Nunito"; }
+.qr svg { width: 100%; display: block; margin-bottom: 3mm; }
+.cab, .franja, .pie { flex-shrink: 0; }
+.franja { height: 7mm; background: linear-gradient(90deg, var(--ruido) 0 33%, var(--sol) 33% 66%, var(--sismo) 66%); }
+.cuerpo { flex: 1; min-height: 0; overflow: hidden; padding: 12mm 20mm 8mm; display: grid; grid-template-columns: 1fr 1.08fr 1.12fr; gap: 14mm; }
+.col { display: flex; flex-direction: column; gap: 10mm; }
+.chips { display: flex; flex-wrap: wrap; gap: 3mm; }
+.chips span { background: var(--crema); border-radius: 20mm; padding: 1.5mm 5mm; font-size: 21pt; font-weight: 700; }
+.chips small { color: var(--tinta2); font-weight: 800; margin-left: 2mm; }
+.caja { background: #fff; border-radius: 9mm; padding: 10mm 11mm; box-shadow: 0 3mm 0 rgba(29, 36, 64, .08); }
+.caja h2 { font-size: 40pt; margin-bottom: 5mm; display: flex; align-items: center; gap: 5mm; }
+.num { display: inline-grid; place-items: center; width: 15mm; height: 15mm; border-radius: 50%; color: #fff; font: 800 22pt "Nunito"; flex: none; }
+.caja p { margin: 0 0 4mm; }
+.caja img { width: 100%; display: block; border-radius: 3mm; }
+.eq { font-family: "Fraunces", serif; font-size: 31pt; text-align: center; margin: 4mm 0; color: var(--tinta); }
+.eq i { font-style: italic; }
+.azul { background: var(--cielo); }
+.sol { background: #FDE7C2; }
+.roja { background: #F9D3C8; }
+.cifras { display: grid; grid-template-columns: 1fr 1fr; gap: 6mm; }
+.cifra { border-radius: 7mm; padding: 6mm 7mm; color: #fff; }
+.cifra b { display: block; font: 700 60pt/1 "Fraunces"; }
+.cifra span { font-weight: 700; font-size: 20pt; }
+.pie { background: var(--tinta); color: #C9D0E4; font-size: 17pt; padding: 7mm 22mm; display: flex; justify-content: space-between; gap: 10mm; }
+.pie b { color: #fff; }
+.preg { font-family: "Fraunces", serif; font-style: italic; font-size: 26pt; border-left: 3mm solid var(--sismo); padding-left: 6mm; margin: 4mm 0; }
+.lista { margin: 0; padding-left: 9mm; }
+.lista li { margin-bottom: 3mm; }
+.dos { display: grid; grid-template-columns: 1fr 1fr; gap: 5mm; }
+.cap { font-size: 21pt; color: var(--tinta2); margin-top: 2mm; }
+table { width: 100%; border-collapse: collapse; font-size: 22pt; }
+td, th { padding: 2mm 3mm; border-bottom: 0.6mm solid #E6E8EF; text-align: left; }
+th { color: var(--tinta2); font-weight: 800; }
+</style>
+</head>
+<body>
+<header class="cab">
+  <div>
+    <h1>Análisis espectral de Fourier para alertas de <span>señales sísmicas</span> inclusivas</h1>
+    <div class="sub">Separar la onda del sismo del ruido ambiental, del experimento controlado a 20 sismos reales de México</div>
+    <div class="gente">Mateo Rodolfo Flores Torres · Víctor Manuel Sánchez Chávez · Sofía Martínez Alanis
+      <small>Profesor Dr. Luis Miguel Méndez Díaz · Análisis de Métodos Matemáticos para la Física · Tecnológico de Monterrey · Expo Ingenierías 2026</small></div>
+  </div>
+  <div class="qr"><svg id="qr" viewBox="0 0 31 31" shape-rendering="crispEdges"></svg>sismo-o-ruido.vercel.app</div>
+</header>
+<div class="franja"></div>
+
+<main class="cuerpo">
+  <!-- columna 1 -->
+  <section class="col">
+    <div class="caja">
+      <h2>El problema</h2>
+      <p>Un sensor sísmico mide la suma del sismo y del ruido del mar, el viento y la ciudad. Si la alerta confunde ruido con sismo, da una falsa alarma. Si el ruido tapa la onda P, el aviso llega tarde. Esto afecta más a las zonas con pocos sensores.</p>
+      <div class="eq"><i>x</i>(<i>t</i>) = <i>s</i>(<i>t</i>) + <i>r</i>(<i>t</i>)</div>
+      <div class="preg">¿Cuánto del registro es sismo y cuánto es ruido, y cuánto mejora la señal real si el ruido se resta en cada frecuencia?</div>
+    </div>
+    <div class="caja">
+      <h2>Objetivos e hipótesis</h2>
+      <ul class="lista">
+        <li>Medir con la serie de Fourier y una regresión trigonométrica cuánta más energía tiene el sismo que el ruido.</li>
+        <li>Extender el método a registros reales con la transformada por ventanas y medir la mejora de la relación señal-ruido.</li>
+        <li>Validarlo y publicarlo en un prototipo web abierto.</li>
+      </ul>
+      <p><b>H1.</b> El sismo tiene mucha más energía que el ruido. <b>H2.</b> Restar el ruido previo a la onda P mejora la señal en todos los sismos.</p>
+    </div>
+    <div class="caja azul">
+      <h2>Enfoque en dos etapas</h2>
+      <img src="img/enfoque.png" alt="Enfoque del proyecto">
+      <p class="cap">La etapa 1 prueba el método en un caso controlado. Su límite motiva la etapa 2.</p>
+    </div>
+    <div class="caja">
+      <h2>Los 20 sismos</h2>
+      <div class="chips"><span>Chiapas<small>1993</small></span><span>Copala<small>1995</small></span><span>Chiapas<small>1995</small></span><span>Michoacán<small>1997</small></span><span>Tehuacán<small>1999</small></span><span>Oaxaca<small>1999</small></span><span>Tecomán<small>2003</small></span><span>El Mayor-Cucapah<small>2010</small></span><span>Ometepec<small>2012</small></span><span>Golfo de California<small>2012</small></span><span>Papanoa<small>2014</small></span><span>Chiapas<small>2014</small></span><span>Tehuantepec<small>2017</small></span><span>Puebla-Morelos<small>2017</small></span><span>Pinotepa<small>2018</small></span><span>Huatulco<small>2020</small></span><span>Acapulco<small>2021</small></span><span>Michoacán<small>2022</small></span><span>Réplica Michoacán<small>2022</small></span><span>Chiapas<small>2026</small></span></div>
+      <p class="cap">Magnitudes de 6.8 a 8.2, entre 113 y 2156 km de Ciudad Universitaria.</p>
+    </div>
+    <div class="caja">
+      <h2>Marco teórico</h2>
+      <p><b>Serie de Fourier.</b> Una señal periódica es una suma de ondas simples.</p>
+      <div class="eq"><i>x</i>(<i>t</i>) = <i>a</i><sub>0</sub> + Σ [<i>a<sub>n</sub></i> cos(<i>nω</i><sub>0</sub><i>t</i>) + <i>b<sub>n</sub></i> sin(<i>nω</i><sub>0</sub><i>t</i>)]</div>
+      <p><b>Transformada por ventanas.</b> La misma serie, calculada en ventanas cortas de un registro largo.</p>
+      <div class="eq"><i>X</i>(<i>m</i>,<i>k</i>) = Σ<sub><i>i</i></sub> <i>x</i><sub><i>i</i>+<i>mH</i></sub> <i>w<sub>i</sub></i> e<sup>−<i>i</i>2π<i>ki</i>/<i>L</i></sup></div>
+      <p><b>Sustracción espectral</b> (Boll, 1979). Se aprende el ruido antes de la onda P y se resta en cada frecuencia.</p>
+      <div class="eq"><i>G</i>(<i>m</i>,<i>k</i>) = √max(1 − β <i>P<sub>R</sub></i>(<i>k</i>)/|<i>X</i>|², <i>g</i><sub>min</sub>²)</div>
+    </div>
+  </section>
+
+  <!-- columna 2 -->
+  <section class="col">
+    <div class="caja">
+      <h2><span class="num" style="background:var(--ruido)">1</span>Experimento controlado</h2>
+      <p>Dos registros simplificados del USGS, uno cada 0.4 s. El sensor (21 datos) registra un sismo y el ambiental (16 datos) solo ruido.</p>
+      <img src="img/ajuste.png" alt="Ajuste de una onda a cada registro">
+      <table>
+        <tr><th></th><th>Sensor</th><th>Ruido</th></tr>
+        <tr><td>Armónico dominante</td><td colspan="2">T = 4.2 s · 94.8 % de la variación</td></tr>
+        <tr><td>Amplitud <i>A</i></td><td>0.365 ± 0.021</td><td>0.062 ± 0.002</td></tr>
+        <tr><td>Ajuste <i>R</i>²</td><td>0.95</td><td>0.98</td></tr>
+      </table>
+      <div class="eq"><i>R</i> = (<i>A<sub>x</sub></i>/<i>A<sub>r</sub></i>)² = 35 ± 5 &nbsp;·&nbsp; λ = <i>vT</i> ≈ 18 km</div>
+    </div>
+    <div class="caja sol">
+      <h2>El hallazgo</h2>
+      <p>El sismo tiene unas 35 veces más energía, pero los dos registros tienen el mismo periodo de 4 s. Ese es también el ritmo del oleaje, la banda de los microsismos (Peterson, 1993). <b>La frecuencia sola no basta.</b> Hace falta usar también el tiempo, y con datos reales.</p>
+    </div>
+    <div class="caja">
+      <h2>Sismo y ruido en frecuencia</h2>
+      <img src="img/real_espectro.png" alt="Espectro del sismo y del ruido">
+      <p class="cap">Puebla-Morelos 2017. El sismo está de 100 a 10 000 veces por encima del ruido, que tiene su propio pico en la banda del mar.</p>
+    </div>
+    <div class="caja">
+      <h2>Ruido real en CU</h2>
+      <img src="img/real_peterson.png" alt="Ruido de G.UNM frente a los modelos de Peterson">
+      <p class="cap">El ruido de la estación G.UNM tiene un pico del mar en 3 a 10 s (mediana 6.4 s) y lo domina el ruido urbano por debajo de 1 s.</p>
+    </div>
+    <div class="caja">
+      <h2>Validación con ruido real</h2>
+      <img src="img/real_robustez.png" alt="Correlación antes y después de separar">
+      <p class="cap">Se suma ruido real a cada sismo limpio. Con ruido tan fuerte como el sismo, el parecido con la onda verdadera sube de 0.71 a 0.86.</p>
+    </div>
+  </section>
+
+  <!-- columna 3 -->
+  <section class="col">
+    <div class="caja">
+      <h2><span class="num" style="background:var(--sismo)">2</span>Expansión a 20 sismos reales</h2>
+      <p>20 sismos de México (1993–2026, <i>M</i> ≥ 6.8), canal vertical de Ciudad Universitaria, datos del USGS y EarthScope.</p>
+      <img src="img/real_registro.png" alt="Puebla-Morelos 2017 separado">
+      <p class="cap">Puebla-Morelos 2017 separado en sismo y ruido.</p>
+      <div class="dos">
+        <img src="img/real_espectrograma.png" alt="Espectrograma antes y después">
+        <img src="img/real_resumen.png" alt="SNR de los 20 sismos">
+      </div>
+    </div>
+    <div class="cifras">
+      <div class="cifra" style="background:var(--sismo)"><b>+10.5 dB</b><span>SNR media en los 20 sismos (×11)</span></div>
+      <div class="cifra" style="background:var(--morado)"><b>20 / 20</b><span>sismos mejoraron</span></div>
+      <div class="cifra" style="background:var(--ruido)"><b style="font-size:50pt">0.71→0.86</b><span>correlación con ruido real a 0 dB</span></div>
+      <div class="cifra" style="background:var(--tinta)"><b>0.996</b><span>correlación en la prueba sintética</span></div>
+    </div>
+    <div class="caja roja">
+      <h2>Prototipo <i style="font-weight:400">Sismo o ruido</i></h2>
+      <div class="dos"><img src="img/web_portada.png" alt="Mapa del prototipo"><img src="img/web_ficha.png" alt="Separación en el prototipo"></div>
+      <p class="cap">Elige un sismo, sepáralo con un botón, mira sus frecuencias y escúchalo. Gratis y sin inteligencia artificial.</p>
+    </div>
+    <div class="caja">
+      <h2>Conclusiones</h2>
+      <ul class="lista">
+        <li>La serie de Fourier mide la diferencia de energía. El límite de 4 s mostró que hace falta el tiempo.</li>
+        <li>La transformada por ventanas con sustracción espectral mejora la señal en todos los sismos reales.</li>
+        <li>Un método ligero y abierto acerca las alertas a donde hay menos sensores (ODS 9 y 11).</li>
+      </ul>
+    </div>
+    <div class="caja azul">
+      <h2>Impacto e inclusión</h2>
+      <p>Corre en segundos en una computadora común, sin entrenar modelos. Puede ser un primer filtro en estaciones rurales con poco cómputo. El prototipo explica con imágenes y sonido cómo se reconoce un sismo, para que más personas entiendan y confíen en la alerta.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="pie">
+  <div><b>Referencias.</b> Boll (1979) IEEE TASSP · Berouti et al. (1979) ICASSP · Mousavi y Langston (2016) J. Appl. Geophys. · Peterson (1993) USGS · Zhu et al. (2019) IEEE TGRS · Datos: USGS ComCat, EarthScope, GEOSCOPE (G.UNM)</div>
+  <div><b>Código</b> github.com/Mmateo101/video-fismat</div>
+</footer>
+<script src="../video/js/qr.js"></script>
+<script>
+  const svg = document.getElementById("qr"), n = QR.length;
+  svg.setAttribute("viewBox", `0 0 ${n} ${n}`);
+  QR.forEach((f, i) => f.forEach((v, j) => { if (v) { const r = document.createElementNS("http://www.w3.org/2000/svg", "rect"); r.setAttribute("x", j); r.setAttribute("y", i); r.setAttribute("width", 1); r.setAttribute("height", 1); r.setAttribute("fill", "#1D2440"); svg.appendChild(r); } }));
+</script>
+</body>
+</html>
