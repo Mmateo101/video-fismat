@@ -26,10 +26,21 @@ const hilos = Math.max(1, +(opt.hilos || 1));
 const t00 = Date.now();
 
 /* Un tramo: cuadros [i0, i1) → un MP4 */
-async function tramo(i0, i1, salida, puerto, etiqueta) {
-  const b = await launch(url, { port: puerto });
+async function tramo(i0, i1, salida, puerto, etiqueta, retraso = 0) {
+  await new Promise((r) => setTimeout(r, retraso));
+  // si la página no termina de cargar (servidor saturado), se reintenta
+  let b;
+  for (let intento = 1; ; intento++) {
+    b = await launch(url, { port: puerto });
+    try { await b.waitFor("window.__ready === true", 90000); break; }
+    catch (e) {
+      console.log(`${etiqueta} no cargó (intento ${intento}): ${[...new Set(b.errors)].join(" | ").slice(0, 160)}`);
+      await b.close();
+      if (intento >= 3) throw e;
+      await new Promise((r) => setTimeout(r, 3000));
+    }
+  }
   try {
-    await b.waitFor("window.__ready === true", 90000);
     const fps = +(opt.fps || (await b.eval("window.__fps")));
     const ff = spawn("ffmpeg", ["-y", "-loglevel", "error", "-f", "image2pipe", "-framerate", String(fps), "-c:v", "mjpeg", "-i", "-",
       "-c:v", "libx264", "-preset", opt.preset || "fast", "-crf", "17", "-pix_fmt", "yuv420p", "-movflags", "+faststart", "-r", String(fps), salida], { stdio: ["pipe", "inherit", "inherit"] });
@@ -70,7 +81,7 @@ try {
       const a = f0 + Math.round(((f1 - f0) * k) / hilos), z = f0 + Math.round(((f1 - f0) * (k + 1)) / hilos);
       partes.push({ a, z, f: join(outDir, `_parte_${k}.mp4`), puerto: 9400 + k * 3 });
     }
-    await Promise.all(partes.map((p, k) => tramo(p.a, p.z, p.f, p.puerto, `[${k + 1}/${hilos}]`)));
+    await Promise.all(partes.map((p, k) => tramo(p.a, p.z, p.f, p.puerto, `[${k + 1}/${hilos}]`, k * 2500)));
     // unir sin recodificar (mismos parámetros en todos los tramos)
     const lista = join(outDir, "_partes.txt");
     writeFileSync(lista, partes.map((p) => `file '${p.f.replace(/\\/g, "/")}'`).join("\n"));

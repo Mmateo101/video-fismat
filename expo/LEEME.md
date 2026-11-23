@@ -2,7 +2,7 @@
 
 | Pide la convocatoria | Archivo | Nota |
 |---|---|---|
-| Video MP4, 3 a 5 min, nombre de 30 caracteres o menos (Anexo 4) | `video/render/SismoORuido_Fismat.mp4` | 4:03, 1920×1080, 62 MB, con las voces del equipo y el final nuevo |
+| Video MP4, 3 a 5 min, nombre de 30 caracteres o menos (Anexo 4) | `video/render/SismoORuido_Fismat.mp4` | 4:03, 1920×1080, 67 MB, con las voces del equipo y el final nuevo |
 | Reporte técnico en PDF, nombre de 30 caracteres o menos (Anexo 5) | `Fismat_SismoORuido.pdf` | 18 páginas |
 | Imagen representativa 1, de preferencia GIF (Anexo 6) | `imagen_1_metodo.gif` | El ruido se resta y la señal se separa |
 | Imagen representativa 2 | `imagen_2_enfoque.png` | Enfoque en dos etapas |
