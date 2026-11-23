@@ -729,7 +729,8 @@ window.MEDIOS = {
    "ss": 0.0,
    "hasta": 5.0,
    "video": true,
-   "cam": "A1"
+   "cam": "A1",
+   "bucle": true
   },
   {
    "escena": "equipo",
@@ -739,7 +740,8 @@ window.MEDIOS = {
    "ss": 0.0,
    "hasta": 2.38,
    "video": true,
-   "cam": "A2"
+   "cam": "A2",
+   "bucle": true
   },
   {
    "escena": "equipo",
@@ -749,7 +751,8 @@ window.MEDIOS = {
    "ss": 0.0,
    "hasta": 4.5,
    "video": true,
-   "cam": "A3"
+   "cam": "A3",
+   "bucle": true
   },
   {
    "escena": "problema",
@@ -1061,7 +1064,8 @@ window.MEDIOS = {
    "ss": 0.0,
    "hasta": 5.0,
    "video": true,
-   "cam": "F1"
+   "cam": "F1",
+   "bucle": true
   },
   {
    "escena": "cierre",
@@ -1071,7 +1075,8 @@ window.MEDIOS = {
    "ss": 0.0,
    "hasta": 4.77,
    "video": true,
-   "cam": "F2"
+   "cam": "F2",
+   "bucle": true
   },
   {
    "escena": "cierre",
@@ -1081,7 +1086,8 @@ window.MEDIOS = {
    "ss": 0.0,
    "hasta": 2.98,
    "video": true,
-   "cam": "F3"
+   "cam": "F3",
+   "bucle": true
   }
  ]
 };

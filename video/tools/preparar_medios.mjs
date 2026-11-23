@@ -31,6 +31,12 @@ for (const m of G.medios) {
       ? ["-i", orig, "-an", "-vf", "fps=30,scale=min(1280\\,iw):-2,format=yuv420p", "-c:v", "libx264", "-preset", "fast", "-crf", "20", "-g", "1", "-movflags", "+faststart", out]
       : ["-i", orig, "-vn", "-ac", "1", "-ar", "48000", "-af", "highpass=f=80,afftdn=nr=12:nf=-30:tn=1", out];
     const r = spawnSync("ffmpeg", ["-y", "-loglevel", "error", ...args], { stdio: "inherit" });
+    if (tipo === "video") {
+      // cuadros sueltos para el render (cada captura muestra el cuadro exacto, sin esperar al decodificador del navegador)
+      const dir = join(vidDir, m.src);
+      mkdirSync(dir, { recursive: true });
+      spawnSync("ffmpeg", ["-y", "-loglevel", "error", "-i", out, "-vf", "scale='min(960,iw)':-2", "-q:v", "3", join(dir, "f%04d.jpg")], { stdio: "inherit" });
+    }
     console.log((r.status === 0 ? "ok   " : "ERROR ") + tipo.padEnd(6) + m.src);
   }
 }

@@ -89,8 +89,10 @@
       const clips = (G.medios || []).filter((m) => m.video && m.cam === o.id && cur && m.escena === cur.id);
       if (clips.length) {
         const grupo = clips.map((m) => {
-          const v = h("video", { preload: "auto", playsinline: "", src: `media/${m.src}.mp4`, style: { position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", visibility: "hidden" } }, hueco);
-          v.muted = true;
+          const st = { position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", visibility: "hidden" };
+          // en el render se usan los cuadros ya extraídos (media/<src>/f0001.jpg…): cada captura muestra el cuadro exacto
+          const v = N.render ? h("img", { decoding: "sync", style: st }, hueco) : h("video", { preload: "auto", playsinline: "", src: `media/${m.src}.mp4`, style: st }, hueco);
+          if (!N.render) v.muted = true;
           return { v, m: Object.assign({ abs: cur.t0 + (cur.warp ? cur.warp(m.at || 0) : m.at || 0) }, m) };
         });
         N.videos.push({ grupo, desde: cur.t0 - 1, hastaT: cur.t1 + 1 });
@@ -110,15 +112,26 @@
     syncVideos(t, exacto) {
       const esperas = [];
       N.videos.forEach((V) => {
-        if (t < V.desde || t > V.hastaT) { V.grupo.forEach(({ v }) => { if (!v.paused) v.pause(); }); return; }
+        const esVideo = (v) => v.tagName === "VIDEO";
+        if (t < V.desde || t > V.hastaT) { V.grupo.forEach(({ v }) => { if (esVideo(v) && !v.paused) v.pause(); }); return; }
         let act = V.grupo[0];
         V.grupo.forEach((c) => { if (c.m.abs <= t) act = c; });
-        const m = act.m, local = Math.min(Math.max(m.ss + (t - m.abs), m.ss), m.hasta - 0.04);
-        V.grupo.forEach((c) => { const vis = c === act ? "visible" : "hidden"; if (c.v.style.visibility !== vis) c.v.style.visibility = vis; if (c !== act && !c.v.paused) c.v.pause(); });
+        const m = act.m, largo = m.hasta - m.ss, rel = t - m.abs;
+        // bucle: el clip se repite mientras su marco esté en pantalla
+        const local = m.bucle && rel > 0 ? m.ss + (rel % largo) : Math.min(Math.max(m.ss + rel, m.ss), m.hasta - 0.04);
+        V.grupo.forEach((c) => { const vis = c === act ? "visible" : "hidden"; if (c.v.style.visibility !== vis) c.v.style.visibility = vis; if (c !== act && esVideo(c.v) && !c.v.paused) c.v.pause(); });
         const v = act.v;
-        const corriendo = !exacto && t >= m.abs && t < m.abs + (m.hasta - m.ss);
-        if (corriendo) { if (v.paused) { v.currentTime = local; v.play().catch(() => {}); } else if (Math.abs(v.currentTime - local) > 0.25) v.currentTime = local; }
-        else {
+        if (!esVideo(v)) {
+          const lc = Math.min(local, m.hasta - 0.1);
+          const src = `media/${m.src}/f${String(Math.floor(lc * 30 + 1e-6) + 1).padStart(4, "0")}.jpg`;
+          if (v.dataset.src !== src) { v.dataset.src = src; v.src = src; esperas.push(v.decode().catch(() => {})); }
+          return;
+        }
+        const corriendo = !exacto && rel >= 0 && (m.bucle || rel < largo);
+        if (corriendo) {
+          if (v.paused) { v.currentTime = local; v.play().catch(() => {}); }
+          else if (Math.abs(v.currentTime - local) > 0.25) v.currentTime = local;
+        } else {
           if (!v.paused) v.pause();
           if (Math.abs(v.currentTime - local) > 0.001) {
             esperas.push(new Promise((r) => { const fin = () => { v.removeEventListener("seeked", fin); r(); }; v.addEventListener("seeked", fin); setTimeout(fin, 4000); }));
@@ -267,7 +280,7 @@
     lista.forEach((def, i) => { const prev = lista[i - 1]; if (!prev) gsap.set(def.el, { autoAlpha: 1 }); else transicion(M, prev, def); });
     M.to({}, { duration: 0.001 }, G.dur);
     document.getElementById("loading").remove();
-    const todosV = N.videos.flatMap((V) => V.grupo.map((c) => c.v));
+    const todosV = N.videos.flatMap((V) => V.grupo.map((c) => c.v)).filter((v) => v.tagName === "VIDEO");
     await Promise.race([Promise.all(todosV.map((v) => (v.readyState >= 2 ? 1 : new Promise((r) => { v.addEventListener("loadeddata", r, { once: true }); v.addEventListener("error", r, { once: true }); })))), new Promise((r) => setTimeout(r, 15000))]);
 
     async function syncAll(tt) { await N.syncVideos(tt, N.render || N.M.paused()); for (const def of lista) if (def.sync && tt >= def.t0 - 1 && tt <= def.t1 + 1) await def.sync(def.inv(tt - def.t0)); }

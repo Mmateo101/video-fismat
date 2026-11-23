@@ -110,7 +110,7 @@ for e in G["escenas"]:
         # el clip entra cuando aparece su marco (t0 original del marco en cameos.json)
         c = [x for x in json.load(open(os.path.join(AQUI, "..", "render", "cameos_orig.json"), encoding="utf-8")) if x["id"] == cam][0]
         t0_esc = sum(x["dur"] for x in G["escenas"][:G["escenas"].index(e)])
-        medios.append({"escena": eid, "orig": f, "src": src, "abs": round(t_abs + warp(c["t0"] - t0_esc), 3), "ss": ss, "hasta": hasta, "video": True, "cam": cam})
+        medios.append({"escena": eid, "orig": f, "src": src, "abs": round(t_abs + warp(c["t0"] - t0_esc), 3), "ss": ss, "hasta": hasta, "video": True, "cam": cam, "bucle": True})
     salida_esc.append({"id": e["id"], "dur": round(D, 2), "nudos": [[round(a, 3), round(b, 3)] for a, b in nudos], "voz": vz})
     acel = max([(a1 - a0) / (b1 - b0) for (a0, b0), (a1, b1) in zip(nudos, nudos[1:]) if b1 > b0] or [1])
     print(f"{e['id']:10s} {e['dur']:5.1f} s → {D:5.1f} s   acel. máx ×{acel:.2f}")
