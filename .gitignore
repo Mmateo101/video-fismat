@@ -22,3 +22,4 @@ video/media/
 video/grabaciones/**/*.mp4
 video/grabaciones/**/*.mov
 video/grabaciones/**/*.m4a
+!web/public/media/*.mp4
