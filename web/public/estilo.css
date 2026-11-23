@@ -111,7 +111,7 @@ button { font: inherit; cursor: pointer; }
 .cifra b { display: block; font: 700 clamp(40px, 5vw, 64px)/1 "Fraunces", serif; }
 .cifra span { font-weight: 700; font-size: 16px; opacity: .92; }
 
-.como { padding: 50px clamp(16px, 4vw, 48px); text-align: center; }
+.como { scroll-margin-top: 70px; padding: 50px clamp(16px, 4vw, 48px); text-align: center; }
 .como h2 { font-size: clamp(30px, 3.5vw, 46px); margin-bottom: 28px; }
 .pasos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; max-width: 1100px; margin: 0 auto; }
 .paso svg { width: 120px; height: 120px; }
@@ -121,7 +121,7 @@ button { font: inherit; cursor: pointer; }
 .pie { background: var(--tinta); color: #E8EAF2; padding: 32px clamp(16px, 4vw, 48px); display: grid; gap: 10px; font-size: 14px; border-radius: 48px 48px 0 0; }
 .pie a { color: var(--sol); font-weight: 800; }
 
-.extra { max-width: 1200px; margin: 0 auto; padding: 30px clamp(16px, 4vw, 48px) 40px; }
+.extra { scroll-margin-top: 70px; max-width: 1200px; margin: 0 auto; padding: 30px clamp(16px, 4vw, 48px) 40px; }
 .extra h2 { font-size: clamp(30px, 3.5vw, 46px); margin-bottom: 18px; }
 .extra video { width: 100%; border-radius: var(--radio); background: var(--tinta); box-shadow: 0 6px 0 rgba(29, 36, 64, .12); display: block; }
 .extra-cab { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: 18px; }

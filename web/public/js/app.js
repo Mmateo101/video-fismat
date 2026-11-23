@@ -241,7 +241,7 @@
   async function elegir(id, desplazar) {
     const q = await cargar(id);
     actual = q; detener();
-    history.replaceState(null, "", "#" + id);
+    if (!/^#(video|reporte|como|explorar)$/.test(location.hash)) history.replaceState(null, "", "#" + id);
     document.querySelectorAll(".chip").forEach((c) => c.classList.toggle("activo", c.dataset.id === id));
     marcarMapa(q);
     $("#f-region").textContent = q.region;
@@ -287,6 +287,8 @@
     gsap.from("#mapa .estado", { opacity: 0, y: 8, duration: 0.6, stagger: 0.015, ease: "power2.out" });
     gsap.from("#mapa .sismo", { scale: 0, transformOrigin: "50% 50%", duration: 0.5, stagger: 0.05, delay: 0.5, ease: "back.out(2)" });
     const ini = location.hash.slice(1);
-    elegir(indice.some((q) => q.id === ini) ? ini : "us2000ar20");
+    await elegir(indice.some((q) => q.id === ini) ? ini : "us2000ar20");
+    const sec = document.getElementById(ini);
+    if (sec) setTimeout(() => sec.scrollIntoView(), 300);
   })();
 })();
