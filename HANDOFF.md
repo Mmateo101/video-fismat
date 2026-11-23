@@ -22,7 +22,7 @@ Equipo: Mateo Rodolfo Flores Torres, Víctor Manuel Sánchez Chávez, Sofía Mar
 - Escenas en `video/js/escenas/*.js`, tiempos y textos en `video/js/guion.js`, motor en `video/js/motor.js`, kit visual en `video/js/kit.js`.
 - Ojo con GSAP en SVG: un grupo con `transform="translate(…)"` se mueve con valores relativos (`x: "+=30"`), si no pierde su posición. `fromTo` con opacidad inicial visible lleva `immediateRender: false`.
 - La demo carga la página real en un iframe (`../web/public/index.html?video=1`) y controla su reloj de GSAP (`window.APP`).
-- Grabaciones (ya integradas, nov 22): `tools/transcribir.py` (Whisper) identifica cada archivo, `tools/mapa_grabaciones.py` las asigna a cada línea y `tools/generar_medios.py` escribe `js/medios.js` con los recortes y un mapa de tiempo por escena que quita silencios (animación ×1.5 máx., voz sin acelerar). Video final 3:56. A Mateo le faltan saludo y despedida, se usa un cuadro fijo de su cameo.
+- Grabaciones (ya integradas, nov 22): `tools/transcribir.py` (Whisper) identifica cada archivo, `tools/mapa_grabaciones.py` las asigna a cada línea y `tools/generar_medios.py` escribe `js/medios.js` con los recortes y un mapa de tiempo por escena que quita silencios (animación ×1.5 máx., voz sin acelerar). Video final 4:03 (con escena final). Mateo usa el mismo clip para saludo y despedida. Render rápido: `node tools/render.mjs --final --hilos=6 --salida=X.mp4` (≈8 min, GPU activada en cdp.mjs; `SIN_GPU=1` la apaga).
 - Proceso manual anterior: ponerlas en `video/grabaciones/<Nombre>/`, registrarlas en `GUION.medios` (formato en el comentario de `guion.js`), correr `node video/tools/preparar_medios.mjs`, renderizar y luego `node video/tools/mezcla.mjs --video=X.mp4` para el audio.
 
 ## Reglas de estilo del usuario
