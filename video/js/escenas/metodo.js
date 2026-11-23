@@ -78,6 +78,14 @@ N.add({
     const rapido = txt(F, "rápido", { x: X0 - 20, y: YS0 + 16, size: 24, anchor: "end", weight: 700, color: C.gris });
     const lento = txt(F, "lento", { x: X0 - 20, y: YS1 - 14, size: 24, anchor: "end", weight: 700, color: C.gris });
     N.show(tl, [rapido, lento], 20.0);
+    // eje de frecuencias del espectrograma (bandas logarítmicas de q.sg_f)
+    const fy = (f) => YS1 - ((Math.log(f) - Math.log(q.sg_f[0])) / (Math.log(q.sg_f[q.sg_f.length - 1]) - Math.log(q.sg_f[0]))) * (YS1 - YS0);
+    const ejeF = [0.1, 1, 8].map((f) => txt(F, `${f} Hz`, { x: xs0 + 12, y: fy(f), size: 22, anchor: "start", weight: 800, color: C.blanco }));
+    N.show(tl, ejeF, 20.4, { stagger: 0.1 });
+    tl.to(ejeF, { autoAlpha: 0, duration: 0.4 }, 38.4);
+    N.eq(root, tl, '<i>X</i>(<i>m</i>,<i>k</i>) = Σ<sub><i>i</i></sub> <i>x</i><sub><i>i</i>+<i>mH</i></sub> <i>w<sub>i</sub></i> e<sup>−<i>i</i>2π<i>ki</i>/<i>L</i></sup> · <i>L</i> = 25.6 s', { y: 30, size: 42, t0: 20.6, t1: 26.4 });
+    N.eq(root, tl, '<i>P<sub>R</sub></i>(<i>k</i>) = (1/<i>M</i>) Σ<sub><i>m</i>∈ruido</sub> |<i>X</i>(<i>m</i>,<i>k</i>)|²', { y: 30, size: 42, t0: 27.0, t1: 33.4 });
+    N.eq(root, tl, '<i>G</i> = √max(1 − β <i>P<sub>R</sub></i>/|<i>X</i>|², <i>g</i><sub>min</sub>²) · β = 2', { y: 30, size: 42, t0: 33.8, t1: 40.6 });
     const ventana = s("rect", { x: xs0, y: YT - 150, width: ((25.6) / (q.dt_web * (crudo.length - 1))) * (X1 - X0), height: 300, rx: 10, fill: C.sol, opacity: 0, stroke: C.sol, "stroke-width": 4 }, F);
     const conector = s("line", { x1: 0, y1: YT + 150, x2: 0, y2: YS0, stroke: C.sol, "stroke-width": 4, "stroke-dasharray": "6 6", opacity: 0 }, F);
     tl.to(ventana, { opacity: 0.35, duration: 0.3 }, 20.0);

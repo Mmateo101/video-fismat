@@ -42,6 +42,9 @@ N.add({
     // barras: cuánto pesa cada onda (el espectro)
     const bOut = s("g", { transform: "translate(1700,860)" }, F);
     const barras = comp.map(([f, a], k) => s("rect", { x: k * 52, y: -a * 220, width: 38, height: a * 220, rx: 8, fill: colores[k] }, bOut));
+    comp.forEach((c, k) => txt(bOut, `f${"₁₂₃₄"[k]}`, { x: k * 52 + 19, y: 30, size: 26, color: C.tinta, font: "Fraunces", italic: true }));
+    txt(bOut, "f (Hz) →", { x: 210, y: 64, size: 22, anchor: "end", weight: 700, color: C.gris });
+    N.eq(root, tl, '<i>X<sub>k</sub></i> = Σ<sub><i>i</i></sub> <i>x<sub>i</sub></i> e<sup>−<i>i</i>2π<i>ki</i>/<i>N</i></sup>', { y: 110, size: 54, t0: 11.4, t1: 14.1 });
     tl.fromTo(barras, { scaleY: 0, svgOrigin: "0 0" }, { scaleY: 1, duration: 0.6, ease: "back.out(2)", stagger: 0.12 }, 11.0);
     tl.to(esc, { scale: 1.06, svgOrigin: "0 0", duration: 3, ease: "sine.inOut" }, 10);
 

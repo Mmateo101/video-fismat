@@ -48,6 +48,9 @@ N.add({
     const km = N.t(root, "18 km", { x: 0, y: 220, w: 1160, align: "center", size: 110, font: "num", color: C.tinta });
     gsap.set(km, { autoAlpha: 0 }); N.pop(tl, km, 12.2);
 
+    N.eq(root, tl, '<i>A<sub>x</sub></i>/<i>A<sub>r</sub></i> = 0.365/0.062 = 5.9', { y: 120, size: 46, t0: 3.8, t1: 6.6 });
+    N.eq(root, tl, '<i>R</i> = (<i>A<sub>x</sub></i>/<i>A<sub>r</sub></i>)² = 35 ± 5', { y: 120, size: 50, t0: 8.2, t1: 10.5 });
+    N.eq(root, tl, 'λ = <i>vT</i> = (4500 m/s)(4.0 s) = 18 000 m', { y: 120, size: 46, t0: 12.4, t1: 13.6 });
     /* ---------- 2 · cuatro segundos también es el mar ---------- */
     tl.to([mont, nieve, reg, km], { autoAlpha: 0, y: "+=80", duration: 0.6, ease: "power2.in" }, 13.6);
     tl.to(larga, { stroke: C.ruido, duration: 0.8 }, 14.0);
@@ -82,6 +85,10 @@ N.add({
       tl.to(dB, { attr: { cx: xD(q.snr_despues) }, duration: 1.0, ease: "expo.inOut" }, 23.2 + i * 0.06);
       tl.to(ln, { attr: { x2: xD(q.snr_despues) }, duration: 1.0, ease: "expo.inOut" }, 23.2 + i * 0.06);
     });
+    const ejeX = s("g", {}, plot);
+    [0, 20, 40, 60, 80].forEach((v) => txt(ejeX, `${v}`, { x: xD(v), y: S.length * dyR + 4, size: 22, weight: 700, color: C.gris }));
+    txt(ejeX, "SNR (dB) →", { x: 1030, y: S.length * dyR + 4, size: 22, anchor: "end", weight: 700, color: C.gris });
+    N.eq(root, tl, 'SNR = 10 log<sub>10</sub>(<i>P</i><sub>sismo</sub>/<i>P</i><sub>ruido</sub>) · +10.5 dB', { x: 1340, y: 660, w: 500, size: 32, t0: 25.4, t1: 28.8 });
     const leyA = N.t(root, "antes", { x: 300, y: 70, size: 34, color: C.ruido }), leyD = N.t(root, "después", { x: 470, y: 70, size: 34, color: C.sismo });
     gsap.set([leyA, leyD], { autoAlpha: 0 }); N.show(tl, [leyA, leyD], 21.8, { stagger: 0.3 });
     const x11 = N.t(root, "0×", { x: 1360, y: 330, w: 460, align: "center", size: 200, font: "num", color: C.sismo });
@@ -112,6 +119,7 @@ N.add({
     const parecido = N.t(root, "parecido con la onda real", { x: 0, y: 130, w: 1920, align: "center", size: 54, color: C.tinta });
     gsap.set(parecido, { autoAlpha: 0 }); N.show(tl, parecido, 29.8);
 
+    N.eq(root, tl, 'ρ = corr(<i>ŝ</i>, <i>s</i>) · SNR de entrada = 0 dB', { y: 880, size: 38, t0: 30.4, t1: 37.0 });
     /* ---------- 5 · las bandas del ruido: la ciudad y el mar ---------- */
     tl.to([...g1, ...g2, parecido], { autoAlpha: 0, scale: 0.8, duration: 0.5, ease: "power2.in" }, 37.0);
     const q0 = def.q, keep = q0.esp_f.map((f, i) => i).filter((i) => q0.esp_f[i] >= 0.045);
@@ -136,6 +144,8 @@ N.add({
     const lento = txt(F, "lento", { x: 160, y: 950, size: 32, anchor: "start", weight: 700, color: C.tinta });
     const rapido = txt(F, "rápido", { x: 1760, y: 950, size: 32, anchor: "end", weight: 700, color: C.tinta });
     N.show(tl, [lento, rapido], 37.6);
+    const tk = [0.1, 1].map((f) => txt(F, `${f} Hz`, { x: fx(f), y: 950, size: 28, weight: 700, color: C.tinta }));
+    N.show(tl, tk, 37.8, { stagger: 0.1 });
     const seis = N.t(root, "~6 s", { x: (fx(0.1) + fx(0.35)) / 2 - 100, y: 110, w: 200, align: "center", size: 50, font: "num", color: C.ruido });
     gsap.set(seis, { autoAlpha: 0 }); N.pop(tl, seis, 41.0);
   },

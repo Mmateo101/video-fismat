@@ -17,6 +17,8 @@ N.add({
     s("rect", { x: 0, y: 12, width: 800, height: 432, rx: 30, fill: "rgba(0,0,0,.25)" }, panel);
     s("rect", { x: 0, y: 0, width: 800, height: 432, rx: 30, fill: C.crema }, panel);
     for (let i = 1; i < 6; i++) s("line", { x1: 30, x2: 770, y1: i * 72, y2: i * 72, stroke: "#EADFC8", "stroke-width": 2 }, panel);
+    txt(panel, "t (s) →", { x: 770, y: 410, size: 22, anchor: "end", weight: 700, color: C.gris });
+    txt(panel, "v (µm/s)", { x: 30, y: 26, size: 22, anchor: "start", weight: 700, color: C.gris });
     tl.fromTo(panel, { scale: 0.5, opacity: 0, svgOrigin: "400 216" }, { scale: 1, opacity: 1, duration: 0.8, ease: "expo.out" }, 0.4);
     // 1) ruido con un pico: falsa alarma
     const r = rng(5), y1 = [];
@@ -49,6 +51,7 @@ N.add({
     const tarde = N.t(root, "aviso tarde", { x: 1260, y: 690, size: 40, color: C.tinta });
     tarde.className = "pill"; tarde.style.background = C.sol;
     N.pop(tl, tarde, 12.2);
+    N.eq(root, tl, "SNR &lt; 0 dB", { x: 1000, y: 160, w: 800, size: 40, color: C.sol, t0: 10.6, t1: 13.8 });
     tl.to(tarde, { autoAlpha: 0, duration: 0.3 }, 14.0);
 
     // reacomodo: el panel se va a la izquierda y entra el mapa

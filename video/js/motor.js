@@ -127,6 +127,15 @@
       return Promise.all(esperas);
     },
 
+    /* Ecuación técnica: aparece, se queda y se va. o: x, y, w, size, color, t0, t1 */
+    eq(parent, tl, html, o = {}) {
+      const e = N.t(parent, html, { x: o.x || 0, y: o.y || 0, w: o.w || 1920, align: o.align || "center", size: o.size || 44, font: "num", color: o.color || C.tinta });
+      gsap.set(e, { autoAlpha: 0 });
+      tl.fromTo(e, { autoAlpha: 0, y: 20, filter: "blur(6px)" }, { autoAlpha: 1, y: 0, filter: "blur(0px)", duration: 0.6, ease: "power2.out", immediateRender: false }, o.t0);
+      if (o.t1 != null) tl.to(e, { autoAlpha: 0, y: -16, duration: 0.4, ease: "power2.in" }, o.t1);
+      return e;
+    },
+
     /* Reacomodo: mueve elementos HTML/SVG a nuevas posiciones con resorte */
     mover(tl, el, at, props, dur = 0.9) { return tl.to(el, Object.assign({ duration: dur, ease: "expo.inOut" }, props), at); },
   };

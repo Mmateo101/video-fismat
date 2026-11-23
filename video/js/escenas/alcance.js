@@ -75,6 +75,9 @@ N.add({
     tl.fromTo(estrella, { scale: 0, svgOrigin: `${cu[0]} ${cu[1]}` }, { scale: 1.4, duration: 0.6, ease: "back.out(3)" }, 16.4);
     const cuT = N.t(root, "Ciudad Universitaria", { x: 250 + cu[0] * 1.35 + 40, y: 40 + cu[1] * 1.35 - 80, size: 34, color: C.tinta });
     gsap.set(cuT, { autoAlpha: 0 }); N.show(tl, cuT, 16.8);
+    const ficha = N.t(root, "G.UNM · canal BHZ · 20 muestras/s · 1993–2026", { x: 0, y: 925, w: 1920, align: "center", size: 30, color: C.tinta });
+    ficha.style.fontFamily = "Fraunces"; gsap.set(ficha, { autoAlpha: 0 }); N.show(tl, ficha, 17.4);
+    N.eq(root, tl, "Δ<i>t</i> = 0.4 s · <i>N</i> = 21 · <i>f</i><sub>max</sub> = 1/(2Δ<i>t</i>) = 1.25 Hz", { y: 790, size: 40, t0: 4.8, t1: 7.0 });
     // reconocer sí, predecir no
     const si = N.t(root, "✓ reconocer", { x: 150, y: 760, size: 44, color: C.blanco });
     si.className = "pill"; si.style.background = C.verde;
