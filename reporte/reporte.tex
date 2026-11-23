@@ -1,0 +1,876 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,english,es-tabla,es-noquoting,es-nodecimaldot]{babel}
+\usepackage{newtxtext,newtxmath}
+\renewcommand{\ttdefault}{lmtt}
+\usepackage{amsmath}
+\usepackage[locale=US]{siunitx}
+\sisetup{group-separator={\,},group-minimum-digits=4,separate-uncertainty=true,output-decimal-marker={.}}
+\usepackage{booktabs,graphicx,float,array,tabularx,longtable}
+\usepackage[labelsep=colon,font=small,labelfont=bf]{caption}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{xcolor}
+\definecolor{navy}{HTML}{1F3B63}
+\usepackage{titlesec}
+\titleformat{\section}{\normalfont\Large\bfseries}{\thesection.}{0.6em}{}
+\titleformat{\subsection}{\normalfont\large\bfseries}{\thesubsection}{0.6em}{}
+\titlespacing*{\section}{0pt}{16pt}{8pt}
+\titlespacing*{\subsection}{0pt}{12pt}{6pt}
+\usepackage{enumitem}
+\setlist{itemsep=2pt,topsep=4pt}
+\setlist[itemize]{label=$\bullet$}
+\usepackage{listings}
+\lstset{language=Python,basicstyle=\ttfamily\footnotesize,breaklines=true,frame=single,rulecolor=\color{black!40},showstringspaces=false,columns=fullflexible,keepspaces=true,extendedchars=true,literate={á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1 {ñ}{{\~n}}1 {Á}{{\'A}}1 {É}{{\'E}}1 {Í}{{\'I}}1 {Ó}{{\'O}}1 {Ú}{{\'U}}1 {Ñ}{{\~N}}1 {µ}{{$\mu$}}1 {→}{{$\to$}}1 {·}{{$\cdot$}}1 {¿}{{?`}}1 {«}{{<<}}1 {»}{{>>}}1}
+\usepackage{fancyhdr}
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small Análisis espectral de Fourier para alertas sísmicas}
+\fancyhead[R]{\small\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\setlength{\headheight}{14pt}
+\usepackage{csquotes}
+\usepackage[style=apa,backend=biber]{biblatex}
+\addbibresource{refs.bib}
+\usepackage{hyperref}
+\hypersetup{colorlinks,allcolors=black}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+\newcommand{\fuente}{Fuente: elaboración propia.}
+
+\begin{document}
+\selectlanguage{spanish}
+
+% ================= PORTADA =================
+\begin{titlepage}
+\centering
+{\large\bfseries Instituto Tecnológico y de Estudios Superiores de Monterrey\par}
+\vspace{2pt}
+{\large Campus Monterrey\par}
+\vspace{1.2cm}
+{\large Análisis de Métodos Matemáticos para la Física\par}
+\vfill
+{\color{navy}\rule{\textwidth}{1.2pt}}\par\vspace{0.6cm}
+{\large\scshape Reporte técnico\par}\vspace{0.3cm}
+{\fontsize{24}{30}\selectfont\bfseries Análisis espectral de Fourier para alertas\\[4pt] de señales sísmicas inclusivas\par}
+\vspace{0.5cm}
+{\large Separación de la onda sísmica y del ruido ambiental. De los registros del USGS a 20 sismos reales de México y al prototipo \textit{Sismo o ruido}\par}
+\vspace{0.6cm}
+{\color{navy}\rule{\textwidth}{1.2pt}}\par
+\vfill
+{\large\bfseries Equipo\par}
+\vspace{6pt}
+\begin{tabular}{ll}
+Mateo Rodolfo Flores Torres & A01783438\\
+Víctor Manuel Sánchez Chávez & A01287522\\
+Sofía Martínez Alanis & A01724528\\
+\end{tabular}
+\par\vspace{0.8cm}
+{\large Profesor: Dr. Luis Miguel Méndez Díaz\par}
+\vspace{4pt}
+{\normalsize Expo Ingenierías, 28.ª edición · Categoría Desarrollo de prototipo de software\par}
+\vspace{4pt}
+{\normalsize Prototipo: \url{https://sismo-o-ruido.vercel.app}\par}
+\vspace{1.2cm}
+{\large Monterrey, Nuevo León, noviembre de 2026\par}
+\end{titlepage}
+
+% ================= RESUMEN =================
+\section*{Resumen}
+\addcontentsline{toc}{section}{Resumen}
+Los sistemas de alerta temprana necesitan separar la onda de un sismo del ruido que siempre registran sus sensores. Este trabajo analiza dos registros simplificados del USGS: uno del sensor durante un sismo y otro ambiental, tomado sin sismo. Primero se calcula la serie de Fourier discreta del registro del sensor. El armónico de periodo \SI{4.2}{s} concentra el \SI{94.8}{\percent} de su energía. Después, cada registro se ajusta con una regresión trigonométrica por mínimos cuadrados. La amplitud del sensor es $0.365 \pm 0.021$ y la del ruido es $0.062 \pm 0.002$. El cociente de energía entre las componentes ajustadas es $35 \pm 5$, bajo los supuestos del modelo. Este resultado permite comparar ambos registros, pero no determinar qué porcentaje del sensor corresponde al sismo, porque el registro ambiental proviene de otra estación y de otro momento. Con la velocidad de \SI{4500}{m/s}, la longitud de onda es de aproximadamente \SI{18.0}{km}. El análisis crítico muestra que el periodo de \SI{4}{s} coincide con la banda de los microsismos oceánicos. Por eso la frecuencia sola no basta y el método se llevó a datos reales. Se analizaron 20 sismos de México, de 1993 a 2026, registrados en Ciudad Universitaria. Como estos registros son largos y no periódicos, se usó la transformada de Fourier por ventanas. El ruido se estimó antes de la llegada de la onda P y se restó en cada frecuencia con sustracción espectral. La relación señal-ruido mejoró en promedio \SI{10.5}{dB}, unas 11 veces en potencia. Con ruido real tan fuerte como el sismo, la correlación con la onda verdadera subió de 0.71 a 0.86. El ruido de la estación tiene un pico oceánico de unos \SI{6}{s}, pero lo domina el ruido urbano entre 1 y \SI{8}{Hz}. Los resultados se pueden explorar en el prototipo web \textit{Sismo o ruido}.
+
+\textbf{Palabras clave:} serie de Fourier, transformada de Fourier de tiempo corto, sustracción espectral, ruido sísmico, alerta temprana.
+
+\begin{otherlanguage}{english}
+\section*{Abstract}
+\addcontentsline{toc}{section}{Abstract}
+Earthquake early warning systems must separate the earthquake wave from the noise that their sensors always record. This work analyzes two simplified USGS records: one from a sensor during an earthquake and one ambient record without an earthquake. The discrete Fourier series of the sensor record shows that the \SI{4.2}{s} harmonic holds \SI{94.8}{\percent} of its energy. A least-squares trigonometric regression gives amplitudes of $0.365 \pm 0.021$ for the sensor and $0.062 \pm 0.002$ for the noise. The energy ratio between the fitted components is $35 \pm 5$ under the model assumptions. This result allows comparing both records, but not determining what percentage of the sensor signal comes from the earthquake, because the ambient record comes from another station and another time. With a speed of \SI{4500}{m/s}, the wavelength is about \SI{18.0}{km}. A critical review shows that the \SI{4}{s} period lies in the oceanic microseism band, so frequency alone is not enough. The method was therefore extended to 20 Mexican earthquakes from 1993 to 2026 recorded at Ciudad Universitaria. Because these records are long and non-periodic, a short-time Fourier transform was used. Noise was estimated before the P-wave arrival and removed at each frequency by spectral subtraction. The signal-to-noise ratio improved by \SI{10.5}{dB} on average, about 11 times in power. With real noise as strong as the earthquake, the correlation with the true wave rose from 0.71 to 0.86. The station noise shows an oceanic peak near \SI{6}{s}, but urban noise between 1 and \SI{8}{Hz} dominates. The results can be explored in the web prototype \textit{Sismo o ruido}.
+
+\textbf{Keywords:} Fourier series, short-time Fourier transform, spectral subtraction, seismic noise, early warning.
+\end{otherlanguage}
+
+\clearpage
+\tableofcontents
+\clearpage
+
+% ================= 1 INTRODUCCIÓN =================
+\section{Introducción}
+Los sismos están entre los riesgos naturales más letales. Varios terremotos del último siglo causaron más de \num{150000} muertes cada uno, como los de Tangshan, China (1976), Haití (2010) e Indonesia (2004) \parencite{statista2025}. Solo en 2004 murieron \num{298101} personas por terremotos en el mundo \parencite{statista2016}.
+
+La alerta temprana reduce este daño. Detecta las primeras ondas de un sismo y avisa antes de que lleguen las sacudidas fuertes \parencite{allen2019}. Su punto débil es el ruido. Todas las estaciones registran vibraciones que no vienen del sismo \parencite{mcnamara2004}. Este reporte estudia cómo separar ambas partes con herramientas de la física matemática.
+
+El reporte es una propuesta de consultoría para el Earthquake Hazards Program del USGS \parencite{expediente}. El trabajo tiene dos fases. En la primera se analizan los dos registros cortos del expediente con una serie de Fourier y una regresión trigonométrica. En la segunda, el mismo razonamiento se lleva a 20 sismos reales de México con la transformada de Fourier por ventanas. Esa fase termina en un prototipo web que cualquier persona puede usar \parencite{prototipo}.
+
+La sección~2 describe el contexto y las secciones~3 a 5 delimitan y justifican el problema. La sección~6 resume la literatura científica y la teoría. Las secciones~7 a 12 presentan los objetivos, la hipótesis, la metodología y los recursos. Las secciones~13 y 14 muestran los resultados y las conclusiones.
+
+% ================= 2 CONTEXTO =================
+\section{Contexto general}
+\textbf{Científico.} Un sismo genera ondas P, S y superficiales que viajan por la Tierra \parencite{shearer2019}. Su espectro tiene una forma típica que depende del tamaño del sismo \parencite{brune1970}. El ruido ambiental también tiene un espectro conocido, con mínimos y máximos según la frecuencia \parencite{peterson1993,mcnamara2004}.
+
+\textbf{Tecnológico.} El EHP del USGS opera la red nacional ANSS y el sistema ShakeAlert en la costa oeste de Estados Unidos \parencite{usgs_ehp,usgs_anss}. México opera el SASMEX desde 1991, el primer sistema público de alerta sísmica del mundo \parencite{espinosa1995}. Hoy se usan redes neuronales para detectar sismos y quitar el ruido \parencite{zhu2019,mousavi2020}. También se usan teléfonos celulares como sensores \parencite{kong2016}.
+
+\textbf{Social.} El tiempo de aviso suele ser de pocos segundos. Las zonas cercanas al epicentro casi no reciben aviso \parencite{minson2018}. Por eso cada mejora en la detección importa, sobre todo en comunidades con menos recursos \parencite{cremen2020}.
+
+% ================= 3 DELIMITACIÓN =================
+\section{Delimitación del objeto de estudio}
+\begin{itemize}
+\item \textbf{Objeto:} la señal que registra un sensor sísmico, no el proceso completo del terremoto.
+\item \textbf{Datos de la fase 1:} los dos registros del expediente del USGS (Tabla~\ref{tab:datos}).
+\item \textbf{Datos de la fase 2:} 20 sismos de México de magnitud 6.8 o mayor, de 1993 a 2026, tomados del catálogo del USGS \parencite{comcat}. Sus registros son de la estación G.UNM, en Ciudad Universitaria, CDMX \parencite{geoscope}. Se usa solo la componente vertical.
+\item \textbf{Herramientas:} serie de Fourier discreta, regresión trigonométrica, transformada de Fourier por ventanas, sustracción espectral, campos escalares y vectoriales.
+\item \textbf{Medio:} un dominio bidimensional homogéneo, con $\rho = \SI{2700}{kg/m^3}$ y $v = \SI{4500}{m/s}$.
+\item \textbf{Fuera de alcance:} predecir sismos, modelos geológicos, inteligencia artificial y sistemas electrónicos.
+\end{itemize}
+
+% ================= 4 PLANTEAMIENTO =================
+\section{Planteamiento del problema}
+Un sensor mide la suma de la onda del sismo y del ruido ambiental. La Figura~\ref{fig:esquema} ilustra este problema con un ejemplo, no con los datos del USGS. El sistema solo conoce la suma. Debe decidir qué parte es sismo antes de emitir una alerta. Si se equivoca, la alerta llega tarde o es una falsa alarma.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{esquema.pdf}
+\caption{Ejemplo ilustrativo: (a) lo que mide el sensor, (b) el ruido de fondo y (c) la onda del sismo sin ruido. \fuente}
+\label{fig:esquema}
+\end{figure}
+
+La pregunta de investigación es:
+\begin{center}
+\begin{minipage}{0.88\textwidth}
+\itshape ¿Qué parte del registro del sensor corresponde a la onda del sismo y qué parte puede explicarse por el ruido ambiental, si ambos registros se analizan con una serie de Fourier y una regresión trigonométrica?
+\end{minipage}
+\end{center}
+De ella surge una segunda pregunta, para los registros reales:
+\begin{center}
+\begin{minipage}{0.88\textwidth}
+\itshape ¿Cuánto mejora la relación señal-ruido de un registro sísmico real si el ruido se estima antes de la onda P y se resta en cada frecuencia con la transformada de Fourier?
+\end{minipage}
+\end{center}
+
+% ================= 5 JUSTIFICACIÓN =================
+\section{Justificación}
+\textbf{Relevancia social.} Una alerta confiable da segundos para protegerse. Una alerta con falsas alarmas pierde la confianza de la población \parencite{allen2019,allen2018eos}.
+
+\textbf{Relevancia científica.} La serie de Fourier es la base del análisis espectral sísmico. Un caso simple permite ver, paso a paso, cómo una señal compleja se vuelve información útil.
+
+\textbf{Objetivos de Desarrollo Sostenible.} El proyecto apoya el ODS~11, sobre ciudades seguras y resilientes \parencite{onu11}, y el ODS~9, sobre innovación e infraestructura \parencite{onu9}.
+
+\textbf{Enfoque DEIP.} La alerta no beneficia a todos por igual.
+\begin{itemize}
+\item \textbf{Diversidad:} las comunidades expuestas incluyen ciudades, zonas rurales, personas mayores, personas con discapacidad y hablantes de lenguas indígenas.
+\item \textbf{Equidad:} las zonas rurales tienen menos sensores y reciben la alerta más tarde. Los modelos ligeros, como el de este trabajo, corren en equipos de bajo costo.
+\item \textbf{Inclusión:} ShakeAlert avisa sobre todo por celular \parencite{usgs_faq}. El SASMEX también usa altavoces en la calle \parencite{sasmex}. Una alerta inclusiva suma canales, como avisos visuales para personas sordas.
+\item \textbf{Pertenencia:} la población actúa si conoce y confía en la alerta \parencite{allen2018eos}. Menos falsas alarmas generan esa confianza.
+\end{itemize}
+
+% ================= 6 MARCO TEÓRICO =================
+\section{Marco teórico}
+
+\subsection{Estado del arte}
+La Tabla~\ref{tab:arte} resume los trabajos científicos revisados. Se buscaron en IEEE Xplore, ScienceDirect, Nature, Science Advances y las revistas de la Seismological Society of America.
+
+\begin{table}[H]
+\centering
+\small
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{3.3cm}>{\raggedright\arraybackslash}p{3.6cm}X}
+\toprule
+Trabajo & Método & Hallazgo y relación con este proyecto\\
+\midrule
+\textcite{brune1970} & Modelo del espectro de la fuente & El espectro de un sismo es plano en bajas frecuencias y cae después de una frecuencia de esquina. Los sismos pequeños tienen esquinas altas.\\
+\textcite{peterson1993} & Espectros de ruido de 75 estaciones & Define los modelos de ruido mínimo y máximo de la Tierra. El ruido tiene un máximo entre 4 y 8 s.\\
+\textcite{longuet1950} & Teoría de ondas oceánicas & Explica los microsismos: el oleaje genera ruido con periodos de 3 a 20 s.\\
+\textcite{mcnamara2004} & Densidad espectral del ruido & El ruido cambia con la frecuencia, el sitio y la hora. Justifica tratar el ruido por bandas.\\
+\textcite{zhu2019} & Redes neuronales & Separan sismo y ruido en el dominio tiempo-frecuencia. Es el estado actual del filtrado.\\
+\textcite{mousavi2020} & Red con atención & Detecta sismos y fases P y S en registros con ruido.\\
+\textcite{espinosa1995} & Sistema SASMEX & Primer sistema público de alerta. Muestra la importancia de la difusión masiva.\\
+\textcite{minson2018} & Límites de la alerta & El aviso es corto cerca del epicentro. Cada segundo de detección cuenta.\\
+\textcite{cremen2020} & Revisión de la alerta & Resume avances técnicos y retos de comunicación.\\
+\textcite{bono2025} & Software SIT & Herramienta reciente para analizar señales sísmicas en tiempo real.\\
+\textcite{boll1979} & Sustracción espectral & Estima el espectro del ruido cuando no hay señal y lo resta en cada frecuencia. Es la base del método de la fase 2.\\
+\textcite{berouti1979} & Sobresustracción y piso & Resta un poco más del ruido estimado y pone un mínimo a la ganancia. Así se evitan artefactos.\\
+\textcite{mousavi2016} & Ruido en tiempo-frecuencia & Estima y suprime el ruido de registros sísmicos con la transformada de tiempo corto. Muestra que el enfoque funciona en sismología.\\
+\bottomrule
+\end{tabularx}
+\caption{Estado del arte sobre señales sísmicas, ruido y alerta temprana.}
+\label{tab:arte}
+\end{table}
+
+La lectura crítica deja tres ideas para este trabajo. Primero, el ruido no es aleatorio en frecuencia: tiene bandas conocidas \parencite{peterson1993}. Segundo, la energía de un sismo pequeño está en frecuencias altas \parencite{brune1970}. Tercero, los métodos actuales separan sismo y ruido usando a la vez tiempo y frecuencia \parencite{zhu2019}. La Figura~\ref{fig:bandas} ubica estas bandas.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\textwidth]{bandas.pdf}
+\caption{Bandas de frecuencia aproximadas del ruido oceánico y de los sismos pequeños, con base en \textcite{longuet1950}, \textcite{peterson1993} y \textcite{brune1970}. La zona gris no se puede observar con los datos del USGS. \fuente}
+\label{fig:bandas}
+\end{figure}
+
+\subsection{Serie de Fourier}
+Una señal periódica de periodo $T_0$ se puede escribir como una suma de ondas simples \parencite{fourier1822,kreyszig2011}:
+\begin{equation}
+x(t) = \underbrace{a_0}_{\text{promedio}} + \sum_{n=1}^{\infty}\underbrace{\left[a_n\cos(n\omega_0 t) + b_n\sin(n\omega_0 t)\right]}_{\text{armónico } n}
+\label{eq:fourier}
+\end{equation}
+donde $t$ es el tiempo en \si{s}, $\omega_0 = 2\pi/T_0$ es la frecuencia angular fundamental en \si{rad/s} y $n$ es el número de armónico. Cada armónico tiene una frecuencia $f_n = n/T_0$ en \si{Hz}.
+
+Con $N$ datos $x_i$ tomados en $t_i = i\,\Delta t$, el periodo es $T_0 = N\Delta t$ y los coeficientes se calculan con sumas:
+\begin{equation}
+a_0 = \frac{1}{N}\sum_{i=0}^{N-1} x_i
+\label{eq:a0}
+\end{equation}
+\begin{equation}
+a_n = \frac{2}{N}\sum_{i=0}^{N-1} x_i\cos(n\omega_0 t_i)
+\label{eq:an}
+\end{equation}
+\begin{equation}
+b_n = \frac{2}{N}\sum_{i=0}^{N-1} x_i\sin(n\omega_0 t_i)
+\label{eq:bn}
+\end{equation}
+donde $a_0$, $a_n$ y $b_n$ tienen las unidades de $x_i$. La frecuencia más alta que se puede observar es la de Nyquist, $f_{\max} = 1/(2\Delta t)$. Cada armónico se puede escribir como una sola onda de amplitud $A_n$ y fase $\varphi_n$ en \si{rad}:
+\[
+a_n\cos(n\omega_0 t) + b_n\sin(n\omega_0 t) = A_n\cos(n\omega_0 t + \varphi_n)
+\]
+\begin{equation}
+A_n = \sqrt{a_n^2 + b_n^2}, \qquad \varphi_n = \operatorname{atan2}\!\left(-b_n,\ a_n\right)
+\label{eq:Aphi}
+\end{equation}
+
+\subsection{Forma compleja}
+La fórmula de Euler une las funciones trigonométricas con la variable compleja:
+\[
+e^{i\theta} = \cos\theta + i\sin\theta
+\]
+donde $i$ es la unidad imaginaria. Con ella, cada armónico se representa con un solo número complejo:
+\begin{equation}
+c_n = \frac{a_n - i\,b_n}{2} = \frac{A_n}{2}\,e^{i\varphi_n}
+\label{eq:cn}
+\end{equation}
+donde el módulo $|c_n|$ es la mitad de la amplitud y el argumento es la fase.
+
+\subsection{Energía de cada armónico}
+El teorema de Parseval reparte la variación de la señal entre sus armónicos \parencite{kreyszig2011}. Con la varianza $\sigma^2 = \frac{1}{N}\sum (x_i - a_0)^2$, la fracción de energía del armónico $n$ es:
+\begin{equation}
+p_n = \frac{A_n^2}{2\sigma^2}
+\label{eq:pn}
+\end{equation}
+donde $p_n$ no tiene unidades y la suma de todas las fracciones es 1. Este porcentaje corresponde a la energía matemática de la señal de aceleración respecto a su promedio. Permite identificar el armónico dominante, pero no equivale directamente al porcentaje de energía mecánica del sismo.
+
+\subsection{Regresión trigonométrica}
+El método de mínimos cuadrados busca la curva que hace mínima la suma de los errores al cuadrado \parencite{kreyszig2011}. Para una onda de frecuencia angular $\omega$ fija, el modelo es:
+\begin{equation}
+y(t) \approx \underbrace{c}_{\text{promedio}} + \underbrace{a\cos(\omega t) + b\sin(\omega t)}_{\text{onda de amplitud } A=\sqrt{a^2+b^2}}
+\label{eq:reg}
+\end{equation}
+donde $c$, $a$ y $b$ tienen las unidades de $y$. Se minimiza la suma de los errores de los $N$ datos $(t_i, y_i)$:
+\[
+S = \sum_{i}\left[y_i - c - a\cos(\omega t_i) - b\sin(\omega t_i)\right]^2
+\]
+Al igualar a cero las derivadas de $S$ respecto a $c$, $a$ y $b$, se obtienen las ecuaciones normales:
+\begin{equation}
+\left(\mathbf{M}^{T}\mathbf{M}\right)\boldsymbol{\beta} = \mathbf{M}^{T}\mathbf{y}
+\label{eq:normal}
+\end{equation}
+donde cada fila de $\mathbf{M}$ es $\left(1,\ \cos\omega t_i,\ \sin\omega t_i\right)$, $\boldsymbol{\beta} = (c, a, b)^{T}$ y $\mathbf{y}$ es el vector de datos. Este ajuste es una serie de Fourier de un solo término. El error estándar de cada parámetro es:
+\begin{equation}
+\mathrm{EE}(\beta_k) = s\sqrt{\left[(\mathbf{M}^{T}\mathbf{M})^{-1}\right]_{kk}}, \qquad s = \sqrt{\frac{S}{N-3}}
+\label{eq:ee}
+\end{equation}
+donde $s$ es la desviación de los residuos, con las unidades de $y$.
+
+\subsection{De la serie a la transformada de Fourier}
+La serie de Fourier supone que la señal se repite con periodo $T_0$. Eso es razonable en el expediente, porque sus 21 datos cubren casi dos ciclos completos. Un registro sísmico real no cumple esa condición. Dura varios minutos, el sismo empieza y termina, y su contenido de frecuencias cambia en el tiempo. Una sola serie para todo el registro mezclaría el ruido de antes con el sismo de después. Por eso, para registros largos se usa la transformada de Fourier discreta en ventanas cortas.
+
+La transformada de Fourier discreta de $N$ datos es \parencite{cooley1965}:
+\begin{equation}
+X_k = \sum_{i=0}^{N-1} x_i\, e^{-\,i\,2\pi k i/N}, \qquad k = 0, 1, \dots, N-1
+\label{eq:dft}
+\end{equation}
+donde $X_k$ es un número complejo con las unidades de $x_i$. Al comparar con las Ecs.~\eqref{eq:a0} a \eqref{eq:bn} se ve que la serie y la transformada dan la misma información:
+\begin{equation}
+a_0 = \frac{X_0}{N}, \qquad a_k = \frac{2}{N}\operatorname{Re}X_k, \qquad b_k = -\frac{2}{N}\operatorname{Im}X_k
+\label{eq:dftserie}
+\end{equation}
+Con los 21 datos del sensor, la Ec.~\eqref{eq:dftserie} reproduce exactamente $a_0 = 0.0214$, $a_2 = -0.147$ y $b_2 = 0.333$. Es decir, la transformada no es otro método. Es la misma serie calculada con el algoritmo rápido de \textcite{cooley1965}.
+
+La transformada de tiempo corto aplica la Ec.~\eqref{eq:dft} a ventanas de $L$ datos que avanzan $H$ datos cada vez:
+\begin{equation}
+X(m,k) = \sum_{i=0}^{L-1} x_{i+mH}\, w_i\, e^{-\,i\,2\pi k i/L}
+\label{eq:stft}
+\end{equation}
+donde $m$ numera la ventana, $k$ la frecuencia y $w_i$ es la ventana de Hann, que suaviza los bordes. Cada columna $m$ es una serie de Fourier corta. El mapa de $|X(m,k)|^2$ se llama espectrograma.
+
+\subsection{Ruido en el espectro y sustracción espectral}
+Por la Ec.~\eqref{eq:balance}, cada celda del espectrograma suma el sismo y el ruido. Si ambos no están correlacionados, en promedio sus potencias se suman:
+\begin{equation}
+|X(m,k)|^2 \approx |S(m,k)|^2 + |R(m,k)|^2
+\label{eq:potencias}
+\end{equation}
+El ruido sube el piso de todo el espectro. No lo hace parejo, porque tiene bandas propias, como los microsismos oceánicos y el ruido urbano \parencite{peterson1993,mcnamara2004}. Esto da dos criterios para separar. Si el sismo y el ruido ocupan frecuencias distintas, basta un filtro de banda. Si comparten frecuencias, como en el expediente, hace falta usar también el tiempo.
+
+La sustracción espectral usa el tiempo \parencite{boll1979}. Antes de la onda P solo hay ruido. Con las $M$ ventanas de esa zona se estima la potencia del ruido en cada frecuencia:
+\begin{equation}
+P_R(k) = \frac{1}{M}\sum_{m\,\in\,\text{ruido}} |X(m,k)|^2
+\label{eq:pruido}
+\end{equation}
+Luego cada celda se multiplica por una ganancia entre 0 y 1 \parencite{berouti1979}:
+\begin{equation}
+G(m,k) = \sqrt{\max\!\left(1 - \beta\,\frac{P_R(k)}{|X(m,k)|^2},\ g_{\min}^2\right)}
+\label{eq:ganancia}
+\end{equation}
+donde $\beta$ es el factor de sobresustracción y $g_{\min}$ el piso espectral, ambos sin unidades. La señal limpia es $\hat{S}(m,k) = G(m,k)\,X(m,k)$. Se regresa al tiempo con la transformada inversa y el ruido estimado es $\hat{r}(t) = x(t) - \hat{s}(t)$. La ganancia funciona como una máscara, igual que en \textcite{zhu2019}, pero aquí sale de una fórmula cerrada y no de una red neuronal.
+
+La calidad se mide con la relación señal-ruido en decibeles:
+\begin{equation}
+\mathrm{SNR} = 10\log_{10}\frac{\overline{s^2}_{\text{sismo}}}{\overline{s^2}_{\text{ruido}}}
+\label{eq:snr}
+\end{equation}
+donde $\overline{s^2}$ es la potencia media de la señal en la ventana del sismo o en la de ruido. Cada \SI{10}{dB} equivalen a multiplicar por 10 la potencia.
+
+\subsection{Campos escalares y vectoriales}
+El desplazamiento del suelo en una sección del terreno es el campo escalar $u(x,y,t)$. El sensor, en su posición fija $(x_0,y_0)$, registra una aceleración proporcional a su segunda derivada temporal, es decir, $x(t) \propto \partial^2 u(x_0,y_0,t)/\partial t^2$. El gradiente indica hacia dónde crece más rápido el campo \parencite{kreyszig2011}:
+\begin{equation}
+\nabla u = \left(\frac{\partial u}{\partial x},\ \frac{\partial u}{\partial y}\right)
+\label{eq:grad}
+\end{equation}
+Para un campo vectorial $\mathbf{F} = (F_x, F_y)$, la divergencia mide cuánto se comprime o se expande, y el rotacional mide cuánto gira:
+\begin{equation}
+\nabla\cdot\mathbf{F} = \frac{\partial F_x}{\partial x} + \frac{\partial F_y}{\partial y}
+\label{eq:div}
+\end{equation}
+\begin{equation}
+\nabla\times\mathbf{F} = \frac{\partial F_y}{\partial x} - \frac{\partial F_x}{\partial y}
+\label{eq:rot}
+\end{equation}
+Si el desplazamiento del suelo es un vector $\mathbf{u}$, la descomposición de Helmholtz lo separa en dos partes \parencite{shearer2019}:
+\begin{equation}
+\mathbf{u} = \underbrace{\nabla\phi}_{\text{ondas P}} + \underbrace{\nabla\times\boldsymbol{\psi}}_{\text{ondas S}}
+\label{eq:helm}
+\end{equation}
+donde $\phi$ es un potencial escalar y $\boldsymbol{\psi}$ un potencial vectorial. La parte $\nabla\phi$ tiene divergencia distinta de cero. La parte $\nabla\times\boldsymbol{\psi}$ tiene rotacional distinto de cero. La componente longitudinal es irrotacional y la transversal es solenoidal.
+
+\subsection{Ecuación de onda y energía}
+En un medio donde la perturbación viaja con velocidad $v$ en \si{m/s}, se cumple la ecuación de onda \parencite{kreyszig2011}:
+\begin{equation}
+\frac{\partial^2 u}{\partial t^2} = v^2\nabla^2 u
+\label{eq:onda}
+\end{equation}
+donde $\nabla^2 u$ es el laplaciano. Una solución es la onda plana $u = U\cos(\mathbf{k}\cdot\mathbf{r} - \omega t + \varphi)$, donde $U$ es la amplitud del desplazamiento y $\mathbf{k}$ es el vector de onda en \si{rad/m}. El gradiente es colineal con el vector de onda, pero su sentido cambia con la fase. Por ello, no determina por sí solo el sentido de propagación. Al sustituirla en la Ec.~\eqref{eq:onda} se obtiene $\omega = v|\mathbf{k}|$, y con $|\mathbf{k}| = 2\pi/\lambda$ y $\omega = 2\pi f$:
+\begin{equation}
+\lambda = \frac{v}{f}
+\label{eq:lambda}
+\end{equation}
+donde $\lambda$ es la longitud de onda en \si{m}. La energía promedio por unidad de volumen de una onda armónica, en \si{J/m^3}, es \parencite{shearer2019}:
+\begin{equation}
+\bar{e} = \frac{1}{2}\rho\,\omega^2 U^2
+\label{eq:energia}
+\end{equation}
+donde $\rho$ es la densidad del medio en \si{kg/m^3}.
+
+% ================= 7 OBJETIVOS =================
+\section{Objetivos}
+\textbf{Objetivo general.} Analizar con la serie y la transformada de Fourier los registros del USGS y 20 sismos reales de México para separar la onda del sismo del ruido ambiental, interpretar el resultado con campos físicos y ponerlo al alcance de cualquier persona en un prototipo web, valorando su aporte a la alerta temprana en comunidades vulnerables.
+
+\textbf{Objetivos específicos.}
+\begin{enumerate}
+\item Calcular la serie de Fourier del registro del sensor para identificar sus armónicos y la energía de cada uno.
+\item Ajustar a mano, por mínimos cuadrados, una onda a cada registro y obtener su amplitud y su fase.
+\item Calcular el cociente de energía y la longitud de onda de la componente sísmica, e interpretarlas con campos escalares y vectoriales y con la literatura científica.
+\item Aplicar la transformada de Fourier por ventanas y la sustracción espectral a 20 sismos reales, y medir cuánto mejora la relación señal-ruido.
+\item Desarrollar y publicar un prototipo web que muestre la separación de cada sismo de forma sencilla.
+\end{enumerate}
+
+% ================= 8 HIPÓTESIS =================
+\section{Hipótesis}
+La componente dominante del registro del sensor tiene mucha más energía que la del registro ambiental. Es decir, el cociente de energía de la Ec.~\eqref{eq:R} es mucho mayor que 1.
+
+\textbf{Racionalidad.} Durante un sismo, el suelo se mueve mucho más que en reposo. El ruido ambiental puede variar entre estaciones y momentos de registro \parencite{peterson1993,mcnamara2004}. Si ambos registros se describen con una onda, la diferencia debe aparecer en la amplitud. Como la energía crece con el cuadrado de la amplitud, la diferencia en energía debe ser todavía mayor.
+
+\textbf{Hipótesis de la fase 2.} En registros reales, restar el ruido estimado antes de la onda P aumenta la relación señal-ruido de la Ec.~\eqref{eq:snr} en todos los sismos analizados.
+
+\textbf{Racionalidad.} El ruido de una estación cambia poco en unos minutos \parencite{mcnamara2004}. Por eso su espectro antes del sismo es una buena estimación del que sigue presente durante el sismo.
+
+% ================= 9 METODOLOGÍA =================
+\section{Metodología}
+
+\subsection{Supuestos}
+\begin{itemize}
+\item Cada registro se describe con una serie de Fourier. Su componente dominante se ajusta con una sola onda.
+\item El registro ambiental representa el ruido del sensor, aunque viene de otra estación y de otro momento.
+\item Ambos registros tienen el mismo periodo dominante $T$, medido en los datos.
+\item El medio es homogéneo y bidimensional, con $\rho = \SI{2700}{kg/m^3}$ y $v = \SI{4500}{m/s}$ \parencite{expediente}.
+\item Al llegar al sensor, la onda se comporta como una onda plana.
+\item Los datos miden aceleración en unidades normalizadas.
+\item Ambos registros usan la misma escala de normalización. Sin ella, la comparación de amplitudes y energías no es válida.
+\end{itemize}
+
+\subsection{Modelo conceptual}
+La Figura~\ref{fig:conceptual} resume el modelo. El sensor mide la suma del sismo y del ruido. La serie de Fourier muestra qué armónicos dominan. La regresión da la amplitud, la frecuencia y la fase. Con ellas se compara la energía y se calcula la longitud de onda.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{conceptual.pdf}
+\caption{Modelo conceptual del proyecto. \fuente}
+\label{fig:conceptual}
+\end{figure}
+
+\subsection{Balance general}
+La señal que mide el sensor es la suma de dos partes:
+\begin{equation}
+\underbrace{x(t)}_{\text{señal del sensor}} = \underbrace{s(t)}_{\text{onda del sismo}} + \underbrace{r(t)}_{\text{ruido ambiental}}
+\label{eq:balance}
+\end{equation}
+donde las tres señales son aceleraciones en unidades normalizadas.
+
+\subsection{Desarrollo de cada término}
+\textbf{Señal del sensor.} Se escribe como la serie de la Ec.~\eqref{eq:fourier}. Si un armónico concentra casi toda la energía, Ec.~\eqref{eq:pn}, se aproxima con una onda. Con la Ec.~\eqref{eq:reg} y $\omega = 2\pi/T$:
+\begin{equation}
+x_i \approx c_x + a_x\cos(\omega t_i) + b_x\sin(\omega t_i), \qquad i = 0, 1, \dots, 20
+\label{eq:modx}
+\end{equation}
+
+\textbf{Ruido ambiental.} Se modela igual, con los datos de la estación sin sismo:
+\begin{equation}
+r_j \approx c_r + a_r\cos(\omega t_j) + b_r\sin(\omega t_j), \qquad j = 0, 1, \dots, 15
+\label{eq:modr}
+\end{equation}
+
+\textbf{Energía.} La Ec.~\eqref{eq:energia} usa el desplazamiento, pero los datos son aceleraciones. En una onda armónica la aceleración es $-\omega^2$ veces el desplazamiento, así que $U = A/\omega^2$:
+\[
+\bar{e} = \frac{1}{2}\rho\,\omega^2\left(\frac{A}{\omega^2}\right)^2 = \frac{\rho A^2}{2\omega^2}
+\]
+Al dividir la energía del sensor entre la del ruido, la densidad se cancela:
+\begin{equation}
+R = \frac{\bar{e}_x}{\bar{e}_r} = \Bigg(\frac{\overbrace{A_x}^{\text{sensor}}\ \omega_r}{\underbrace{A_r}_{\text{ruido}}\ \omega_x}\Bigg)^{2}
+\label{eq:R}
+\end{equation}
+donde $R$ no tiene unidades.
+
+\subsection{Modelo final}
+Con el mismo periodo para ambos registros, $\omega_x = \omega_r = \omega$, el modelo final son las Ecs.~\eqref{eq:modx} y \eqref{eq:modr} junto con:
+\[
+R = \left(\frac{A_x}{A_r}\right)^2
+\]
+\begin{equation}
+\lambda = vT
+\label{eq:lamT}
+\end{equation}
+La frecuencia angular se fija a partir del periodo estimado, $\omega = 2\pi/T$. La regresión calcula la amplitud y la fase con esa frecuencia previamente elegida. La Tabla~\ref{tab:simbolos} define los símbolos.
+
+\begin{table}[H]
+\centering
+\small
+\begin{tabular}{lll}
+\toprule
+Símbolo & Significado & Unidades\\
+\midrule
+$t_i$, $t_j$ & Tiempo de cada dato & \si{s}\\
+$x_i$, $r_j$ & Datos del sensor y del ambiente & Aceleración normalizada\\
+$c$, $a$, $b$ & Parámetros de la regresión & Aceleración normalizada\\
+$A$ & Amplitud de la onda & Aceleración normalizada\\
+$\varphi$ & Fase de la onda & \si{rad}\\
+$T$ & Periodo dominante & \si{s}\\
+$\omega$ & Frecuencia angular, $2\pi/T$ & \si{rad/s}\\
+$A_n$, $p_n$ & Amplitud y fracción de energía del armónico $n$ & Normalizada, adimensional\\
+$R$ & Cociente de energía sensor/ruido & Adimensional\\
+$v$ & Velocidad de propagación & \si{m/s}\\
+$\lambda$ & Longitud de onda & \si{m}\\
+\bottomrule
+\end{tabular}
+\caption{Símbolos del modelo final y del cálculo de constantes.}
+\label{tab:simbolos}
+\end{table}
+
+\subsection{Procedimiento}
+\begin{enumerate}
+\item Graficar los datos de la Tabla~\ref{tab:datos}. Sirve para ver su forma y proponer el modelo.
+\item Calcular $a_n$ y $b_n$ con las Ecs.~\eqref{eq:an} y \eqref{eq:bn}. Sirve para encontrar el armónico dominante.
+\item Calcular $p_n$ con la Ec.~\eqref{eq:pn}. Sirve para justificar el ajuste de una sola onda.
+\item Medir $T$ entre dos picos y calcular $\omega$. Sirve para fijar la frecuencia de la regresión.
+\item Resolver las ecuaciones normales, Ec.~\eqref{eq:normal}. Sirve para obtener $c$, $a$ y $b$ de cada registro.
+\item Calcular $A$ y $\varphi$ con la Ec.~\eqref{eq:Aphi} y su error con la Ec.~\eqref{eq:ee}.
+\item Calcular $R$ con la Ec.~\eqref{eq:R}. Sirve para responder la pregunta de investigación.
+\item Calcular $\lambda$ con la Ec.~\eqref{eq:lamT}. Sirve para interpretar la propagación.
+\item Comparar los resultados con la literatura de la Tabla~\ref{tab:arte}. Sirve para evaluar su validez.
+\end{enumerate}
+
+\subsection{Extensión a registros reales}
+La fase 2 sigue los mismos pasos lógicos que la fase 1. Primero se mira el espectro, luego se separa y al final se valida. Cambian los datos y la herramienta. Todo está en el script \texttt{sismos\_fourier.py} (Anexo~B), que usa ObsPy para descargar y preparar los datos \parencite{obspy2010}.
+\begin{enumerate}
+\item \textbf{Catálogo.} Se toman 20 sismos de México con $M \geq 6.8$ del catálogo del USGS \parencite{comcat}. Se eligieron los más conocidos con registro disponible.
+\item \textbf{Registros.} Se descarga el canal vertical BHZ (20 muestras por segundo) de la estación G.UNM desde EarthScope \parencite{geoscope}. Si no hubiera datos, el script busca una estación de la red del Servicio Sismológico Nacional \parencite{ssn}.
+\item \textbf{Preparación.} Se quita la tendencia y se corrige la respuesta del instrumento para obtener velocidad en \si{m/s}. Se deja la banda de 0.04 a \SI{8}{Hz}. Se recorta de 5 minutos antes a 10 minutos después de la onda P, calculada con el modelo iasp91.
+\item \textbf{Espectrograma.} Se aplica la Ec.~\eqref{eq:stft} con ventanas de \SI{25.6}{s} y traslape de \SI{75}{\percent}.
+\item \textbf{Ruido.} Se estima $P_R(k)$ con la Ec.~\eqref{eq:pruido}, usando solo las ventanas que terminan \SI{40}{s} antes de la onda P. Ese margen evita que el sismo se cuele en la estimación.
+\item \textbf{Resta.} Se aplica la ganancia de la Ec.~\eqref{eq:ganancia} y la transformada inversa.
+\item \textbf{Medición.} Se calcula la SNR, Ec.~\eqref{eq:snr}, en los 3 minutos después de la P y en sus primeros \SI{10}{s}, que son los que usa una alerta temprana.
+\item \textbf{Validación.} Se prueba con un sismo sintético de forma conocida. También se suma ruido real a cada sismo limpio a distintos niveles. Para alargar ese ruido se usan sustitutos de Fourier, que conservan su espectro y cambian sus fases al azar \parencite{theiler1992}.
+\end{enumerate}
+La Tabla~\ref{tab:parametros} resume los parámetros.
+
+\begin{table}[H]
+\centering
+\small
+\begin{tabular}{lll}
+\toprule
+Parámetro & Valor & Razón\\
+\midrule
+Ventana de la STFT, $L$ & 512 datos (\SI{25.6}{s}) & Resuelve el pico de microsismos de 0.1 a \SI{0.35}{Hz}\\
+Traslape & \SI{75}{\percent} & Reconstrucción suave con la ventana de Hann\\
+Sobresustracción, $\beta$ & 2 & Valor típico de \textcite{berouti1979}\\
+Piso espectral, $g_{\min}$ & 0.02 & Evita ganancias de cero exacto\\
+Ventana de ruido & de \SI{-280}{s} a \SI{-40}{s} & Solo ruido, sin fuga del sismo\\
+Banda de análisis & 0.04 a \SI{8}{Hz} & Periodos que resuelve la ventana\\
+\bottomrule
+\end{tabular}
+\caption{Parámetros del método de la fase 2.}
+\label{tab:parametros}
+\end{table}
+
+\subsection{Prototipo de software}
+El prototipo \textit{Sismo o ruido} es una página web estática \parencite{prototipo}. El script de Python exporta, por cada sismo, la señal cruda, el sismo y el ruido separados, sus espectros y sus espectrogramas. La página los dibuja en el navegador con HTML, CSS y JavaScript, sin servidor ni inteligencia artificial. Se publica en Vercel y su código está en GitHub. Se diseñó para personas sin conocimientos del tema. Por eso usa poco texto, un mapa para elegir y un solo botón para separar. También permite escuchar el sismo acelerado 400 veces, una técnica de divulgación llamada audificación \parencite{kilb2012}.
+
+% ================= 10 TÉCNICAS =================
+\section{Técnicas y herramientas de ingeniería empleadas}
+\begin{itemize}
+\item \textbf{Análisis de Fourier discreto:} descompone cada registro en armónicos y mide su energía.
+\item \textbf{Mínimos cuadrados lineales:} ajusta la onda dominante con ecuaciones normales resueltas a mano.
+\item \textbf{Propagación de incertidumbre:} da el error de cada resultado a partir del error de los datos y del ajuste.
+\item \textbf{Análisis vectorial:} gradiente, divergencia, rotacional y ecuación de onda para la lectura física.
+\item \textbf{Revisión de literatura:} búsqueda y lectura crítica de artículos indexados.
+\item \textbf{Transformada de Fourier rápida y de tiempo corto:} espectros y espectrogramas de registros largos.
+\item \textbf{Sustracción espectral:} estimación y resta del ruido en cada frecuencia.
+\item \textbf{Densidad espectral de potencia:} método de \textcite{welch1967} para comparar el ruido con los modelos de \textcite{peterson1993}.
+\item \textbf{Validación con sustitutos de Fourier:} ruido real con el mismo espectro para probar el método a distintos niveles.
+\item \textbf{Desarrollo web:} HTML, CSS y JavaScript, con publicación continua en Vercel y control de versiones en GitHub.
+\item \textbf{Software:} Python 3 con NumPy, SciPy, Matplotlib y ObsPy (Anexo~B), y \LaTeX{} para el reporte.
+\end{itemize}
+
+% ================= 11 INFRAESTRUCTURA =================
+\section{Infraestructura}
+El proyecto es teórico y computacional. No requiere laboratorio ni equipo de medición. Se usaron computadoras personales del equipo y la conexión a internet del campus para consultar las bases de datos científicas. Los registros reales se descargaron de los servidores públicos FDSN del USGS y de EarthScope. El prototipo vive en la plataforma gratuita de Vercel y el código en GitHub.
+
+% ================= 12 RECURSOS =================
+\section{Recursos utilizados}
+\begin{table}[H]
+\centering
+\small
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{3.2cm}X}
+\toprule
+Tipo & Recurso\\
+\midrule
+Datos & Dos registros del expediente del USGS: 21 y 16 datos, cada \SI{0.4}{s} \parencite{expediente}. Catálogo del USGS y registros de la estación G.UNM de 20 sismos \parencite{comcat,geoscope}.\\
+Parámetros & Densidad, velocidad y profundidad del medio, dados por el USGS.\\
+Equipo & Computadoras personales. No se usaron materiales, reactivos ni sensores.\\
+Software & Python 3, NumPy, SciPy, Matplotlib, ObsPy, \LaTeX, Vercel y GitHub. Todos son gratuitos.\\
+Información & Artículos de IEEE Xplore, ScienceDirect, Nature, Science Advances y SSA, y libros de texto.\\
+Humanos & Tres integrantes del equipo y la asesoría del profesor.\\
+\bottomrule
+\end{tabularx}
+\caption{Recursos utilizados.}
+\label{tab:recursos}
+\end{table}
+
+% ================= 13 RESULTADOS =================
+\section{Resultados}
+
+\subsection{Datos}
+La Tabla~\ref{tab:datos} muestra los registros. Los valores tienen dos decimales. Si fueron redondeados al centésimo, $\pm 0.005$ es su límite de redondeo y no una incertidumbre instrumental. El expediente menciona un muestreo de \SI{50}{Hz}, pero la tabla trae un dato cada \SI{0.4}{s}. Con ese intervalo solo se observan frecuencias de hasta $f_{\max} = \SI{1.25}{Hz}$. La Figura~\ref{fig:datos} muestra los datos.
+
+\begin{table}[H]
+\centering
+\small
+\begin{tabular}{ccc@{\hspace{1.5cm}}ccc}
+\toprule
+$t$ (s) & Sensor $x_i$ & Ambiental $r_j$ & $t$ (s) & Sensor $x_i$ & Ambiental $r_j$\\
+\midrule
+0.0 & 0.02 & 0.03 & 4.4 & $-0.04$ & 0.06\\
+0.4 & 0.08 & 0.05 & 4.8 & 0.18 & 0.07\\
+0.8 & 0.21 & 0.07 & 5.2 & 0.33 & 0.05\\
+1.2 & 0.35 & 0.04 & 5.6 & 0.39 & 0.01\\
+1.6 & 0.41 & 0.02 & 6.0 & 0.27 & $-0.03$\\
+2.0 & 0.29 & $-0.01$ & 6.4 & 0.05 & --\\
+2.4 & 0.10 & $-0.05$ & 6.8 & $-0.17$ & --\\
+2.8 & $-0.12$ & $-0.06$ & 7.2 & $-0.34$ & --\\
+3.2 & $-0.31$ & $-0.04$ & 7.6 & $-0.40$ & --\\
+3.6 & $-0.38$ & $-0.01$ & 8.0 & $-0.22$ & --\\
+4.0 & $-0.25$ & 0.03 & & & \\
+\bottomrule
+\end{tabular}
+\caption{Registros del USGS en unidades normalizadas de aceleración (límite de redondeo $\pm 0.005$).}
+\label{tab:datos}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{datos.pdf}
+\caption{Datos de la Tabla~\ref{tab:datos}. Fuente: elaboración propia con datos del USGS.}
+\label{fig:datos}
+\end{figure}
+
+\subsection{Coeficientes de Fourier}
+Con los 21 datos del sensor, $T_0 = \SI{8.4}{s}$ y $a_0 = 0.021$. La Tabla~\ref{tab:fourier} muestra los primeros seis armónicos. Los demás aportan menos del \SI{0.1}{\percent} cada uno (Anexo~C).
+
+\begin{table}[H]
+\centering
+\begin{tabular}{ccrrrcr}
+\toprule
+$n$ & $f_n$ (Hz) & $T_n$ (s) & $a_n$ & $b_n$ & $A_n$ & $p_n$ (\%)\\
+\midrule
+1 & 0.119 & 8.40 & 0.008 & 0.041 & 0.042 & 1.3\\
+\textbf{2} & \textbf{0.238} & \textbf{4.20} & $\mathbf{-0.147}$ & \textbf{0.333} & \textbf{0.364} & \textbf{94.8}\\
+3 & 0.357 & 2.80 & 0.047 & $-0.034$ & 0.058 & 2.4\\
+4 & 0.476 & 2.10 & 0.031 & $-0.007$ & 0.031 & 0.7\\
+5 & 0.595 & 1.68 & 0.018 & $-0.008$ & 0.019 & 0.3\\
+6 & 0.714 & 1.40 & 0.024 & $-0.00049$ & 0.024 & 0.4\\
+\bottomrule
+\end{tabular}
+\caption{Coeficientes de Fourier del registro del sensor.}
+\label{tab:fourier}
+\end{table}
+
+\textit{Ejemplo de sustitución:} $a_2 = \frac{2}{21}\sum x_i\cos(2\omega_0 t_i) = \frac{2}{21}(-1.548) = -0.147$.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\textwidth]{espectro.pdf}
+\caption{Amplitud de cada armónico de ambos registros. \fuente}
+\label{fig:espectro}
+\end{figure}
+
+El armónico $n = 2$ concentra el \SI{94.8}{\percent} de la energía. En forma compleja, Ec.~\eqref{eq:cn}, $c_2 = -0.074 - 0.166\,i$, con módulo $0.182 = A_2/2$ y argumento \SI{-1.99}{rad}. En el registro ambiental la energía se reparte entre $n=1$ y $n=2$, porque su ventana de Fourier de \SI{6.4}{s} no es múltiplo de su periodo. En el registro ambiental transcurren \SI{6.0}{s} entre la primera y la última muestra.
+
+En el análisis de Fourier, las 21 muestras del sensor forman una ventana de \SI{8.4}{s}. Su segundo armónico tiene un periodo de \SI{4.2}{s}. Al medir directamente la distancia entre dos crestas consecutivas, se obtienen \SI{4.0}{s} en ambos registros. Este último valor se usó para ajustar las dos curvas.
+
+\subsection{Periodo y frecuencia}
+El periodo se estima con la distancia entre dos picos consecutivos. La frecuencia angular es $\omega = 2\pi/T$.
+
+En el análisis de Fourier, las 21 muestras del sensor forman una ventana de \SI{8.4}{s}. Su segundo armónico tiene un periodo de \SI{4.2}{s}. Al medir directamente la distancia entre dos crestas consecutivas, se obtienen \SI{4.0}{s} en ambos registros. Este último valor se usó para ajustar las dos curvas.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{lccc}
+\toprule
+Registro & Picos (s) & $T$ (s) & $\omega$ (rad/s)\\
+\midrule
+Sensor & 1.6 y 5.6 & $\approx 4.0$ & $\approx 1.571$\\
+Ambiental & 0.8 y 4.8 & $\approx 4.0$ & $\approx 1.571$\\
+\bottomrule
+\end{tabular}
+\caption{Periodo y frecuencia angular de cada registro.}
+\label{tab:periodo}
+\end{table}
+
+\textit{Ejemplo de sustitución:} $\omega = 2\pi/\SI{4.0}{s} = \SI{1.571}{rad/s}$.
+
+\subsection{Amplitud y fase}
+\begin{table}[H]
+\centering
+\small
+\begin{tabular}{lcccccc}
+\toprule
+Registro & $c$ & $a$ & $b$ & $A$ & $\varphi$ (rad) & $R^2$\\
+\midrule
+Sensor & $0.033 \pm 0.015$ & $-0.237 \pm 0.020$ & $0.278 \pm 0.021$ & $0.365 \pm 0.021$ & $-2.28$ & 0.95\\
+Ambiental & $0.004 \pm 0.002$ & $0.026 \pm 0.002$ & $0.056 \pm 0.002$ & $0.062 \pm 0.002$ & $-1.14$ & 0.98\\
+\bottomrule
+\end{tabular}
+\caption{Parámetros de la regresión trigonométrica con $T = \SI{4.0}{s}$.}
+\label{tab:ajuste}
+\end{table}
+
+Con el periodo fijo de \SI{4.0}{s}, las curvas explican el \SI{94.6}{\percent} de la variación del sensor y el \SI{98.3}{\percent} de la referencia ambiental. La amplitud ajustada del sensor es 5.92 veces la ambiental. Bajo los supuestos del modelo, al elevar esa relación al cuadrado se obtiene un cociente de energía de $35 \pm 5$.
+
+\textit{Ejemplo de sustitución (sensor):} las ecuaciones normales quedan
+\[
+\begin{pmatrix} 21 & 1 & 0\\ 1 & 11 & 0\\ 0 & 0 & 10 \end{pmatrix}
+\begin{pmatrix} c_x\\ a_x\\ b_x \end{pmatrix} =
+\begin{pmatrix} 0.450\\ -2.578\\ 2.776 \end{pmatrix}
+\]
+de donde $b_x = 0.278$, $a_x = -0.237$, $c_x = 0.033$ y $A_x = \sqrt{0.237^2 + 0.278^2} = 0.365$.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{ajuste.pdf}
+\caption{Ajuste de una onda a cada registro. Fuente: elaboración propia con datos del USGS.}
+\label{fig:ajuste}
+\end{figure}
+
+\subsection{Cociente de energía y longitud de onda}
+Como $\omega$ es igual en ambos registros, la incertidumbre de $R$ solo depende de las amplitudes:
+\begin{equation}
+\frac{\delta R}{R} = 2\sqrt{\left(\frac{\delta A_x}{A_x}\right)^2 + \left(\frac{\delta A_r}{A_r}\right)^2}
+\label{eq:dR}
+\end{equation}
+Los errores de las amplitudes y de $R$ corresponden al ajuste con el periodo fijo. La longitud de onda sale de la Ec.~\eqref{eq:lamT} con el periodo estimado.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{lcc}
+\toprule
+Magnitud & Valor & Unidades\\
+\midrule
+Cociente de energía, $R$ & $35 \pm 5$ & --\\
+Longitud de onda, $\lambda$ & $\approx \num{18000}$ & \si{m}\\
+Número de onda, $|\mathbf{k}|$ & $\approx 3.5 \times 10^{-4}$ & \si{rad/m}\\
+\bottomrule
+\end{tabular}
+\caption{Resultados físicos del modelo.}
+\label{tab:fisicos}
+\end{table}
+
+\textit{Ejemplo de sustitución:} $R = (0.365/0.062)^2 = 35$ y $\lambda = (\SI{4500}{m/s})(\SI{4.0}{s}) = \SI{18000}{m}$.
+
+\subsection{Registros reales de 20 sismos}
+La fase 1 dejó una duda. Un periodo de \SI{4}{s} también puede ser ruido del mar. La fase 2 la revisa con registros reales. La Figura~\ref{fig:real_registro} muestra el sismo de Puebla-Morelos de 2017 visto desde Ciudad Universitaria, a \SI{113}{km} del epicentro. El registro crudo se separa en sismo y ruido. Antes de la onda P, el sismo separado queda casi en cero. El ruido separado conserva su forma de antes y después del sismo.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\textwidth]{real_registro.png}
+\caption{Sismo de Puebla-Morelos (19 de septiembre de 2017, $M$ 7.1) en la estación G.UNM. La franja azul es la ventana de ruido. El ruido separado se muestra amplificado. Fuente: elaboración propia con datos del USGS y EarthScope.}
+\label{fig:real_registro}
+\end{figure}
+
+La Figura~\ref{fig:real_espectro} compara los espectros de Fourier de la ventana del sismo y de la ventana de ruido. El sismo está entre 100 y \num{10000} veces por encima del ruido en casi todas las frecuencias. El ruido tiene un pico en la banda de los microsismos y sube otra vez por encima de \SI{1}{Hz}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\textwidth]{real_espectro.png}
+\caption{Espectro de amplitud del sismo de Puebla-Morelos y del ruido previo. La línea punteada marca el periodo de \SI{4}{s} del expediente. \fuente}
+\label{fig:real_espectro}
+\end{figure}
+
+La Figura~\ref{fig:real_peterson} ubica ese ruido entre los modelos de \textcite{peterson1993}. Entre 3 y \SI{10}{s} aparece el pico de los microsismos. Por debajo de \SI{1}{s} el ruido rebasa el modelo de ruido alto. Ese es el ruido urbano de la Ciudad de México. En los 20 sismos, el pico de microsismos tiene una mediana de \SI{6.4}{s}, con un rango de 3.0 a \SI{9.6}{s}. Solo el \SI{14}{\percent} de la energía del ruido cae en esa banda. El resto es ruido más rápido. Esto confirma la duda de la fase 1. El periodo de \SI{4}{s} del expediente cae justo donde el mar también hace ruido.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\textwidth]{real_peterson.png}
+\caption{Densidad espectral del ruido de G.UNM antes del sismo de Puebla-Morelos, con los modelos de ruido mínimo (NLNM) y máximo (NHNM). La franja gris es la banda de microsismos. \fuente}
+\label{fig:real_peterson}
+\end{figure}
+
+La Figura~\ref{fig:real_espectrograma} muestra el espectrograma antes y después de la resta para el mismo sismo. La zona previa a la onda P se apaga y el sismo queda igual.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\textwidth]{real_espectrograma.png}
+\caption{Espectrograma del sismo de Puebla-Morelos antes y después de la sustracción espectral. \fuente}
+\label{fig:real_espectrograma}
+\end{figure}
+
+La Tabla~\ref{tab:sismos} resume los 20 sismos y la Figura~\ref{fig:real_resumen} los compara. La SNR subió en todos. La mejora va de 3.3 a \SI{17.6}{dB}, con un promedio de \SI{10.5}{dB}. Eso es unas 11 veces más potencia del sismo frente al ruido. En los primeros \SI{10}{s} de la onda P, los que usa una alerta, la mejora promedio es de \SI{10.0}{dB}. El caso más difícil es el del Golfo de California de 2012. A \SI{1754}{km} su onda P casi no se distingue del ruido y la mejora en esos segundos es mínima.
+
+{\small\input{tabla_sismos.tex}}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{real_resumen.png}
+\caption{Relación señal-ruido de cada sismo antes y después de la sustracción espectral. \fuente}
+\label{fig:real_resumen}
+\end{figure}
+
+\subsection{Validación}
+La prueba sintética recupera el sismo conocido con una correlación de 0.996. Su SNR pasa de 5.9 a \SI{22.5}{dB}. La Figura~\ref{fig:real_robustez} muestra la prueba con ruido real. Cuando el ruido es tan fuerte como el sismo (\SI{0}{dB}), la correlación con la onda verdadera sube de 0.71 a 0.86. Con ruido tres veces más fuerte (\SI{-5}{dB}), sube de 0.48 a 0.67. Cuando la señal ya es clara, por encima de \SI{10}{dB}, el método no la daña.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textwidth]{real_robustez.png}
+\caption{Correlación entre el sismo real y la señal con ruido, antes y después de separar, para distintos niveles de ruido. Promedio de los 20 sismos. \fuente}
+\label{fig:real_robustez}
+\end{figure}
+
+\subsection{Prototipo \textit{Sismo o ruido}}
+El prototipo está publicado en \url{https://sismo-o-ruido.vercel.app} y funciona en computadora y celular. La Figura~\ref{fig:web} muestra sus dos pantallas principales. La persona elige un sismo en el mapa o en la lista. La ficha muestra su magnitud, su distancia a Ciudad Universitaria y su profundidad. Con el botón \textit{Separar}, la señal registrada se divide en sismo y ruido. Debajo aparecen sus frecuencias, el espectrograma antes y después del filtro y tres cifras clave. Cada señal se puede escuchar. El prototipo usa los mismos resultados de la Tabla~\ref{tab:sismos}, así que cualquier persona puede revisar lo que reporta este documento.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.49\textwidth]{web_portada.png}\hfill
+\includegraphics[width=0.49\textwidth]{web_ficha.png}
+\caption{Prototipo \textit{Sismo o ruido}. A la izquierda, el mapa con los 20 sismos y la estación de CU. A la derecha, la señal del sismo de Puebla-Morelos separada en sismo y ruido. \fuente}
+\label{fig:web}
+\end{figure}
+
+\subsection{Impacto del proyecto}
+\textbf{Técnico.} El método mejora la señal sin entrenar modelos ni usar equipos caros. Corre en segundos en una computadora común. Así puede ser un primer filtro en estaciones con poca capacidad de cómputo.
+
+\textbf{Social.} El prototipo es gratuito y abierto. Explica con imágenes y sonido cómo se distingue un sismo del ruido, sin pedir conocimientos previos. Eso acerca la ciencia de la alerta sísmica a estudiantes y a la población. La confianza en la alerta crece cuando la gente entiende cómo funciona \parencite{allen2018eos}.
+
+\textbf{ODS.} El proyecto apoya el ODS~11, porque busca alertas más confiables para ciudades y comunidades \parencite{onu11}. También apoya el ODS~9, porque aplica innovación matemática a la infraestructura de monitoreo \parencite{onu9}.
+
+\subsection{Discusión crítica}
+\textbf{La hipótesis se cumple con estos datos.} El cociente de energía entre las componentes ajustadas es $35 \pm 5$, bajo los supuestos del modelo. Este resultado permite comparar ambos registros, pero no determinar qué porcentaje del sensor corresponde al sismo, porque el registro ambiental proviene de otra estación y de otro momento.
+
+\textbf{El periodo no separa sismo y ruido.} Ambos registros tienen un periodo de \SI{4}{s}. Ese periodo está en la banda de los microsismos secundarios, causados por el oleaje \parencite{longuet1950,peterson1993}. En datos reales, una componente de \SI{4}{s} podría ser ruido oceánico y no sismo. La diferencia más clara entre ambos registros se observa en la amplitud de sus componentes ajustadas, no en la frecuencia. Los métodos actuales usan además la duración y el cambio en el tiempo \parencite{zhu2019,mousavi2020}.
+
+\textbf{El muestreo limita lo que se puede ver.} Con $\Delta t = \SI{0.4}{s}$ solo se observan frecuencias de hasta \SI{1.25}{Hz}. La energía de un sismo pequeño suele estar en frecuencias más altas \parencite{brune1970}. Los sistemas de alerta reales registran a 100 muestras por segundo o más \parencite{allen2019}. Por eso estos datos describen un caso didáctico y no una señal completa. Los registros reales, con 20 muestras por segundo, ya llegan a \SI{10}{Hz}.
+
+\textbf{Los datos reales confirman la crítica.} El ruido real sí tiene un pico en la banda de \SI{4}{s} a \SI{9}{s}. Un filtro que solo mirara la frecuencia confundiría ese ruido con un sismo. La sustracción espectral resuelve el problema porque usa el tiempo. Aprende el ruido antes de la onda P y lo resta después.
+
+\textbf{Lo que el método no hace.} Supone que el ruido no cambia durante el sismo. El ruido que llega mientras tiembla queda mezclado con el sismo, porque en esas celdas la señal es mucho mayor. Los 20 sismos son grandes, así que su SNR inicial ya es alta. El método aporta más en sismos pequeños o lejanos, como el del Golfo de California, que son justo los más difíciles.
+
+\textbf{Lectura física.} La longitud de onda estimada, de unos \SI{18}{km}, es del mismo orden que la profundidad de análisis de \SI{15}{km}. Los registros disponibles no permiten calcular las variaciones espaciales del desplazamiento. Por ello, la interpretación de las ondas P y S es teórica y no constituye una separación realizada con estos datos.
+
+
+% ================= 14 CONCLUSIONES =================
+\section{Conclusiones}
+\begin{itemize}
+\item El segundo armónico, de periodo \SI{4.2}{s}, concentra el \SI{94.8}{\percent} de la variación de la aceleración del sensor respecto a su media. Esto justifica aproximar el registro con una sola onda.
+\item La regresión trigonométrica da amplitudes de $0.365 \pm 0.021$ (sensor) y $0.062 \pm 0.002$ (ruido). El cociente de energía entre las componentes ajustadas es $35 \pm 5$, así que la hipótesis se cumple bajo los supuestos del modelo.
+\item La longitud de onda es de aproximadamente \SI{18.0}{km}, del mismo orden que la profundidad de análisis.
+\item La frecuencia sola no separa sismo y ruido, porque ambos caen en la banda de los microsismos. En datos reales se necesitan la amplitud, la duración, un muestreo más fino y varios sensores.
+\item La transformada de Fourier es la misma serie de Fourier calculada en ventanas. Esa extensión permitió analizar registros reales de 15 minutos.
+\item La sustracción espectral mejoró la relación señal-ruido en los 20 sismos reales, en promedio \SI{10.5}{dB}. La hipótesis de la fase 2 se cumple.
+\item El ruido de Ciudad Universitaria tiene un pico oceánico de unos \SI{6}{s}, pero lo domina el ruido urbano de 1 a \SI{8}{Hz}.
+\item El prototipo \textit{Sismo o ruido} pone estos resultados al alcance de cualquier persona, de forma gratuita y sin conocimientos previos.
+\end{itemize}
+
+El análisis permitió identificar y comparar las componentes dominantes de los registros del expediente. Con registros reales, la información que faltaba fue el tiempo. Saber cuándo solo hay ruido permitió separarlo del sismo en cada frecuencia.
+
+\subsection{Limitaciones}
+El análisis está limitado por la corta duración de los registros y por el intervalo de muestreo disponible, que restringe las frecuencias que pueden identificarse. Además, el registro ambiental fue obtenido en condiciones distintas a las del sensor, por lo que su uso permite una comparación aproximada. Los supuestos de una onda dominante y un medio homogéneo simplifican el procedimiento, aunque no describen todos los cambios de una señal sísmica real. Por ello, los resultados deben interpretarse dentro de las condiciones del modelo. En la fase 2 se usó una sola estación y una sola componente. El método supone que el ruido no cambia durante el sismo. Los 20 sismos son grandes, así que no prueban el caso de sismos pequeños.
+
+\subsection{Recomendaciones}
+Para mejorar el análisis, se recomienda utilizar registros de mayor duración y frecuencia de muestreo, junto con mediciones de ruido de la misma estación. También conviene verificar que las señales tengan una escala comparable y aplicar el procedimiento a distintos registros con y sin sismo. Esto permitiría evaluar si las diferencias observadas se mantienen y qué tan útil resulta el modelo para distinguir ambos casos antes de considerar una aplicación de alerta temprana. Como siguiente paso, conviene probar el método con sismos pequeños, con varias estaciones y con un ruido que se actualice durante el registro, como en \textcite{mousavi2016}.
+
+% ================= BIBLIOGRAFÍA =================
+\printbibliography[title={Bibliografía}]
+
+% ================= ANEXOS =================
+\clearpage
+\appendix
+\renewcommand{\thesection}{\Alph{section}}
+\section*{Anexos}
+\addcontentsline{toc}{section}{Anexos}
+
+\subsection*{Anexo A. Cronograma}
+\addcontentsline{toc}{subsection}{Anexo A. Cronograma}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\textwidth]{gantt.pdf}
+\caption{Cronograma por semana del semestre. Las barras oscuras son actividades terminadas. \fuente}
+\label{fig:gantt}
+\end{figure}
+
+\subsection*{Anexo B. Código de verificación}
+\addcontentsline{toc}{subsection}{Anexo B. Código de verificación}
+El siguiente código en Python reproduce los resultados de la fase 1.
+\lstinputlisting{analisis.py}
+El script de la fase 2 descarga los 20 sismos, aplica el método, hace las pruebas y exporta las figuras y los datos del prototipo. También está en \url{https://github.com/Mmateo101/video-fismat}.
+\lstinputlisting{sismos_fourier.py}
+
+\subsection*{Anexo C. Coeficientes de Fourier completos}
+\addcontentsline{toc}{subsection}{Anexo C. Coeficientes de Fourier completos}
+\begin{table}[H]
+\centering
+\begin{tabular}{crrcr}
+\toprule
+$n$ & $a_n$ & $b_n$ & $A_n$ & $p_n$ (\%)\\
+\midrule
+7 & 0.007 & $-0.004$ & 0.008 & $<0.1$\\
+8 & 0.003 & $-0.004$ & 0.006 & $<0.1$\\
+9 & 0.004 & $-0.002$ & 0.005 & $<0.1$\\
+10 & 0.004 & $-0.005$ & 0.006 & $<0.1$\\
+\bottomrule
+\end{tabular}
+\caption{Armónicos 7 a 10 del registro del sensor.}
+\label{tab:fourier2}
+\end{table}
+
+\end{document}

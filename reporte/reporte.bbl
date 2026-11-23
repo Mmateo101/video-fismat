@@ -1,0 +1,3075 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{apa/apasortcite//global/global/global}
+    \entry{allen2019}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=deeea5f8151a648e0c34d3d59041953a}{%
+           family={Allen},
+           familyi={A\bibinitperiod},
+           given={Richard\bibnamedelima M.},
+           giveni={R\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=77be65052eb6e079cd54f1709a62cd2d}{%
+           family={Melgar},
+           familyi={M\bibinitperiod},
+           given={Diego},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{bc96655c942e0fffa2723071b01b31c2}
+      \strng{fullhash}{bc96655c942e0fffa2723071b01b31c2}
+      \strng{fullhashraw}{bc96655c942e0fffa2723071b01b31c2}
+      \strng{bibnamehash}{bc96655c942e0fffa2723071b01b31c2}
+      \strng{authorbibnamehash}{bc96655c942e0fffa2723071b01b31c2}
+      \strng{authornamehash}{bc96655c942e0fffa2723071b01b31c2}
+      \strng{authorfullhash}{bc96655c942e0fffa2723071b01b31c2}
+      \strng{authorfullhashraw}{bc96655c942e0fffa2723071b01b31c2}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Annual Review of Earth and Planetary Sciences}
+      \field{title}{Earthquake early warning: Advances, scientific challenges, and societal needs}
+      \field{volume}{47}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \field{pages}{361\bibrangedash 388}
+      \range{pages}{28}
+      \verb{doi}
+      \verb 10.1146/annurev-earth-053018-060457
+      \endverb
+    \endentry
+    \entry{allen2018eos}{article}{}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=deeea5f8151a648e0c34d3d59041953a}{%
+           family={Allen},
+           familyi={A\bibinitperiod},
+           given={Richard\bibnamedelima M.},
+           giveni={R\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bf29d1296b3bbb823940d40f3fc96c3c}{%
+           family={Cochran},
+           familyi={C\bibinitperiod},
+           given={Elizabeth\bibnamedelima S.},
+           giveni={E\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f6efe026f309244ff47ea73497df43cd}{%
+           family={Huggins},
+           familyi={H\bibinitperiod},
+           given={Tom},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=de41740cd7c780e61a05911312e8b967}{%
+           family={Miles},
+           familyi={M\bibinitperiod},
+           given={Scott},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a74a1feba12aae703b2ae6d87308916f}{%
+           family={Otegui},
+           familyi={O\bibinitperiod},
+           given={Diego},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{8a5e9a73537fd6c37b4695ad75d2fe3c}
+      \strng{fullhash}{dcd3c77d32bcdd50d7ba7c19b9b8a2af}
+      \strng{fullhashraw}{dcd3c77d32bcdd50d7ba7c19b9b8a2af}
+      \strng{bibnamehash}{dcd3c77d32bcdd50d7ba7c19b9b8a2af}
+      \strng{authorbibnamehash}{dcd3c77d32bcdd50d7ba7c19b9b8a2af}
+      \strng{authornamehash}{8a5e9a73537fd6c37b4695ad75d2fe3c}
+      \strng{authorfullhash}{dcd3c77d32bcdd50d7ba7c19b9b8a2af}
+      \strng{authorfullhashraw}{dcd3c77d32bcdd50d7ba7c19b9b8a2af}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Eos}
+      \field{title}{Lessons from {Mexico's} earthquake early warning system}
+      \field{volume}{99}
+      \field{year}{2018}
+      \field{dateera}{ce}
+      \verb{doi}
+      \verb 10.1029/2018EO105095
+      \endverb
+    \endentry
+    \entry{berouti1979}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=75aa9fcf7a004459c0e3453e68fb1833}{%
+           family={Berouti},
+           familyi={B\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c6a683eee0f820c41a4f039b41668373}{%
+           family={Schwartz},
+           familyi={S\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3708bcd8410b178570f0e6c63236222f}{%
+           family={Makhoul},
+           familyi={M\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{e7c37fabd9a5332e97be992b551a2959}
+      \strng{fullhash}{739480ecab199b8ff6caec89d56db713}
+      \strng{fullhashraw}{739480ecab199b8ff6caec89d56db713}
+      \strng{bibnamehash}{739480ecab199b8ff6caec89d56db713}
+      \strng{authorbibnamehash}{739480ecab199b8ff6caec89d56db713}
+      \strng{authornamehash}{e7c37fabd9a5332e97be992b551a2959}
+      \strng{authorfullhash}{739480ecab199b8ff6caec89d56db713}
+      \strng{authorfullhashraw}{739480ecab199b8ff6caec89d56db713}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP)}
+      \field{title}{Enhancement of speech corrupted by acoustic noise}
+      \field{volume}{4}
+      \field{year}{1979}
+      \field{dateera}{ce}
+      \field{pages}{208\bibrangedash 211}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1109/ICASSP.1979.1170788
+      \endverb
+    \endentry
+    \entry{obspy2010}{article}{}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=a4ccbb6fdd39c1346e2c80783b5044d9}{%
+           family={Beyreuther},
+           familyi={B\bibinitperiod},
+           given={Moritz},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=260d3f673529e7a467ed1b0e6f872d67}{%
+           family={Barsch},
+           familyi={B\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2ad0525fe321d79e5cd9c32144ca8bd7}{%
+           family={Krischer},
+           familyi={K\bibinitperiod},
+           given={Lion},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=595e3b9041aa4d12003ba8696317dfa1}{%
+           family={Megies},
+           familyi={M\bibinitperiod},
+           given={Tobias},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a657e8cd49727e07eafca92e52461579}{%
+           family={Behr},
+           familyi={B\bibinitperiod},
+           given={Yannik},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=dda9b4dc0df5b09d5fdd7db5411bc2cb}{%
+           family={Wassermann},
+           familyi={W\bibinitperiod},
+           given={Joachim},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{667003198c46dce2f59769f2e7665bb2}
+      \strng{fullhash}{04e9d1cf02b8d301026e1d4b37558ec2}
+      \strng{fullhashraw}{04e9d1cf02b8d301026e1d4b37558ec2}
+      \strng{bibnamehash}{04e9d1cf02b8d301026e1d4b37558ec2}
+      \strng{authorbibnamehash}{04e9d1cf02b8d301026e1d4b37558ec2}
+      \strng{authornamehash}{667003198c46dce2f59769f2e7665bb2}
+      \strng{authorfullhash}{04e9d1cf02b8d301026e1d4b37558ec2}
+      \strng{authorfullhashraw}{04e9d1cf02b8d301026e1d4b37558ec2}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Seismological Research Letters}
+      \field{number}{3}
+      \field{title}{{ObsPy}: A {Python} toolbox for seismology}
+      \field{volume}{81}
+      \field{year}{2010}
+      \field{dateera}{ce}
+      \field{pages}{530\bibrangedash 533}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1785/gssrl.81.3.530
+      \endverb
+    \endentry
+    \entry{boll1979}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=162b4b3b502362949db9d7e202c38fba}{%
+           family={Boll},
+           familyi={B\bibinitperiod},
+           given={Steven\bibnamedelima F.},
+           giveni={S\bibinitperiod\bibinitdelim F\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{162b4b3b502362949db9d7e202c38fba}
+      \strng{fullhash}{162b4b3b502362949db9d7e202c38fba}
+      \strng{fullhashraw}{162b4b3b502362949db9d7e202c38fba}
+      \strng{bibnamehash}{162b4b3b502362949db9d7e202c38fba}
+      \strng{authorbibnamehash}{162b4b3b502362949db9d7e202c38fba}
+      \strng{authornamehash}{162b4b3b502362949db9d7e202c38fba}
+      \strng{authorfullhash}{162b4b3b502362949db9d7e202c38fba}
+      \strng{authorfullhashraw}{162b4b3b502362949db9d7e202c38fba}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Acoustics, Speech, and Signal Processing}
+      \field{number}{2}
+      \field{title}{Suppression of acoustic noise in speech using spectral subtraction}
+      \field{volume}{27}
+      \field{year}{1979}
+      \field{dateera}{ce}
+      \field{pages}{113\bibrangedash 120}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1109/TASSP.1979.1163209
+      \endverb
+    \endentry
+    \entry{bono2025}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=c19212a5b953bf8bf298a897576e14a2}{%
+           family={Bono},
+           familyi={B\bibinitperiod},
+           given={Andrea},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{c19212a5b953bf8bf298a897576e14a2}
+      \strng{fullhash}{c19212a5b953bf8bf298a897576e14a2}
+      \strng{fullhashraw}{c19212a5b953bf8bf298a897576e14a2}
+      \strng{bibnamehash}{c19212a5b953bf8bf298a897576e14a2}
+      \strng{authorbibnamehash}{c19212a5b953bf8bf298a897576e14a2}
+      \strng{authornamehash}{c19212a5b953bf8bf298a897576e14a2}
+      \strng{authorfullhash}{c19212a5b953bf8bf298a897576e14a2}
+      \strng{authorfullhashraw}{c19212a5b953bf8bf298a897576e14a2}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eid}{100241}
+      \field{journaltitle}{Applied Computing and Geosciences}
+      \field{title}{Seismic {Intelligence} {Tool}: An extensive multipurpose software for seismic signal analysis}
+      \field{volume}{26}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \verb{doi}
+      \verb 10.1016/j.acags.2025.100241
+      \endverb
+    \endentry
+    \entry{brune1970}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=25bca13fe107f8666fb17c7d723aefff}{%
+           family={Brune},
+           familyi={B\bibinitperiod},
+           given={James\bibnamedelima N.},
+           giveni={J\bibinitperiod\bibinitdelim N\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{25bca13fe107f8666fb17c7d723aefff}
+      \strng{fullhash}{25bca13fe107f8666fb17c7d723aefff}
+      \strng{fullhashraw}{25bca13fe107f8666fb17c7d723aefff}
+      \strng{bibnamehash}{25bca13fe107f8666fb17c7d723aefff}
+      \strng{authorbibnamehash}{25bca13fe107f8666fb17c7d723aefff}
+      \strng{authornamehash}{25bca13fe107f8666fb17c7d723aefff}
+      \strng{authorfullhash}{25bca13fe107f8666fb17c7d723aefff}
+      \strng{authorfullhashraw}{25bca13fe107f8666fb17c7d723aefff}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Geophysical Research}
+      \field{number}{26}
+      \field{title}{Tectonic stress and the spectra of seismic shear waves from earthquakes}
+      \field{volume}{75}
+      \field{year}{1970}
+      \field{dateera}{ce}
+      \field{pages}{4997\bibrangedash 5009}
+      \range{pages}{13}
+    \endentry
+    \entry{cooley1965}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=9a5cfe59165ea73852bf47c17612fc90}{%
+           family={Cooley},
+           familyi={C\bibinitperiod},
+           given={James\bibnamedelima W.},
+           giveni={J\bibinitperiod\bibinitdelim W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9edab5dbc1987bcb98d6de058f00fc47}{%
+           family={Tukey},
+           familyi={T\bibinitperiod},
+           given={John\bibnamedelima W.},
+           giveni={J\bibinitperiod\bibinitdelim W\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{ee74374d9504fa6fb4aa57320b0e47fc}
+      \strng{fullhash}{ee74374d9504fa6fb4aa57320b0e47fc}
+      \strng{fullhashraw}{ee74374d9504fa6fb4aa57320b0e47fc}
+      \strng{bibnamehash}{ee74374d9504fa6fb4aa57320b0e47fc}
+      \strng{authorbibnamehash}{ee74374d9504fa6fb4aa57320b0e47fc}
+      \strng{authornamehash}{ee74374d9504fa6fb4aa57320b0e47fc}
+      \strng{authorfullhash}{ee74374d9504fa6fb4aa57320b0e47fc}
+      \strng{authorfullhashraw}{ee74374d9504fa6fb4aa57320b0e47fc}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Mathematics of Computation}
+      \field{number}{90}
+      \field{title}{An algorithm for the machine calculation of complex {Fourier} series}
+      \field{volume}{19}
+      \field{year}{1965}
+      \field{dateera}{ce}
+      \field{pages}{297\bibrangedash 301}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.1090/S0025-5718-1965-0178586-1
+      \endverb
+    \endentry
+    \entry{cremen2020}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=97338d3c56c7e032d4ce9ef36956b7bb}{%
+           family={Cremen},
+           familyi={C\bibinitperiod},
+           given={Gemma},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=839576978647823eb9ba7ddb8db1d669}{%
+           family={Galasso},
+           familyi={G\bibinitperiod},
+           given={Carmine},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{e89fceff8053ef2c2a84295fc3728553}
+      \strng{fullhash}{e89fceff8053ef2c2a84295fc3728553}
+      \strng{fullhashraw}{e89fceff8053ef2c2a84295fc3728553}
+      \strng{bibnamehash}{e89fceff8053ef2c2a84295fc3728553}
+      \strng{authorbibnamehash}{e89fceff8053ef2c2a84295fc3728553}
+      \strng{authornamehash}{e89fceff8053ef2c2a84295fc3728553}
+      \strng{authorfullhash}{e89fceff8053ef2c2a84295fc3728553}
+      \strng{authorfullhashraw}{e89fceff8053ef2c2a84295fc3728553}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eid}{103184}
+      \field{journaltitle}{Earth-Science Reviews}
+      \field{title}{Earthquake early warning: Recent advances and perspectives}
+      \field{volume}{205}
+      \field{year}{2020}
+      \field{dateera}{ce}
+    \endentry
+    \entry{espinosa1995}{article}{}{}
+      \name{author}{7}{}{%
+        {{un=0,uniquepart=base,hash=5680e97e284bf8c6eeff0b336660aca0}{%
+           family={Espinosa-Aranda},
+           familyi={E\bibinithyphendelim A\bibinitperiod},
+           given={J.\bibnamedelimi M.},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e356d14f54d04458b260065b207e2797}{%
+           family={Jiménez},
+           familyi={J\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a3adc5e79935321522a9f28f878863f7}{%
+           family={Ibarrola},
+           familyi={I\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=20c74f71312e95b041a87b6890643d66}{%
+           family={Alcantar},
+           familyi={A\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=76914d8c6191eca95fe2ae5bb744058b}{%
+           family={Aguilar},
+           familyi={A\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bf212a3db34da97ada9c7e279467262f}{%
+           family={Inostroza},
+           familyi={I\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3948a614569595290b6d4be4098dcf85}{%
+           family={Maldonado},
+           familyi={M\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{d6929489a536ff64f9089f4295c9658d}
+      \strng{fullhash}{4d8f12c46ddb84f147ddbbad079bc656}
+      \strng{fullhashraw}{4d8f12c46ddb84f147ddbbad079bc656}
+      \strng{bibnamehash}{4d8f12c46ddb84f147ddbbad079bc656}
+      \strng{authorbibnamehash}{4d8f12c46ddb84f147ddbbad079bc656}
+      \strng{authornamehash}{d6929489a536ff64f9089f4295c9658d}
+      \strng{authorfullhash}{4d8f12c46ddb84f147ddbbad079bc656}
+      \strng{authorfullhashraw}{4d8f12c46ddb84f147ddbbad079bc656}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Seismological Research Letters}
+      \field{number}{6}
+      \field{title}{Mexico City seismic alert system}
+      \field{volume}{66}
+      \field{year}{1995}
+      \field{dateera}{ce}
+      \field{pages}{42\bibrangedash 53}
+      \range{pages}{12}
+    \endentry
+    \entry{prototipo}{online}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=b4e27c5945d966f598f72b21b28b58ba}{%
+           family={Flores\bibnamedelima Torres},
+           familyi={F\bibinitperiod\bibinitdelim T\bibinitperiod},
+           given={Mateo\bibnamedelima R.},
+           giveni={M\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=acdd09c2047dd0d7a5adf0225b7ce78d}{%
+           family={Sánchez\bibnamedelima Chávez},
+           familyi={S\bibinitperiod\bibinitdelim C\bibinitperiod},
+           given={Víctor\bibnamedelima M.},
+           giveni={V\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0122b33477685b94304c92110c990d21}{%
+           family={Martínez\bibnamedelima Alanis},
+           familyi={M\bibinitperiod\bibinitdelim A\bibinitperiod},
+           given={Sofía},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{45c9a12fe851665e9ece878e2f458160}
+      \strng{fullhash}{062347c4b9527b3a59da6854c41a2309}
+      \strng{fullhashraw}{062347c4b9527b3a59da6854c41a2309}
+      \strng{bibnamehash}{062347c4b9527b3a59da6854c41a2309}
+      \strng{authorbibnamehash}{062347c4b9527b3a59da6854c41a2309}
+      \strng{authornamehash}{45c9a12fe851665e9ece878e2f458160}
+      \strng{authorfullhash}{062347c4b9527b3a59da6854c41a2309}
+      \strng{authorfullhashraw}{062347c4b9527b3a59da6854c41a2309}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Sismo o ruido. Explorador de 20 sismos de México}
+      \field{urlday}{22}
+      \field{urlmonth}{11}
+      \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://sismo-o-ruido.vercel.app
+      \endverb
+      \verb{url}
+      \verb https://sismo-o-ruido.vercel.app
+      \endverb
+    \endentry
+    \entry{fourier1822}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=a70507b718c953f6ae7e28c0ba43cff8}{%
+           family={Fourier},
+           familyi={F\bibinitperiod},
+           given={Joseph},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Firmin Didot}%
+      }
+      \strng{namehash}{a70507b718c953f6ae7e28c0ba43cff8}
+      \strng{fullhash}{a70507b718c953f6ae7e28c0ba43cff8}
+      \strng{fullhashraw}{a70507b718c953f6ae7e28c0ba43cff8}
+      \strng{bibnamehash}{a70507b718c953f6ae7e28c0ba43cff8}
+      \strng{authorbibnamehash}{a70507b718c953f6ae7e28c0ba43cff8}
+      \strng{authornamehash}{a70507b718c953f6ae7e28c0ba43cff8}
+      \strng{authorfullhash}{a70507b718c953f6ae7e28c0ba43cff8}
+      \strng{authorfullhashraw}{a70507b718c953f6ae7e28c0ba43cff8}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Théorie analytique de la chaleur}
+      \field{year}{1822}
+      \field{dateera}{ce}
+    \endentry
+    \entry{geoscope}{dataset}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=80d85037aabcd253df56420407f66ff4}{%
+           family={{Institut de physique du globe de Paris (IPGP) and École et Observatoire des Sciences de la Terre de Strasbourg (EOST)}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{80d85037aabcd253df56420407f66ff4}
+      \strng{fullhash}{80d85037aabcd253df56420407f66ff4}
+      \strng{fullhashraw}{80d85037aabcd253df56420407f66ff4}
+      \strng{bibnamehash}{80d85037aabcd253df56420407f66ff4}
+      \strng{authorbibnamehash}{80d85037aabcd253df56420407f66ff4}
+      \strng{authornamehash}{80d85037aabcd253df56420407f66ff4}
+      \strng{authorfullhash}{80d85037aabcd253df56420407f66ff4}
+      \strng{authorfullhashraw}{80d85037aabcd253df56420407f66ff4}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{GEOSCOPE}, French Global Network of broad band seismic stations}
+      \field{urlday}{22}
+      \field{urlmonth}{11}
+      \field{urlyear}{2026}
+      \field{year}{1982}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.18715/GEOSCOPE.G
+      \endverb
+    \endentry
+    \entry{kilb2012}{article}{}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=c458ea671b3ef6f538cbd8ae64810c35}{%
+           family={Kilb},
+           familyi={K\bibinitperiod},
+           given={Debi},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8634c1d13d9ca94d3f9014c7c8b9afc0}{%
+           family={Peng},
+           familyi={P\bibinitperiod},
+           given={Zhigang},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=90b33a426cedeea4f0b8a4ab46cec4e8}{%
+           family={Simpson},
+           familyi={S\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=009e31fcfd2b2284fafb124adbf4448e}{%
+           family={Michael},
+           familyi={M\bibinitperiod},
+           given={Andrew},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=598b431091ce7b4517aea907bca7781b}{%
+           family={Fisher},
+           familyi={F\bibinitperiod},
+           given={Meghan},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b39b79bc61f6b1928e2f9b52d57a5c8e}{%
+           family={Rohrlick},
+           familyi={R\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{381ad398e74be55312a0afc0b09fa073}
+      \strng{fullhash}{1630c7d3f679513bafcdded7248c32e0}
+      \strng{fullhashraw}{1630c7d3f679513bafcdded7248c32e0}
+      \strng{bibnamehash}{1630c7d3f679513bafcdded7248c32e0}
+      \strng{authorbibnamehash}{1630c7d3f679513bafcdded7248c32e0}
+      \strng{authornamehash}{381ad398e74be55312a0afc0b09fa073}
+      \strng{authorfullhash}{1630c7d3f679513bafcdded7248c32e0}
+      \strng{authorfullhashraw}{1630c7d3f679513bafcdded7248c32e0}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Seismological Research Letters}
+      \field{number}{2}
+      \field{title}{Listen, watch, learn: {SeisSound} video products}
+      \field{volume}{83}
+      \field{year}{2012}
+      \field{dateera}{ce}
+      \field{pages}{281\bibrangedash 286}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1785/gssrl.83.2.281
+      \endverb
+    \endentry
+    \entry{kong2016}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=e042cce6948917905ef264194e91fe23}{%
+           family={Kong},
+           familyi={K\bibinitperiod},
+           given={Qingkai},
+           giveni={Q\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=deeea5f8151a648e0c34d3d59041953a}{%
+           family={Allen},
+           familyi={A\bibinitperiod},
+           given={Richard\bibnamedelima M.},
+           giveni={R\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=862601ee158f77cec7c4d858e2d25f47}{%
+           family={Schreier},
+           familyi={S\bibinitperiod},
+           given={Louis},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4662c88646f28ab1253e78a750a8f919}{%
+           family={Kwon},
+           familyi={K\bibinitperiod},
+           given={Young-Woo},
+           giveni={Y\bibinithyphendelim W\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{cac2ce9bbb952f0d75810d168f274396}
+      \strng{fullhash}{c610f8cc06449c7f1f06f93f539b7343}
+      \strng{fullhashraw}{c610f8cc06449c7f1f06f93f539b7343}
+      \strng{bibnamehash}{c610f8cc06449c7f1f06f93f539b7343}
+      \strng{authorbibnamehash}{c610f8cc06449c7f1f06f93f539b7343}
+      \strng{authornamehash}{cac2ce9bbb952f0d75810d168f274396}
+      \strng{authorfullhash}{c610f8cc06449c7f1f06f93f539b7343}
+      \strng{authorfullhashraw}{c610f8cc06449c7f1f06f93f539b7343}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eid}{e1501055}
+      \field{journaltitle}{Science Advances}
+      \field{number}{2}
+      \field{title}{{MyShake}: A smartphone seismic network for earthquake early warning and beyond}
+      \field{volume}{2}
+      \field{year}{2016}
+      \field{dateera}{ce}
+    \endentry
+    \entry{kreyszig2011}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=c4141ad87d07f41e44c31cc3b342bb04}{%
+           family={Kreyszig},
+           familyi={K\bibinitperiod},
+           given={Erwin},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Wiley}%
+      }
+      \strng{namehash}{c4141ad87d07f41e44c31cc3b342bb04}
+      \strng{fullhash}{c4141ad87d07f41e44c31cc3b342bb04}
+      \strng{fullhashraw}{c4141ad87d07f41e44c31cc3b342bb04}
+      \strng{bibnamehash}{c4141ad87d07f41e44c31cc3b342bb04}
+      \strng{authorbibnamehash}{c4141ad87d07f41e44c31cc3b342bb04}
+      \strng{authornamehash}{c4141ad87d07f41e44c31cc3b342bb04}
+      \strng{authorfullhash}{c4141ad87d07f41e44c31cc3b342bb04}
+      \strng{authorfullhashraw}{c4141ad87d07f41e44c31cc3b342bb04}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{10}
+      \field{title}{Advanced engineering mathematics}
+      \field{year}{2011}
+      \field{dateera}{ce}
+    \endentry
+    \entry{longuet1950}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=c222efed3725e26d399da5ffb92890a0}{%
+           family={Longuet-Higgins},
+           familyi={L\bibinithyphendelim H\bibinitperiod},
+           given={M.\bibnamedelimi S.},
+           giveni={M\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{c222efed3725e26d399da5ffb92890a0}
+      \strng{fullhash}{c222efed3725e26d399da5ffb92890a0}
+      \strng{fullhashraw}{c222efed3725e26d399da5ffb92890a0}
+      \strng{bibnamehash}{c222efed3725e26d399da5ffb92890a0}
+      \strng{authorbibnamehash}{c222efed3725e26d399da5ffb92890a0}
+      \strng{authornamehash}{c222efed3725e26d399da5ffb92890a0}
+      \strng{authorfullhash}{c222efed3725e26d399da5ffb92890a0}
+      \strng{authorfullhashraw}{c222efed3725e26d399da5ffb92890a0}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Philosophical Transactions of the Royal Society of London. Series A}
+      \field{number}{857}
+      \field{title}{A theory of the origin of microseisms}
+      \field{volume}{243}
+      \field{year}{1950}
+      \field{dateera}{ce}
+      \field{pages}{1\bibrangedash 35}
+      \range{pages}{35}
+    \endentry
+    \entry{mcnamara2004}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=f578771896531c410c7c3d33c893216e}{%
+           family={McNamara},
+           familyi={M\bibinitperiod},
+           given={Daniel\bibnamedelima E.},
+           giveni={D\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3b731edac7e9d4ad05f22cad604caead}{%
+           family={Buland},
+           familyi={B\bibinitperiod},
+           given={Raymond\bibnamedelima P.},
+           giveni={R\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{a7cfcd1ac6d6e8059a707da753ff9ade}
+      \strng{fullhash}{a7cfcd1ac6d6e8059a707da753ff9ade}
+      \strng{fullhashraw}{a7cfcd1ac6d6e8059a707da753ff9ade}
+      \strng{bibnamehash}{a7cfcd1ac6d6e8059a707da753ff9ade}
+      \strng{authorbibnamehash}{a7cfcd1ac6d6e8059a707da753ff9ade}
+      \strng{authornamehash}{a7cfcd1ac6d6e8059a707da753ff9ade}
+      \strng{authorfullhash}{a7cfcd1ac6d6e8059a707da753ff9ade}
+      \strng{authorfullhashraw}{a7cfcd1ac6d6e8059a707da753ff9ade}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Bulletin of the Seismological Society of America}
+      \field{number}{4}
+      \field{title}{Ambient noise levels in the continental {United States}}
+      \field{volume}{94}
+      \field{year}{2004}
+      \field{dateera}{ce}
+      \field{pages}{1517\bibrangedash 1527}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1785/012003001
+      \endverb
+    \endentry
+    \entry{minson2018}{article}{}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=e934fc9e4e93f38eeaeb066dc7452181}{%
+           family={Minson},
+           familyi={M\bibinitperiod},
+           given={Sarah\bibnamedelima E.},
+           giveni={S\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e55374042adecf893e2bdd169b330090}{%
+           family={Meier},
+           familyi={M\bibinitperiod},
+           given={Men-Andrin},
+           giveni={M\bibinithyphendelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d981eb7706065b2f2875c124422b7da3}{%
+           family={Baltay},
+           familyi={B\bibinitperiod},
+           given={Annemarie\bibnamedelima S.},
+           giveni={A\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=38b3e63f5a618e79441ad25a89dc540b}{%
+           family={Hanks},
+           familyi={H\bibinitperiod},
+           given={Thomas\bibnamedelima C.},
+           giveni={T\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bf29d1296b3bbb823940d40f3fc96c3c}{%
+           family={Cochran},
+           familyi={C\bibinitperiod},
+           given={Elizabeth\bibnamedelima S.},
+           giveni={E\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{c2bfd683a58cff524d1a60a57f6e4c63}
+      \strng{fullhash}{2b5972946b907bc94471ca0ae88891be}
+      \strng{fullhashraw}{2b5972946b907bc94471ca0ae88891be}
+      \strng{bibnamehash}{2b5972946b907bc94471ca0ae88891be}
+      \strng{authorbibnamehash}{2b5972946b907bc94471ca0ae88891be}
+      \strng{authornamehash}{c2bfd683a58cff524d1a60a57f6e4c63}
+      \strng{authorfullhash}{2b5972946b907bc94471ca0ae88891be}
+      \strng{authorfullhashraw}{2b5972946b907bc94471ca0ae88891be}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eid}{eaaq0504}
+      \field{journaltitle}{Science Advances}
+      \field{number}{3}
+      \field{title}{The limits of earthquake early warning: Timeliness of ground motion estimates}
+      \field{volume}{4}
+      \field{year}{2018}
+      \field{dateera}{ce}
+    \endentry
+    \entry{mousavi2016}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=74313f02ee2a7b14dee753101d9e4e4b}{%
+           family={Mousavi},
+           familyi={M\bibinitperiod},
+           given={S.\bibnamedelimi Mostafa},
+           giveni={S\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=58c41e015e18d25c5085476aebaef26f}{%
+           family={Langston},
+           familyi={L\bibinitperiod},
+           given={Charles\bibnamedelima A.},
+           giveni={C\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{f22a4993e74509904596d860e9cc4b27}
+      \strng{fullhash}{f22a4993e74509904596d860e9cc4b27}
+      \strng{fullhashraw}{f22a4993e74509904596d860e9cc4b27}
+      \strng{bibnamehash}{f22a4993e74509904596d860e9cc4b27}
+      \strng{authorbibnamehash}{f22a4993e74509904596d860e9cc4b27}
+      \strng{authornamehash}{f22a4993e74509904596d860e9cc4b27}
+      \strng{authorfullhash}{f22a4993e74509904596d860e9cc4b27}
+      \strng{authorfullhashraw}{f22a4993e74509904596d860e9cc4b27}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Applied Geophysics}
+      \field{title}{Adaptive noise estimation and suppression for improving microseismic event detection}
+      \field{volume}{132}
+      \field{year}{2016}
+      \field{dateera}{ce}
+      \field{pages}{116\bibrangedash 124}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1016/j.jappgeo.2016.06.008
+      \endverb
+    \endentry
+    \entry{mousavi2020}{article}{}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=74313f02ee2a7b14dee753101d9e4e4b}{%
+           family={Mousavi},
+           familyi={M\bibinitperiod},
+           given={S.\bibnamedelimi Mostafa},
+           giveni={S\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a79e78de4d1bdf7b5f829c93fa96a2fb}{%
+           family={Ellsworth},
+           familyi={E\bibinitperiod},
+           given={William\bibnamedelima L.},
+           giveni={W\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bc81214037214604a2918e8211a1307d}{%
+           family={Zhu},
+           familyi={Z\bibinitperiod},
+           given={Weiqiang},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=de4dd81edb114a5cec71e82aa16e7269}{%
+           family={Chuang},
+           familyi={C\bibinitperiod},
+           given={Lindsay\bibnamedelima Y.},
+           giveni={L\bibinitperiod\bibinitdelim Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=07a32099eef6927fda3905bb5800b621}{%
+           family={Beroza},
+           familyi={B\bibinitperiod},
+           given={Gregory\bibnamedelima C.},
+           giveni={G\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{91d290c13b7fcd458ac69b4911fd9db1}
+      \strng{fullhash}{bed28222555cbf8a89a59e7d65cd6800}
+      \strng{fullhashraw}{bed28222555cbf8a89a59e7d65cd6800}
+      \strng{bibnamehash}{bed28222555cbf8a89a59e7d65cd6800}
+      \strng{authorbibnamehash}{bed28222555cbf8a89a59e7d65cd6800}
+      \strng{authornamehash}{91d290c13b7fcd458ac69b4911fd9db1}
+      \strng{authorfullhash}{bed28222555cbf8a89a59e7d65cd6800}
+      \strng{authorfullhashraw}{bed28222555cbf8a89a59e7d65cd6800}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eid}{3952}
+      \field{journaltitle}{Nature Communications}
+      \field{title}{Earthquake transformer: An attentive deep-learning model for simultaneous earthquake detection and phase picking}
+      \field{volume}{11}
+      \field{year}{2020}
+      \field{dateera}{ce}
+    \endentry
+    \entry{onu11}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=289d6d295de5d9f9e01197fab2b80b67}{%
+           family={{Naciones Unidas}},
+           familyi={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{289d6d295de5d9f9e01197fab2b80b67}
+      \strng{fullhash}{289d6d295de5d9f9e01197fab2b80b67}
+      \strng{fullhashraw}{289d6d295de5d9f9e01197fab2b80b67}
+      \strng{bibnamehash}{289d6d295de5d9f9e01197fab2b80b67}
+      \strng{authorbibnamehash}{289d6d295de5d9f9e01197fab2b80b67}
+      \strng{authornamehash}{289d6d295de5d9f9e01197fab2b80b67}
+      \strng{authorfullhash}{289d6d295de5d9f9e01197fab2b80b67}
+      \strng{authorfullhashraw}{289d6d295de5d9f9e01197fab2b80b67}
+      \field{extraname}{1}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{extradate}{1}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Objetivo 11: Lograr que las ciudades sean más inclusivas, seguras, resilientes y sostenibles}
+      \field{urlday}{8}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.un.org/sustainabledevelopment/es/cities/
+      \endverb
+      \verb{url}
+      \verb https://www.un.org/sustainabledevelopment/es/cities/
+      \endverb
+    \endentry
+    \entry{onu9}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=289d6d295de5d9f9e01197fab2b80b67}{%
+           family={{Naciones Unidas}},
+           familyi={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{289d6d295de5d9f9e01197fab2b80b67}
+      \strng{fullhash}{289d6d295de5d9f9e01197fab2b80b67}
+      \strng{fullhashraw}{289d6d295de5d9f9e01197fab2b80b67}
+      \strng{bibnamehash}{289d6d295de5d9f9e01197fab2b80b67}
+      \strng{authorbibnamehash}{289d6d295de5d9f9e01197fab2b80b67}
+      \strng{authornamehash}{289d6d295de5d9f9e01197fab2b80b67}
+      \strng{authorfullhash}{289d6d295de5d9f9e01197fab2b80b67}
+      \strng{authorfullhashraw}{289d6d295de5d9f9e01197fab2b80b67}
+      \field{extraname}{2}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{extradate}{2}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Objetivo 9: Construir infraestructuras resilientes, promover la industrialización sostenible y fomentar la innovación}
+      \field{urlday}{8}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.un.org/sustainabledevelopment/es/infrastructure/
+      \endverb
+      \verb{url}
+      \verb https://www.un.org/sustainabledevelopment/es/infrastructure/
+      \endverb
+    \endentry
+    \entry{peterson1993}{report}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=4c863193cf734ac0b1ce9298c2a6961d}{%
+           family={Peterson},
+           familyi={P\bibinitperiod},
+           given={Jon},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {U.S. Geological Survey}%
+      }
+      \strng{namehash}{4c863193cf734ac0b1ce9298c2a6961d}
+      \strng{fullhash}{4c863193cf734ac0b1ce9298c2a6961d}
+      \strng{fullhashraw}{4c863193cf734ac0b1ce9298c2a6961d}
+      \strng{bibnamehash}{4c863193cf734ac0b1ce9298c2a6961d}
+      \strng{authorbibnamehash}{4c863193cf734ac0b1ce9298c2a6961d}
+      \strng{authornamehash}{4c863193cf734ac0b1ce9298c2a6961d}
+      \strng{authorfullhash}{4c863193cf734ac0b1ce9298c2a6961d}
+      \strng{authorfullhashraw}{4c863193cf734ac0b1ce9298c2a6961d}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{number}{93-322}
+      \field{title}{Observations and modeling of seismic background noise}
+      \field{type}{Open-File Report}
+      \field{year}{1993}
+      \field{dateera}{ce}
+    \endentry
+    \entry{sasmex}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=561c6a31ab70c0882977a7bcd9aa2c39}{%
+           family={{Poder Judicial de la Ciudad de México}},
+           familyi={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{561c6a31ab70c0882977a7bcd9aa2c39}
+      \strng{fullhash}{561c6a31ab70c0882977a7bcd9aa2c39}
+      \strng{fullhashraw}{561c6a31ab70c0882977a7bcd9aa2c39}
+      \strng{bibnamehash}{561c6a31ab70c0882977a7bcd9aa2c39}
+      \strng{authorbibnamehash}{561c6a31ab70c0882977a7bcd9aa2c39}
+      \strng{authornamehash}{561c6a31ab70c0882977a7bcd9aa2c39}
+      \strng{authorfullhash}{561c6a31ab70c0882977a7bcd9aa2c39}
+      \strng{authorfullhashraw}{561c6a31ab70c0882977a7bcd9aa2c39}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Funcionamiento del {SASMEX}}
+      \field{urlday}{8}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://poderjudicialcdmx.gob.mx/proteccion_civil/wp-content/uploads/2_FUNCIONAMIENTO_DEL_SASMEX.pdf
+      \endverb
+      \verb{url}
+      \verb https://poderjudicialcdmx.gob.mx/proteccion_civil/wp-content/uploads/2_FUNCIONAMIENTO_DEL_SASMEX.pdf
+      \endverb
+    \endentry
+    \entry{ssn}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=a85a543ddca2d1a404a8292f8ee9fc66}{%
+           family={{Servicio Sismológico Nacional}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{a85a543ddca2d1a404a8292f8ee9fc66}
+      \strng{fullhash}{a85a543ddca2d1a404a8292f8ee9fc66}
+      \strng{fullhashraw}{a85a543ddca2d1a404a8292f8ee9fc66}
+      \strng{bibnamehash}{a85a543ddca2d1a404a8292f8ee9fc66}
+      \strng{authorbibnamehash}{a85a543ddca2d1a404a8292f8ee9fc66}
+      \strng{authornamehash}{a85a543ddca2d1a404a8292f8ee9fc66}
+      \strng{authorfullhash}{a85a543ddca2d1a404a8292f8ee9fc66}
+      \strng{authorfullhashraw}{a85a543ddca2d1a404a8292f8ee9fc66}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Servicio Sismológico Nacional, Instituto de Geofísica, {UNAM}}
+      \field{urlday}{22}
+      \field{urlmonth}{11}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb http://www.ssn.unam.mx
+      \endverb
+      \verb{url}
+      \verb http://www.ssn.unam.mx
+      \endverb
+    \endentry
+    \entry{shearer2019}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=ee176653aab0517cf682e8a5f2302e1a}{%
+           family={Shearer},
+           familyi={S\bibinitperiod},
+           given={Peter\bibnamedelima M.},
+           giveni={P\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{ee176653aab0517cf682e8a5f2302e1a}
+      \strng{fullhash}{ee176653aab0517cf682e8a5f2302e1a}
+      \strng{fullhashraw}{ee176653aab0517cf682e8a5f2302e1a}
+      \strng{bibnamehash}{ee176653aab0517cf682e8a5f2302e1a}
+      \strng{authorbibnamehash}{ee176653aab0517cf682e8a5f2302e1a}
+      \strng{authornamehash}{ee176653aab0517cf682e8a5f2302e1a}
+      \strng{authorfullhash}{ee176653aab0517cf682e8a5f2302e1a}
+      \strng{authorfullhashraw}{ee176653aab0517cf682e8a5f2302e1a}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{3}
+      \field{title}{Introduction to seismology}
+      \field{year}{2019}
+      \field{dateera}{ce}
+    \endentry
+    \entry{statista2016}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=62182ca58a739daa8ddd8a48b7b19abb}{%
+           family={{Statista}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{62182ca58a739daa8ddd8a48b7b19abb}
+      \strng{fullhash}{62182ca58a739daa8ddd8a48b7b19abb}
+      \strng{fullhashraw}{62182ca58a739daa8ddd8a48b7b19abb}
+      \strng{bibnamehash}{62182ca58a739daa8ddd8a48b7b19abb}
+      \strng{authorbibnamehash}{62182ca58a739daa8ddd8a48b7b19abb}
+      \strng{authornamehash}{62182ca58a739daa8ddd8a48b7b19abb}
+      \strng{authorfullhash}{62182ca58a739daa8ddd8a48b7b19abb}
+      \strng{authorfullhashraw}{62182ca58a739daa8ddd8a48b7b19abb}
+      \field{extraname}{1}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{30}
+      \field{month}{9}
+      \field{title}{Deaths due to earthquakes worldwide 2000--2015}
+      \field{urlday}{8}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{year}{2016}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.statista.com/statistics/263108/global-death-toll-due-to-earthquakes-since-2000/
+      \endverb
+      \verb{url}
+      \verb https://www.statista.com/statistics/263108/global-death-toll-due-to-earthquakes-since-2000/
+      \endverb
+    \endentry
+    \entry{statista2025}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=62182ca58a739daa8ddd8a48b7b19abb}{%
+           family={{Statista}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{62182ca58a739daa8ddd8a48b7b19abb}
+      \strng{fullhash}{62182ca58a739daa8ddd8a48b7b19abb}
+      \strng{fullhashraw}{62182ca58a739daa8ddd8a48b7b19abb}
+      \strng{bibnamehash}{62182ca58a739daa8ddd8a48b7b19abb}
+      \strng{authorbibnamehash}{62182ca58a739daa8ddd8a48b7b19abb}
+      \strng{authornamehash}{62182ca58a739daa8ddd8a48b7b19abb}
+      \strng{authorfullhash}{62182ca58a739daa8ddd8a48b7b19abb}
+      \strng{authorfullhashraw}{62182ca58a739daa8ddd8a48b7b19abb}
+      \field{extraname}{2}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{30}
+      \field{month}{6}
+      \field{title}{Death toll in great earthquakes 1900--2024}
+      \field{urlday}{8}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.statista.com/statistics/266325/death-toll-in-great-earthquakes/
+      \endverb
+      \verb{url}
+      \verb https://www.statista.com/statistics/266325/death-toll-in-great-earthquakes/
+      \endverb
+    \endentry
+    \entry{expediente}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=c9c8e92af142d30f762a8d67d07dc517}{%
+           family={{Tecnológico de Monterrey}},
+           familyi={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{c9c8e92af142d30f762a8d67d07dc517}
+      \strng{fullhash}{c9c8e92af142d30f762a8d67d07dc517}
+      \strng{fullhashraw}{c9c8e92af142d30f762a8d67d07dc517}
+      \strng{bibnamehash}{c9c8e92af142d30f762a8d67d07dc517}
+      \strng{authorbibnamehash}{c9c8e92af142d30f762a8d67d07dc517}
+      \strng{authornamehash}{c9c8e92af142d30f762a8d67d07dc517}
+      \strng{authorfullhash}{c9c8e92af142d30f762a8d67d07dc517}
+      \strng{authorfullhashraw}{c9c8e92af142d30f762a8d67d07dc517}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Material del curso Análisis de Métodos Matemáticos para la Física}
+      \field{title}{Expediente de consultoría 5: Análisis matemático de señales sísmicas mediante transformadas integrales para el desarrollo de sistemas inteligentes de alerta temprana}
+      \field{year}{2026}
+      \field{dateera}{ce}
+    \endentry
+    \entry{theiler1992}{article}{}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=3ebb10a577afae935bde2ad87630005c}{%
+           family={Theiler},
+           familyi={T\bibinitperiod},
+           given={James},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9c7e2f2c6bed2b5092fca690df63baa9}{%
+           family={Eubank},
+           familyi={E\bibinitperiod},
+           given={Stephen},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=795220d6c8c4f86e420d6df5a8b5e974}{%
+           family={Longtin},
+           familyi={L\bibinitperiod},
+           given={André},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=abf2f6a97afb914fafab8ace344e1ac2}{%
+           family={Galdrikian},
+           familyi={G\bibinitperiod},
+           given={Bryan},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8989d3ee480656dd3eb385ab19b9d332}{%
+           family={Farmer},
+           familyi={F\bibinitperiod},
+           given={J.\bibnamedelimi Doyne},
+           giveni={J\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{fa7824ec2b9818f936d3737aa53c33d7}
+      \strng{fullhash}{5cbcfc61abd535c3a5ca3226012881e5}
+      \strng{fullhashraw}{5cbcfc61abd535c3a5ca3226012881e5}
+      \strng{bibnamehash}{5cbcfc61abd535c3a5ca3226012881e5}
+      \strng{authorbibnamehash}{5cbcfc61abd535c3a5ca3226012881e5}
+      \strng{authornamehash}{fa7824ec2b9818f936d3737aa53c33d7}
+      \strng{authorfullhash}{5cbcfc61abd535c3a5ca3226012881e5}
+      \strng{authorfullhashraw}{5cbcfc61abd535c3a5ca3226012881e5}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Physica D: Nonlinear Phenomena}
+      \field{number}{1--4}
+      \field{title}{Testing for nonlinearity in time series: The method of surrogate data}
+      \field{volume}{58}
+      \field{year}{1992}
+      \field{dateera}{ce}
+      \field{pages}{77\bibrangedash 94}
+      \range{pages}{18}
+      \verb{doi}
+      \verb 10.1016/0167-2789(92)90102-S
+      \endverb
+    \endentry
+    \entry{usgs_ehp}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=443478d363b15c65a1ee517d1122e79b}{%
+           family={{U.S. Geological Survey}},
+           familyi={U\bibinitperiod}}}%
+      }
+      \strng{namehash}{443478d363b15c65a1ee517d1122e79b}
+      \strng{fullhash}{443478d363b15c65a1ee517d1122e79b}
+      \strng{fullhashraw}{443478d363b15c65a1ee517d1122e79b}
+      \strng{bibnamehash}{443478d363b15c65a1ee517d1122e79b}
+      \strng{authorbibnamehash}{443478d363b15c65a1ee517d1122e79b}
+      \strng{authornamehash}{443478d363b15c65a1ee517d1122e79b}
+      \strng{authorfullhash}{443478d363b15c65a1ee517d1122e79b}
+      \strng{authorfullhashraw}{443478d363b15c65a1ee517d1122e79b}
+      \field{extraname}{1}
+      \field{sortinit}{U}
+      \field{sortinithash}{6901a00e45705986ee5e7ca9fd39adca}
+      \field{extradate}{1}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{About the {Earthquake Hazards Program}}
+      \field{urlday}{8}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.usgs.gov/programs/earthquake-hazards/about
+      \endverb
+      \verb{url}
+      \verb https://www.usgs.gov/programs/earthquake-hazards/about
+      \endverb
+    \endentry
+    \entry{usgs_anss}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=443478d363b15c65a1ee517d1122e79b}{%
+           family={{U.S. Geological Survey}},
+           familyi={U\bibinitperiod}}}%
+      }
+      \strng{namehash}{443478d363b15c65a1ee517d1122e79b}
+      \strng{fullhash}{443478d363b15c65a1ee517d1122e79b}
+      \strng{fullhashraw}{443478d363b15c65a1ee517d1122e79b}
+      \strng{bibnamehash}{443478d363b15c65a1ee517d1122e79b}
+      \strng{authorbibnamehash}{443478d363b15c65a1ee517d1122e79b}
+      \strng{authornamehash}{443478d363b15c65a1ee517d1122e79b}
+      \strng{authorfullhash}{443478d363b15c65a1ee517d1122e79b}
+      \strng{authorfullhashraw}{443478d363b15c65a1ee517d1122e79b}
+      \field{extraname}{2}
+      \field{sortinit}{U}
+      \field{sortinithash}{6901a00e45705986ee5e7ca9fd39adca}
+      \field{extradate}{2}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{ANSS} -- {Advanced National Seismic System}}
+      \field{urlday}{8}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.usgs.gov/programs/earthquake-hazards/anss-advanced-national-seismic-system
+      \endverb
+      \verb{url}
+      \verb https://www.usgs.gov/programs/earthquake-hazards/anss-advanced-national-seismic-system
+      \endverb
+    \endentry
+    \entry{usgs_faq}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=443478d363b15c65a1ee517d1122e79b}{%
+           family={{U.S. Geological Survey}},
+           familyi={U\bibinitperiod}}}%
+      }
+      \strng{namehash}{443478d363b15c65a1ee517d1122e79b}
+      \strng{fullhash}{443478d363b15c65a1ee517d1122e79b}
+      \strng{fullhashraw}{443478d363b15c65a1ee517d1122e79b}
+      \strng{bibnamehash}{443478d363b15c65a1ee517d1122e79b}
+      \strng{authorbibnamehash}{443478d363b15c65a1ee517d1122e79b}
+      \strng{authornamehash}{443478d363b15c65a1ee517d1122e79b}
+      \strng{authorfullhash}{443478d363b15c65a1ee517d1122e79b}
+      \strng{authorfullhashraw}{443478d363b15c65a1ee517d1122e79b}
+      \field{extraname}{3}
+      \field{sortinit}{U}
+      \field{sortinithash}{6901a00e45705986ee5e7ca9fd39adca}
+      \field{extradate}{3}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{How do {I} sign up to receive {ShakeAlert}-powered alerts on my phone?}
+      \field{urlday}{8}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.usgs.gov/faqs/how-do-i-sign-shakealertr-earthquake-early-warning-system
+      \endverb
+      \verb{url}
+      \verb https://www.usgs.gov/faqs/how-do-i-sign-shakealertr-earthquake-early-warning-system
+      \endverb
+    \endentry
+    \entry{comcat}{dataset}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=36a4c862f661e5fb86b473583b97b40d}{%
+           family={{U.S. Geological Survey, Earthquake Hazards Program}},
+           familyi={U\bibinitperiod}}}%
+      }
+      \strng{namehash}{36a4c862f661e5fb86b473583b97b40d}
+      \strng{fullhash}{36a4c862f661e5fb86b473583b97b40d}
+      \strng{fullhashraw}{36a4c862f661e5fb86b473583b97b40d}
+      \strng{bibnamehash}{36a4c862f661e5fb86b473583b97b40d}
+      \strng{authorbibnamehash}{36a4c862f661e5fb86b473583b97b40d}
+      \strng{authornamehash}{36a4c862f661e5fb86b473583b97b40d}
+      \strng{authorfullhash}{36a4c862f661e5fb86b473583b97b40d}
+      \strng{authorfullhashraw}{36a4c862f661e5fb86b473583b97b40d}
+      \field{sortinit}{U}
+      \field{sortinithash}{6901a00e45705986ee5e7ca9fd39adca}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Advanced National Seismic System ({ANSS}) Comprehensive Catalog of Earthquake Events and Products}
+      \field{urlday}{22}
+      \field{urlmonth}{11}
+      \field{urlyear}{2026}
+      \field{year}{2017}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.5066/F7MS3QZH
+      \endverb
+    \endentry
+    \entry{welch1967}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=64b8b4f1ff80e770e409c8e9784015a6}{%
+           family={Welch},
+           familyi={W\bibinitperiod},
+           given={Peter\bibnamedelima D.},
+           giveni={P\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{64b8b4f1ff80e770e409c8e9784015a6}
+      \strng{fullhash}{64b8b4f1ff80e770e409c8e9784015a6}
+      \strng{fullhashraw}{64b8b4f1ff80e770e409c8e9784015a6}
+      \strng{bibnamehash}{64b8b4f1ff80e770e409c8e9784015a6}
+      \strng{authorbibnamehash}{64b8b4f1ff80e770e409c8e9784015a6}
+      \strng{authornamehash}{64b8b4f1ff80e770e409c8e9784015a6}
+      \strng{authorfullhash}{64b8b4f1ff80e770e409c8e9784015a6}
+      \strng{authorfullhashraw}{64b8b4f1ff80e770e409c8e9784015a6}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Audio and Electroacoustics}
+      \field{number}{2}
+      \field{title}{The use of fast {Fourier} transform for the estimation of power spectra: A method based on time averaging over short, modified periodograms}
+      \field{volume}{15}
+      \field{year}{1967}
+      \field{dateera}{ce}
+      \field{pages}{70\bibrangedash 73}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1109/TAU.1967.1161901
+      \endverb
+    \endentry
+    \entry{zhu2019}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=bc81214037214604a2918e8211a1307d}{%
+           family={Zhu},
+           familyi={Z\bibinitperiod},
+           given={Weiqiang},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=74313f02ee2a7b14dee753101d9e4e4b}{%
+           family={Mousavi},
+           familyi={M\bibinitperiod},
+           given={S.\bibnamedelimi Mostafa},
+           giveni={S\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=07a32099eef6927fda3905bb5800b621}{%
+           family={Beroza},
+           familyi={B\bibinitperiod},
+           given={Gregory\bibnamedelima C.},
+           giveni={G\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{c3efe70f2276bbbf9b23d98034f6f7a0}
+      \strng{fullhash}{4c1bd92b5205ac5fdca3c2719c1125d6}
+      \strng{fullhashraw}{4c1bd92b5205ac5fdca3c2719c1125d6}
+      \strng{bibnamehash}{4c1bd92b5205ac5fdca3c2719c1125d6}
+      \strng{authorbibnamehash}{4c1bd92b5205ac5fdca3c2719c1125d6}
+      \strng{authornamehash}{c3efe70f2276bbbf9b23d98034f6f7a0}
+      \strng{authorfullhash}{4c1bd92b5205ac5fdca3c2719c1125d6}
+      \strng{authorfullhashraw}{4c1bd92b5205ac5fdca3c2719c1125d6}
+      \field{sortinit}{Z}
+      \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Geoscience and Remote Sensing}
+      \field{number}{11}
+      \field{title}{Seismic signal denoising and decomposition using deep neural networks}
+      \field{volume}{57}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \field{pages}{9476\bibrangedash 9488}
+      \range{pages}{13}
+    \endentry
+  \enddatalist
+  \datalist[entry]{apa/global//global/global/global}
+    \entry{allen2018eos}{article}{}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=deeea5f8151a648e0c34d3d59041953a}{%
+           family={Allen},
+           familyi={A\bibinitperiod},
+           given={Richard\bibnamedelima M.},
+           giveni={R\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bf29d1296b3bbb823940d40f3fc96c3c}{%
+           family={Cochran},
+           familyi={C\bibinitperiod},
+           given={Elizabeth\bibnamedelima S.},
+           giveni={E\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f6efe026f309244ff47ea73497df43cd}{%
+           family={Huggins},
+           familyi={H\bibinitperiod},
+           given={Tom},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=de41740cd7c780e61a05911312e8b967}{%
+           family={Miles},
+           familyi={M\bibinitperiod},
+           given={Scott},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a74a1feba12aae703b2ae6d87308916f}{%
+           family={Otegui},
+           familyi={O\bibinitperiod},
+           given={Diego},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{8a5e9a73537fd6c37b4695ad75d2fe3c}
+      \strng{fullhash}{dcd3c77d32bcdd50d7ba7c19b9b8a2af}
+      \strng{fullhashraw}{dcd3c77d32bcdd50d7ba7c19b9b8a2af}
+      \strng{bibnamehash}{dcd3c77d32bcdd50d7ba7c19b9b8a2af}
+      \strng{authorbibnamehash}{dcd3c77d32bcdd50d7ba7c19b9b8a2af}
+      \strng{authornamehash}{8a5e9a73537fd6c37b4695ad75d2fe3c}
+      \strng{authorfullhash}{dcd3c77d32bcdd50d7ba7c19b9b8a2af}
+      \strng{authorfullhashraw}{dcd3c77d32bcdd50d7ba7c19b9b8a2af}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Eos}
+      \field{title}{Lessons from {Mexico's} earthquake early warning system}
+      \field{volume}{99}
+      \field{year}{2018}
+      \field{dateera}{ce}
+      \verb{doi}
+      \verb 10.1029/2018EO105095
+      \endverb
+    \endentry
+    \entry{allen2019}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=deeea5f8151a648e0c34d3d59041953a}{%
+           family={Allen},
+           familyi={A\bibinitperiod},
+           given={Richard\bibnamedelima M.},
+           giveni={R\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=77be65052eb6e079cd54f1709a62cd2d}{%
+           family={Melgar},
+           familyi={M\bibinitperiod},
+           given={Diego},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{bc96655c942e0fffa2723071b01b31c2}
+      \strng{fullhash}{bc96655c942e0fffa2723071b01b31c2}
+      \strng{fullhashraw}{bc96655c942e0fffa2723071b01b31c2}
+      \strng{bibnamehash}{bc96655c942e0fffa2723071b01b31c2}
+      \strng{authorbibnamehash}{bc96655c942e0fffa2723071b01b31c2}
+      \strng{authornamehash}{bc96655c942e0fffa2723071b01b31c2}
+      \strng{authorfullhash}{bc96655c942e0fffa2723071b01b31c2}
+      \strng{authorfullhashraw}{bc96655c942e0fffa2723071b01b31c2}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Annual Review of Earth and Planetary Sciences}
+      \field{title}{Earthquake early warning: Advances, scientific challenges, and societal needs}
+      \field{volume}{47}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \field{pages}{361\bibrangedash 388}
+      \range{pages}{28}
+      \verb{doi}
+      \verb 10.1146/annurev-earth-053018-060457
+      \endverb
+    \endentry
+    \entry{berouti1979}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=75aa9fcf7a004459c0e3453e68fb1833}{%
+           family={Berouti},
+           familyi={B\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c6a683eee0f820c41a4f039b41668373}{%
+           family={Schwartz},
+           familyi={S\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3708bcd8410b178570f0e6c63236222f}{%
+           family={Makhoul},
+           familyi={M\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{e7c37fabd9a5332e97be992b551a2959}
+      \strng{fullhash}{739480ecab199b8ff6caec89d56db713}
+      \strng{fullhashraw}{739480ecab199b8ff6caec89d56db713}
+      \strng{bibnamehash}{739480ecab199b8ff6caec89d56db713}
+      \strng{authorbibnamehash}{739480ecab199b8ff6caec89d56db713}
+      \strng{authornamehash}{e7c37fabd9a5332e97be992b551a2959}
+      \strng{authorfullhash}{739480ecab199b8ff6caec89d56db713}
+      \strng{authorfullhashraw}{739480ecab199b8ff6caec89d56db713}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP)}
+      \field{title}{Enhancement of speech corrupted by acoustic noise}
+      \field{volume}{4}
+      \field{year}{1979}
+      \field{dateera}{ce}
+      \field{pages}{208\bibrangedash 211}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1109/ICASSP.1979.1170788
+      \endverb
+    \endentry
+    \entry{obspy2010}{article}{}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=a4ccbb6fdd39c1346e2c80783b5044d9}{%
+           family={Beyreuther},
+           familyi={B\bibinitperiod},
+           given={Moritz},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=260d3f673529e7a467ed1b0e6f872d67}{%
+           family={Barsch},
+           familyi={B\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2ad0525fe321d79e5cd9c32144ca8bd7}{%
+           family={Krischer},
+           familyi={K\bibinitperiod},
+           given={Lion},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=595e3b9041aa4d12003ba8696317dfa1}{%
+           family={Megies},
+           familyi={M\bibinitperiod},
+           given={Tobias},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a657e8cd49727e07eafca92e52461579}{%
+           family={Behr},
+           familyi={B\bibinitperiod},
+           given={Yannik},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=dda9b4dc0df5b09d5fdd7db5411bc2cb}{%
+           family={Wassermann},
+           familyi={W\bibinitperiod},
+           given={Joachim},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{667003198c46dce2f59769f2e7665bb2}
+      \strng{fullhash}{04e9d1cf02b8d301026e1d4b37558ec2}
+      \strng{fullhashraw}{04e9d1cf02b8d301026e1d4b37558ec2}
+      \strng{bibnamehash}{04e9d1cf02b8d301026e1d4b37558ec2}
+      \strng{authorbibnamehash}{04e9d1cf02b8d301026e1d4b37558ec2}
+      \strng{authornamehash}{667003198c46dce2f59769f2e7665bb2}
+      \strng{authorfullhash}{04e9d1cf02b8d301026e1d4b37558ec2}
+      \strng{authorfullhashraw}{04e9d1cf02b8d301026e1d4b37558ec2}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Seismological Research Letters}
+      \field{number}{3}
+      \field{title}{{ObsPy}: A {Python} toolbox for seismology}
+      \field{volume}{81}
+      \field{year}{2010}
+      \field{dateera}{ce}
+      \field{pages}{530\bibrangedash 533}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1785/gssrl.81.3.530
+      \endverb
+    \endentry
+    \entry{boll1979}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=162b4b3b502362949db9d7e202c38fba}{%
+           family={Boll},
+           familyi={B\bibinitperiod},
+           given={Steven\bibnamedelima F.},
+           giveni={S\bibinitperiod\bibinitdelim F\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{162b4b3b502362949db9d7e202c38fba}
+      \strng{fullhash}{162b4b3b502362949db9d7e202c38fba}
+      \strng{fullhashraw}{162b4b3b502362949db9d7e202c38fba}
+      \strng{bibnamehash}{162b4b3b502362949db9d7e202c38fba}
+      \strng{authorbibnamehash}{162b4b3b502362949db9d7e202c38fba}
+      \strng{authornamehash}{162b4b3b502362949db9d7e202c38fba}
+      \strng{authorfullhash}{162b4b3b502362949db9d7e202c38fba}
+      \strng{authorfullhashraw}{162b4b3b502362949db9d7e202c38fba}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Acoustics, Speech, and Signal Processing}
+      \field{number}{2}
+      \field{title}{Suppression of acoustic noise in speech using spectral subtraction}
+      \field{volume}{27}
+      \field{year}{1979}
+      \field{dateera}{ce}
+      \field{pages}{113\bibrangedash 120}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1109/TASSP.1979.1163209
+      \endverb
+    \endentry
+    \entry{bono2025}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=c19212a5b953bf8bf298a897576e14a2}{%
+           family={Bono},
+           familyi={B\bibinitperiod},
+           given={Andrea},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{c19212a5b953bf8bf298a897576e14a2}
+      \strng{fullhash}{c19212a5b953bf8bf298a897576e14a2}
+      \strng{fullhashraw}{c19212a5b953bf8bf298a897576e14a2}
+      \strng{bibnamehash}{c19212a5b953bf8bf298a897576e14a2}
+      \strng{authorbibnamehash}{c19212a5b953bf8bf298a897576e14a2}
+      \strng{authornamehash}{c19212a5b953bf8bf298a897576e14a2}
+      \strng{authorfullhash}{c19212a5b953bf8bf298a897576e14a2}
+      \strng{authorfullhashraw}{c19212a5b953bf8bf298a897576e14a2}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eid}{100241}
+      \field{journaltitle}{Applied Computing and Geosciences}
+      \field{title}{Seismic {Intelligence} {Tool}: An extensive multipurpose software for seismic signal analysis}
+      \field{volume}{26}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \verb{doi}
+      \verb 10.1016/j.acags.2025.100241
+      \endverb
+    \endentry
+    \entry{brune1970}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=25bca13fe107f8666fb17c7d723aefff}{%
+           family={Brune},
+           familyi={B\bibinitperiod},
+           given={James\bibnamedelima N.},
+           giveni={J\bibinitperiod\bibinitdelim N\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{25bca13fe107f8666fb17c7d723aefff}
+      \strng{fullhash}{25bca13fe107f8666fb17c7d723aefff}
+      \strng{fullhashraw}{25bca13fe107f8666fb17c7d723aefff}
+      \strng{bibnamehash}{25bca13fe107f8666fb17c7d723aefff}
+      \strng{authorbibnamehash}{25bca13fe107f8666fb17c7d723aefff}
+      \strng{authornamehash}{25bca13fe107f8666fb17c7d723aefff}
+      \strng{authorfullhash}{25bca13fe107f8666fb17c7d723aefff}
+      \strng{authorfullhashraw}{25bca13fe107f8666fb17c7d723aefff}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Geophysical Research}
+      \field{number}{26}
+      \field{title}{Tectonic stress and the spectra of seismic shear waves from earthquakes}
+      \field{volume}{75}
+      \field{year}{1970}
+      \field{dateera}{ce}
+      \field{pages}{4997\bibrangedash 5009}
+      \range{pages}{13}
+    \endentry
+    \entry{cooley1965}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=9a5cfe59165ea73852bf47c17612fc90}{%
+           family={Cooley},
+           familyi={C\bibinitperiod},
+           given={James\bibnamedelima W.},
+           giveni={J\bibinitperiod\bibinitdelim W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9edab5dbc1987bcb98d6de058f00fc47}{%
+           family={Tukey},
+           familyi={T\bibinitperiod},
+           given={John\bibnamedelima W.},
+           giveni={J\bibinitperiod\bibinitdelim W\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{ee74374d9504fa6fb4aa57320b0e47fc}
+      \strng{fullhash}{ee74374d9504fa6fb4aa57320b0e47fc}
+      \strng{fullhashraw}{ee74374d9504fa6fb4aa57320b0e47fc}
+      \strng{bibnamehash}{ee74374d9504fa6fb4aa57320b0e47fc}
+      \strng{authorbibnamehash}{ee74374d9504fa6fb4aa57320b0e47fc}
+      \strng{authornamehash}{ee74374d9504fa6fb4aa57320b0e47fc}
+      \strng{authorfullhash}{ee74374d9504fa6fb4aa57320b0e47fc}
+      \strng{authorfullhashraw}{ee74374d9504fa6fb4aa57320b0e47fc}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Mathematics of Computation}
+      \field{number}{90}
+      \field{title}{An algorithm for the machine calculation of complex {Fourier} series}
+      \field{volume}{19}
+      \field{year}{1965}
+      \field{dateera}{ce}
+      \field{pages}{297\bibrangedash 301}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.1090/S0025-5718-1965-0178586-1
+      \endverb
+    \endentry
+    \entry{cremen2020}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=97338d3c56c7e032d4ce9ef36956b7bb}{%
+           family={Cremen},
+           familyi={C\bibinitperiod},
+           given={Gemma},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=839576978647823eb9ba7ddb8db1d669}{%
+           family={Galasso},
+           familyi={G\bibinitperiod},
+           given={Carmine},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{e89fceff8053ef2c2a84295fc3728553}
+      \strng{fullhash}{e89fceff8053ef2c2a84295fc3728553}
+      \strng{fullhashraw}{e89fceff8053ef2c2a84295fc3728553}
+      \strng{bibnamehash}{e89fceff8053ef2c2a84295fc3728553}
+      \strng{authorbibnamehash}{e89fceff8053ef2c2a84295fc3728553}
+      \strng{authornamehash}{e89fceff8053ef2c2a84295fc3728553}
+      \strng{authorfullhash}{e89fceff8053ef2c2a84295fc3728553}
+      \strng{authorfullhashraw}{e89fceff8053ef2c2a84295fc3728553}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eid}{103184}
+      \field{journaltitle}{Earth-Science Reviews}
+      \field{title}{Earthquake early warning: Recent advances and perspectives}
+      \field{volume}{205}
+      \field{year}{2020}
+      \field{dateera}{ce}
+    \endentry
+    \entry{espinosa1995}{article}{}{}
+      \name{author}{7}{}{%
+        {{un=0,uniquepart=base,hash=5680e97e284bf8c6eeff0b336660aca0}{%
+           family={Espinosa-Aranda},
+           familyi={E\bibinithyphendelim A\bibinitperiod},
+           given={J.\bibnamedelimi M.},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e356d14f54d04458b260065b207e2797}{%
+           family={Jiménez},
+           familyi={J\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a3adc5e79935321522a9f28f878863f7}{%
+           family={Ibarrola},
+           familyi={I\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=20c74f71312e95b041a87b6890643d66}{%
+           family={Alcantar},
+           familyi={A\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=76914d8c6191eca95fe2ae5bb744058b}{%
+           family={Aguilar},
+           familyi={A\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bf212a3db34da97ada9c7e279467262f}{%
+           family={Inostroza},
+           familyi={I\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3948a614569595290b6d4be4098dcf85}{%
+           family={Maldonado},
+           familyi={M\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{d6929489a536ff64f9089f4295c9658d}
+      \strng{fullhash}{4d8f12c46ddb84f147ddbbad079bc656}
+      \strng{fullhashraw}{4d8f12c46ddb84f147ddbbad079bc656}
+      \strng{bibnamehash}{4d8f12c46ddb84f147ddbbad079bc656}
+      \strng{authorbibnamehash}{4d8f12c46ddb84f147ddbbad079bc656}
+      \strng{authornamehash}{d6929489a536ff64f9089f4295c9658d}
+      \strng{authorfullhash}{4d8f12c46ddb84f147ddbbad079bc656}
+      \strng{authorfullhashraw}{4d8f12c46ddb84f147ddbbad079bc656}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Seismological Research Letters}
+      \field{number}{6}
+      \field{title}{Mexico City seismic alert system}
+      \field{volume}{66}
+      \field{year}{1995}
+      \field{dateera}{ce}
+      \field{pages}{42\bibrangedash 53}
+      \range{pages}{12}
+    \endentry
+    \entry{prototipo}{online}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=b4e27c5945d966f598f72b21b28b58ba}{%
+           family={Flores\bibnamedelima Torres},
+           familyi={F\bibinitperiod\bibinitdelim T\bibinitperiod},
+           given={Mateo\bibnamedelima R.},
+           giveni={M\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=acdd09c2047dd0d7a5adf0225b7ce78d}{%
+           family={Sánchez\bibnamedelima Chávez},
+           familyi={S\bibinitperiod\bibinitdelim C\bibinitperiod},
+           given={Víctor\bibnamedelima M.},
+           giveni={V\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0122b33477685b94304c92110c990d21}{%
+           family={Martínez\bibnamedelima Alanis},
+           familyi={M\bibinitperiod\bibinitdelim A\bibinitperiod},
+           given={Sofía},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{45c9a12fe851665e9ece878e2f458160}
+      \strng{fullhash}{062347c4b9527b3a59da6854c41a2309}
+      \strng{fullhashraw}{062347c4b9527b3a59da6854c41a2309}
+      \strng{bibnamehash}{062347c4b9527b3a59da6854c41a2309}
+      \strng{authorbibnamehash}{062347c4b9527b3a59da6854c41a2309}
+      \strng{authornamehash}{45c9a12fe851665e9ece878e2f458160}
+      \strng{authorfullhash}{062347c4b9527b3a59da6854c41a2309}
+      \strng{authorfullhashraw}{062347c4b9527b3a59da6854c41a2309}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Sismo o ruido. Explorador de 20 sismos de México}
+      \field{urlday}{22}
+      \field{urlmonth}{11}
+      \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://sismo-o-ruido.vercel.app
+      \endverb
+      \verb{url}
+      \verb https://sismo-o-ruido.vercel.app
+      \endverb
+    \endentry
+    \entry{fourier1822}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=a70507b718c953f6ae7e28c0ba43cff8}{%
+           family={Fourier},
+           familyi={F\bibinitperiod},
+           given={Joseph},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Firmin Didot}%
+      }
+      \strng{namehash}{a70507b718c953f6ae7e28c0ba43cff8}
+      \strng{fullhash}{a70507b718c953f6ae7e28c0ba43cff8}
+      \strng{fullhashraw}{a70507b718c953f6ae7e28c0ba43cff8}
+      \strng{bibnamehash}{a70507b718c953f6ae7e28c0ba43cff8}
+      \strng{authorbibnamehash}{a70507b718c953f6ae7e28c0ba43cff8}
+      \strng{authornamehash}{a70507b718c953f6ae7e28c0ba43cff8}
+      \strng{authorfullhash}{a70507b718c953f6ae7e28c0ba43cff8}
+      \strng{authorfullhashraw}{a70507b718c953f6ae7e28c0ba43cff8}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Théorie analytique de la chaleur}
+      \field{year}{1822}
+      \field{dateera}{ce}
+    \endentry
+    \entry{geoscope}{dataset}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=80d85037aabcd253df56420407f66ff4}{%
+           family={{Institut de physique du globe de Paris (IPGP) and École et Observatoire des Sciences de la Terre de Strasbourg (EOST)}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{80d85037aabcd253df56420407f66ff4}
+      \strng{fullhash}{80d85037aabcd253df56420407f66ff4}
+      \strng{fullhashraw}{80d85037aabcd253df56420407f66ff4}
+      \strng{bibnamehash}{80d85037aabcd253df56420407f66ff4}
+      \strng{authorbibnamehash}{80d85037aabcd253df56420407f66ff4}
+      \strng{authornamehash}{80d85037aabcd253df56420407f66ff4}
+      \strng{authorfullhash}{80d85037aabcd253df56420407f66ff4}
+      \strng{authorfullhashraw}{80d85037aabcd253df56420407f66ff4}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{GEOSCOPE}, French Global Network of broad band seismic stations}
+      \field{urlday}{22}
+      \field{urlmonth}{11}
+      \field{urlyear}{2026}
+      \field{year}{1982}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.18715/GEOSCOPE.G
+      \endverb
+    \endentry
+    \entry{kilb2012}{article}{}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=c458ea671b3ef6f538cbd8ae64810c35}{%
+           family={Kilb},
+           familyi={K\bibinitperiod},
+           given={Debi},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8634c1d13d9ca94d3f9014c7c8b9afc0}{%
+           family={Peng},
+           familyi={P\bibinitperiod},
+           given={Zhigang},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=90b33a426cedeea4f0b8a4ab46cec4e8}{%
+           family={Simpson},
+           familyi={S\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=009e31fcfd2b2284fafb124adbf4448e}{%
+           family={Michael},
+           familyi={M\bibinitperiod},
+           given={Andrew},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=598b431091ce7b4517aea907bca7781b}{%
+           family={Fisher},
+           familyi={F\bibinitperiod},
+           given={Meghan},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b39b79bc61f6b1928e2f9b52d57a5c8e}{%
+           family={Rohrlick},
+           familyi={R\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{381ad398e74be55312a0afc0b09fa073}
+      \strng{fullhash}{1630c7d3f679513bafcdded7248c32e0}
+      \strng{fullhashraw}{1630c7d3f679513bafcdded7248c32e0}
+      \strng{bibnamehash}{1630c7d3f679513bafcdded7248c32e0}
+      \strng{authorbibnamehash}{1630c7d3f679513bafcdded7248c32e0}
+      \strng{authornamehash}{381ad398e74be55312a0afc0b09fa073}
+      \strng{authorfullhash}{1630c7d3f679513bafcdded7248c32e0}
+      \strng{authorfullhashraw}{1630c7d3f679513bafcdded7248c32e0}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Seismological Research Letters}
+      \field{number}{2}
+      \field{title}{Listen, watch, learn: {SeisSound} video products}
+      \field{volume}{83}
+      \field{year}{2012}
+      \field{dateera}{ce}
+      \field{pages}{281\bibrangedash 286}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1785/gssrl.83.2.281
+      \endverb
+    \endentry
+    \entry{kong2016}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=e042cce6948917905ef264194e91fe23}{%
+           family={Kong},
+           familyi={K\bibinitperiod},
+           given={Qingkai},
+           giveni={Q\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=deeea5f8151a648e0c34d3d59041953a}{%
+           family={Allen},
+           familyi={A\bibinitperiod},
+           given={Richard\bibnamedelima M.},
+           giveni={R\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=862601ee158f77cec7c4d858e2d25f47}{%
+           family={Schreier},
+           familyi={S\bibinitperiod},
+           given={Louis},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4662c88646f28ab1253e78a750a8f919}{%
+           family={Kwon},
+           familyi={K\bibinitperiod},
+           given={Young-Woo},
+           giveni={Y\bibinithyphendelim W\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{cac2ce9bbb952f0d75810d168f274396}
+      \strng{fullhash}{c610f8cc06449c7f1f06f93f539b7343}
+      \strng{fullhashraw}{c610f8cc06449c7f1f06f93f539b7343}
+      \strng{bibnamehash}{c610f8cc06449c7f1f06f93f539b7343}
+      \strng{authorbibnamehash}{c610f8cc06449c7f1f06f93f539b7343}
+      \strng{authornamehash}{cac2ce9bbb952f0d75810d168f274396}
+      \strng{authorfullhash}{c610f8cc06449c7f1f06f93f539b7343}
+      \strng{authorfullhashraw}{c610f8cc06449c7f1f06f93f539b7343}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eid}{e1501055}
+      \field{journaltitle}{Science Advances}
+      \field{number}{2}
+      \field{title}{{MyShake}: A smartphone seismic network for earthquake early warning and beyond}
+      \field{volume}{2}
+      \field{year}{2016}
+      \field{dateera}{ce}
+    \endentry
+    \entry{kreyszig2011}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=c4141ad87d07f41e44c31cc3b342bb04}{%
+           family={Kreyszig},
+           familyi={K\bibinitperiod},
+           given={Erwin},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Wiley}%
+      }
+      \strng{namehash}{c4141ad87d07f41e44c31cc3b342bb04}
+      \strng{fullhash}{c4141ad87d07f41e44c31cc3b342bb04}
+      \strng{fullhashraw}{c4141ad87d07f41e44c31cc3b342bb04}
+      \strng{bibnamehash}{c4141ad87d07f41e44c31cc3b342bb04}
+      \strng{authorbibnamehash}{c4141ad87d07f41e44c31cc3b342bb04}
+      \strng{authornamehash}{c4141ad87d07f41e44c31cc3b342bb04}
+      \strng{authorfullhash}{c4141ad87d07f41e44c31cc3b342bb04}
+      \strng{authorfullhashraw}{c4141ad87d07f41e44c31cc3b342bb04}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{10}
+      \field{title}{Advanced engineering mathematics}
+      \field{year}{2011}
+      \field{dateera}{ce}
+    \endentry
+    \entry{longuet1950}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=c222efed3725e26d399da5ffb92890a0}{%
+           family={Longuet-Higgins},
+           familyi={L\bibinithyphendelim H\bibinitperiod},
+           given={M.\bibnamedelimi S.},
+           giveni={M\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{c222efed3725e26d399da5ffb92890a0}
+      \strng{fullhash}{c222efed3725e26d399da5ffb92890a0}
+      \strng{fullhashraw}{c222efed3725e26d399da5ffb92890a0}
+      \strng{bibnamehash}{c222efed3725e26d399da5ffb92890a0}
+      \strng{authorbibnamehash}{c222efed3725e26d399da5ffb92890a0}
+      \strng{authornamehash}{c222efed3725e26d399da5ffb92890a0}
+      \strng{authorfullhash}{c222efed3725e26d399da5ffb92890a0}
+      \strng{authorfullhashraw}{c222efed3725e26d399da5ffb92890a0}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Philosophical Transactions of the Royal Society of London. Series A}
+      \field{number}{857}
+      \field{title}{A theory of the origin of microseisms}
+      \field{volume}{243}
+      \field{year}{1950}
+      \field{dateera}{ce}
+      \field{pages}{1\bibrangedash 35}
+      \range{pages}{35}
+    \endentry
+    \entry{mcnamara2004}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=f578771896531c410c7c3d33c893216e}{%
+           family={McNamara},
+           familyi={M\bibinitperiod},
+           given={Daniel\bibnamedelima E.},
+           giveni={D\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3b731edac7e9d4ad05f22cad604caead}{%
+           family={Buland},
+           familyi={B\bibinitperiod},
+           given={Raymond\bibnamedelima P.},
+           giveni={R\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{a7cfcd1ac6d6e8059a707da753ff9ade}
+      \strng{fullhash}{a7cfcd1ac6d6e8059a707da753ff9ade}
+      \strng{fullhashraw}{a7cfcd1ac6d6e8059a707da753ff9ade}
+      \strng{bibnamehash}{a7cfcd1ac6d6e8059a707da753ff9ade}
+      \strng{authorbibnamehash}{a7cfcd1ac6d6e8059a707da753ff9ade}
+      \strng{authornamehash}{a7cfcd1ac6d6e8059a707da753ff9ade}
+      \strng{authorfullhash}{a7cfcd1ac6d6e8059a707da753ff9ade}
+      \strng{authorfullhashraw}{a7cfcd1ac6d6e8059a707da753ff9ade}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Bulletin of the Seismological Society of America}
+      \field{number}{4}
+      \field{title}{Ambient noise levels in the continental {United States}}
+      \field{volume}{94}
+      \field{year}{2004}
+      \field{dateera}{ce}
+      \field{pages}{1517\bibrangedash 1527}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1785/012003001
+      \endverb
+    \endentry
+    \entry{minson2018}{article}{}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=e934fc9e4e93f38eeaeb066dc7452181}{%
+           family={Minson},
+           familyi={M\bibinitperiod},
+           given={Sarah\bibnamedelima E.},
+           giveni={S\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e55374042adecf893e2bdd169b330090}{%
+           family={Meier},
+           familyi={M\bibinitperiod},
+           given={Men-Andrin},
+           giveni={M\bibinithyphendelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d981eb7706065b2f2875c124422b7da3}{%
+           family={Baltay},
+           familyi={B\bibinitperiod},
+           given={Annemarie\bibnamedelima S.},
+           giveni={A\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=38b3e63f5a618e79441ad25a89dc540b}{%
+           family={Hanks},
+           familyi={H\bibinitperiod},
+           given={Thomas\bibnamedelima C.},
+           giveni={T\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bf29d1296b3bbb823940d40f3fc96c3c}{%
+           family={Cochran},
+           familyi={C\bibinitperiod},
+           given={Elizabeth\bibnamedelima S.},
+           giveni={E\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{c2bfd683a58cff524d1a60a57f6e4c63}
+      \strng{fullhash}{2b5972946b907bc94471ca0ae88891be}
+      \strng{fullhashraw}{2b5972946b907bc94471ca0ae88891be}
+      \strng{bibnamehash}{2b5972946b907bc94471ca0ae88891be}
+      \strng{authorbibnamehash}{2b5972946b907bc94471ca0ae88891be}
+      \strng{authornamehash}{c2bfd683a58cff524d1a60a57f6e4c63}
+      \strng{authorfullhash}{2b5972946b907bc94471ca0ae88891be}
+      \strng{authorfullhashraw}{2b5972946b907bc94471ca0ae88891be}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eid}{eaaq0504}
+      \field{journaltitle}{Science Advances}
+      \field{number}{3}
+      \field{title}{The limits of earthquake early warning: Timeliness of ground motion estimates}
+      \field{volume}{4}
+      \field{year}{2018}
+      \field{dateera}{ce}
+    \endentry
+    \entry{mousavi2020}{article}{}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=74313f02ee2a7b14dee753101d9e4e4b}{%
+           family={Mousavi},
+           familyi={M\bibinitperiod},
+           given={S.\bibnamedelimi Mostafa},
+           giveni={S\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a79e78de4d1bdf7b5f829c93fa96a2fb}{%
+           family={Ellsworth},
+           familyi={E\bibinitperiod},
+           given={William\bibnamedelima L.},
+           giveni={W\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bc81214037214604a2918e8211a1307d}{%
+           family={Zhu},
+           familyi={Z\bibinitperiod},
+           given={Weiqiang},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=de4dd81edb114a5cec71e82aa16e7269}{%
+           family={Chuang},
+           familyi={C\bibinitperiod},
+           given={Lindsay\bibnamedelima Y.},
+           giveni={L\bibinitperiod\bibinitdelim Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=07a32099eef6927fda3905bb5800b621}{%
+           family={Beroza},
+           familyi={B\bibinitperiod},
+           given={Gregory\bibnamedelima C.},
+           giveni={G\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{91d290c13b7fcd458ac69b4911fd9db1}
+      \strng{fullhash}{bed28222555cbf8a89a59e7d65cd6800}
+      \strng{fullhashraw}{bed28222555cbf8a89a59e7d65cd6800}
+      \strng{bibnamehash}{bed28222555cbf8a89a59e7d65cd6800}
+      \strng{authorbibnamehash}{bed28222555cbf8a89a59e7d65cd6800}
+      \strng{authornamehash}{91d290c13b7fcd458ac69b4911fd9db1}
+      \strng{authorfullhash}{bed28222555cbf8a89a59e7d65cd6800}
+      \strng{authorfullhashraw}{bed28222555cbf8a89a59e7d65cd6800}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eid}{3952}
+      \field{journaltitle}{Nature Communications}
+      \field{title}{Earthquake transformer: An attentive deep-learning model for simultaneous earthquake detection and phase picking}
+      \field{volume}{11}
+      \field{year}{2020}
+      \field{dateera}{ce}
+    \endentry
+    \entry{mousavi2016}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=74313f02ee2a7b14dee753101d9e4e4b}{%
+           family={Mousavi},
+           familyi={M\bibinitperiod},
+           given={S.\bibnamedelimi Mostafa},
+           giveni={S\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=58c41e015e18d25c5085476aebaef26f}{%
+           family={Langston},
+           familyi={L\bibinitperiod},
+           given={Charles\bibnamedelima A.},
+           giveni={C\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{f22a4993e74509904596d860e9cc4b27}
+      \strng{fullhash}{f22a4993e74509904596d860e9cc4b27}
+      \strng{fullhashraw}{f22a4993e74509904596d860e9cc4b27}
+      \strng{bibnamehash}{f22a4993e74509904596d860e9cc4b27}
+      \strng{authorbibnamehash}{f22a4993e74509904596d860e9cc4b27}
+      \strng{authornamehash}{f22a4993e74509904596d860e9cc4b27}
+      \strng{authorfullhash}{f22a4993e74509904596d860e9cc4b27}
+      \strng{authorfullhashraw}{f22a4993e74509904596d860e9cc4b27}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Applied Geophysics}
+      \field{title}{Adaptive noise estimation and suppression for improving microseismic event detection}
+      \field{volume}{132}
+      \field{year}{2016}
+      \field{dateera}{ce}
+      \field{pages}{116\bibrangedash 124}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1016/j.jappgeo.2016.06.008
+      \endverb
+    \endentry
+    \entry{onu11}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=289d6d295de5d9f9e01197fab2b80b67}{%
+           family={{Naciones Unidas}},
+           familyi={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{289d6d295de5d9f9e01197fab2b80b67}
+      \strng{fullhash}{289d6d295de5d9f9e01197fab2b80b67}
+      \strng{fullhashraw}{289d6d295de5d9f9e01197fab2b80b67}
+      \strng{bibnamehash}{289d6d295de5d9f9e01197fab2b80b67}
+      \strng{authorbibnamehash}{289d6d295de5d9f9e01197fab2b80b67}
+      \strng{authornamehash}{289d6d295de5d9f9e01197fab2b80b67}
+      \strng{authorfullhash}{289d6d295de5d9f9e01197fab2b80b67}
+      \strng{authorfullhashraw}{289d6d295de5d9f9e01197fab2b80b67}
+      \field{extraname}{1}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{extradate}{1}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Objetivo 11: Lograr que las ciudades sean más inclusivas, seguras, resilientes y sostenibles}
+      \field{urlday}{8}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.un.org/sustainabledevelopment/es/cities/
+      \endverb
+      \verb{url}
+      \verb https://www.un.org/sustainabledevelopment/es/cities/
+      \endverb
+    \endentry
+    \entry{onu9}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=289d6d295de5d9f9e01197fab2b80b67}{%
+           family={{Naciones Unidas}},
+           familyi={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{289d6d295de5d9f9e01197fab2b80b67}
+      \strng{fullhash}{289d6d295de5d9f9e01197fab2b80b67}
+      \strng{fullhashraw}{289d6d295de5d9f9e01197fab2b80b67}
+      \strng{bibnamehash}{289d6d295de5d9f9e01197fab2b80b67}
+      \strng{authorbibnamehash}{289d6d295de5d9f9e01197fab2b80b67}
+      \strng{authornamehash}{289d6d295de5d9f9e01197fab2b80b67}
+      \strng{authorfullhash}{289d6d295de5d9f9e01197fab2b80b67}
+      \strng{authorfullhashraw}{289d6d295de5d9f9e01197fab2b80b67}
+      \field{extraname}{2}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{extradate}{2}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Objetivo 9: Construir infraestructuras resilientes, promover la industrialización sostenible y fomentar la innovación}
+      \field{urlday}{8}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.un.org/sustainabledevelopment/es/infrastructure/
+      \endverb
+      \verb{url}
+      \verb https://www.un.org/sustainabledevelopment/es/infrastructure/
+      \endverb
+    \endentry
+    \entry{peterson1993}{report}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=4c863193cf734ac0b1ce9298c2a6961d}{%
+           family={Peterson},
+           familyi={P\bibinitperiod},
+           given={Jon},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {U.S. Geological Survey}%
+      }
+      \strng{namehash}{4c863193cf734ac0b1ce9298c2a6961d}
+      \strng{fullhash}{4c863193cf734ac0b1ce9298c2a6961d}
+      \strng{fullhashraw}{4c863193cf734ac0b1ce9298c2a6961d}
+      \strng{bibnamehash}{4c863193cf734ac0b1ce9298c2a6961d}
+      \strng{authorbibnamehash}{4c863193cf734ac0b1ce9298c2a6961d}
+      \strng{authornamehash}{4c863193cf734ac0b1ce9298c2a6961d}
+      \strng{authorfullhash}{4c863193cf734ac0b1ce9298c2a6961d}
+      \strng{authorfullhashraw}{4c863193cf734ac0b1ce9298c2a6961d}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{number}{93-322}
+      \field{title}{Observations and modeling of seismic background noise}
+      \field{type}{Open-File Report}
+      \field{year}{1993}
+      \field{dateera}{ce}
+    \endentry
+    \entry{sasmex}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=561c6a31ab70c0882977a7bcd9aa2c39}{%
+           family={{Poder Judicial de la Ciudad de México}},
+           familyi={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{561c6a31ab70c0882977a7bcd9aa2c39}
+      \strng{fullhash}{561c6a31ab70c0882977a7bcd9aa2c39}
+      \strng{fullhashraw}{561c6a31ab70c0882977a7bcd9aa2c39}
+      \strng{bibnamehash}{561c6a31ab70c0882977a7bcd9aa2c39}
+      \strng{authorbibnamehash}{561c6a31ab70c0882977a7bcd9aa2c39}
+      \strng{authornamehash}{561c6a31ab70c0882977a7bcd9aa2c39}
+      \strng{authorfullhash}{561c6a31ab70c0882977a7bcd9aa2c39}
+      \strng{authorfullhashraw}{561c6a31ab70c0882977a7bcd9aa2c39}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Funcionamiento del {SASMEX}}
+      \field{urlday}{8}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://poderjudicialcdmx.gob.mx/proteccion_civil/wp-content/uploads/2_FUNCIONAMIENTO_DEL_SASMEX.pdf
+      \endverb
+      \verb{url}
+      \verb https://poderjudicialcdmx.gob.mx/proteccion_civil/wp-content/uploads/2_FUNCIONAMIENTO_DEL_SASMEX.pdf
+      \endverb
+    \endentry
+    \entry{ssn}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=a85a543ddca2d1a404a8292f8ee9fc66}{%
+           family={{Servicio Sismológico Nacional}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{a85a543ddca2d1a404a8292f8ee9fc66}
+      \strng{fullhash}{a85a543ddca2d1a404a8292f8ee9fc66}
+      \strng{fullhashraw}{a85a543ddca2d1a404a8292f8ee9fc66}
+      \strng{bibnamehash}{a85a543ddca2d1a404a8292f8ee9fc66}
+      \strng{authorbibnamehash}{a85a543ddca2d1a404a8292f8ee9fc66}
+      \strng{authornamehash}{a85a543ddca2d1a404a8292f8ee9fc66}
+      \strng{authorfullhash}{a85a543ddca2d1a404a8292f8ee9fc66}
+      \strng{authorfullhashraw}{a85a543ddca2d1a404a8292f8ee9fc66}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Servicio Sismológico Nacional, Instituto de Geofísica, {UNAM}}
+      \field{urlday}{22}
+      \field{urlmonth}{11}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb http://www.ssn.unam.mx
+      \endverb
+      \verb{url}
+      \verb http://www.ssn.unam.mx
+      \endverb
+    \endentry
+    \entry{shearer2019}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=ee176653aab0517cf682e8a5f2302e1a}{%
+           family={Shearer},
+           familyi={S\bibinitperiod},
+           given={Peter\bibnamedelima M.},
+           giveni={P\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{ee176653aab0517cf682e8a5f2302e1a}
+      \strng{fullhash}{ee176653aab0517cf682e8a5f2302e1a}
+      \strng{fullhashraw}{ee176653aab0517cf682e8a5f2302e1a}
+      \strng{bibnamehash}{ee176653aab0517cf682e8a5f2302e1a}
+      \strng{authorbibnamehash}{ee176653aab0517cf682e8a5f2302e1a}
+      \strng{authornamehash}{ee176653aab0517cf682e8a5f2302e1a}
+      \strng{authorfullhash}{ee176653aab0517cf682e8a5f2302e1a}
+      \strng{authorfullhashraw}{ee176653aab0517cf682e8a5f2302e1a}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{3}
+      \field{title}{Introduction to seismology}
+      \field{year}{2019}
+      \field{dateera}{ce}
+    \endentry
+    \entry{statista2016}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=62182ca58a739daa8ddd8a48b7b19abb}{%
+           family={{Statista}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{62182ca58a739daa8ddd8a48b7b19abb}
+      \strng{fullhash}{62182ca58a739daa8ddd8a48b7b19abb}
+      \strng{fullhashraw}{62182ca58a739daa8ddd8a48b7b19abb}
+      \strng{bibnamehash}{62182ca58a739daa8ddd8a48b7b19abb}
+      \strng{authorbibnamehash}{62182ca58a739daa8ddd8a48b7b19abb}
+      \strng{authornamehash}{62182ca58a739daa8ddd8a48b7b19abb}
+      \strng{authorfullhash}{62182ca58a739daa8ddd8a48b7b19abb}
+      \strng{authorfullhashraw}{62182ca58a739daa8ddd8a48b7b19abb}
+      \field{extraname}{1}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{30}
+      \field{month}{9}
+      \field{title}{Deaths due to earthquakes worldwide 2000--2015}
+      \field{urlday}{8}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{year}{2016}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.statista.com/statistics/263108/global-death-toll-due-to-earthquakes-since-2000/
+      \endverb
+      \verb{url}
+      \verb https://www.statista.com/statistics/263108/global-death-toll-due-to-earthquakes-since-2000/
+      \endverb
+    \endentry
+    \entry{statista2025}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=62182ca58a739daa8ddd8a48b7b19abb}{%
+           family={{Statista}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{62182ca58a739daa8ddd8a48b7b19abb}
+      \strng{fullhash}{62182ca58a739daa8ddd8a48b7b19abb}
+      \strng{fullhashraw}{62182ca58a739daa8ddd8a48b7b19abb}
+      \strng{bibnamehash}{62182ca58a739daa8ddd8a48b7b19abb}
+      \strng{authorbibnamehash}{62182ca58a739daa8ddd8a48b7b19abb}
+      \strng{authornamehash}{62182ca58a739daa8ddd8a48b7b19abb}
+      \strng{authorfullhash}{62182ca58a739daa8ddd8a48b7b19abb}
+      \strng{authorfullhashraw}{62182ca58a739daa8ddd8a48b7b19abb}
+      \field{extraname}{2}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{30}
+      \field{month}{6}
+      \field{title}{Death toll in great earthquakes 1900--2024}
+      \field{urlday}{8}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.statista.com/statistics/266325/death-toll-in-great-earthquakes/
+      \endverb
+      \verb{url}
+      \verb https://www.statista.com/statistics/266325/death-toll-in-great-earthquakes/
+      \endverb
+    \endentry
+    \entry{expediente}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=c9c8e92af142d30f762a8d67d07dc517}{%
+           family={{Tecnológico de Monterrey}},
+           familyi={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{c9c8e92af142d30f762a8d67d07dc517}
+      \strng{fullhash}{c9c8e92af142d30f762a8d67d07dc517}
+      \strng{fullhashraw}{c9c8e92af142d30f762a8d67d07dc517}
+      \strng{bibnamehash}{c9c8e92af142d30f762a8d67d07dc517}
+      \strng{authorbibnamehash}{c9c8e92af142d30f762a8d67d07dc517}
+      \strng{authornamehash}{c9c8e92af142d30f762a8d67d07dc517}
+      \strng{authorfullhash}{c9c8e92af142d30f762a8d67d07dc517}
+      \strng{authorfullhashraw}{c9c8e92af142d30f762a8d67d07dc517}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Material del curso Análisis de Métodos Matemáticos para la Física}
+      \field{title}{Expediente de consultoría 5: Análisis matemático de señales sísmicas mediante transformadas integrales para el desarrollo de sistemas inteligentes de alerta temprana}
+      \field{year}{2026}
+      \field{dateera}{ce}
+    \endentry
+    \entry{theiler1992}{article}{}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=3ebb10a577afae935bde2ad87630005c}{%
+           family={Theiler},
+           familyi={T\bibinitperiod},
+           given={James},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9c7e2f2c6bed2b5092fca690df63baa9}{%
+           family={Eubank},
+           familyi={E\bibinitperiod},
+           given={Stephen},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=795220d6c8c4f86e420d6df5a8b5e974}{%
+           family={Longtin},
+           familyi={L\bibinitperiod},
+           given={André},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=abf2f6a97afb914fafab8ace344e1ac2}{%
+           family={Galdrikian},
+           familyi={G\bibinitperiod},
+           given={Bryan},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8989d3ee480656dd3eb385ab19b9d332}{%
+           family={Farmer},
+           familyi={F\bibinitperiod},
+           given={J.\bibnamedelimi Doyne},
+           giveni={J\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{fa7824ec2b9818f936d3737aa53c33d7}
+      \strng{fullhash}{5cbcfc61abd535c3a5ca3226012881e5}
+      \strng{fullhashraw}{5cbcfc61abd535c3a5ca3226012881e5}
+      \strng{bibnamehash}{5cbcfc61abd535c3a5ca3226012881e5}
+      \strng{authorbibnamehash}{5cbcfc61abd535c3a5ca3226012881e5}
+      \strng{authornamehash}{fa7824ec2b9818f936d3737aa53c33d7}
+      \strng{authorfullhash}{5cbcfc61abd535c3a5ca3226012881e5}
+      \strng{authorfullhashraw}{5cbcfc61abd535c3a5ca3226012881e5}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Physica D: Nonlinear Phenomena}
+      \field{number}{1--4}
+      \field{title}{Testing for nonlinearity in time series: The method of surrogate data}
+      \field{volume}{58}
+      \field{year}{1992}
+      \field{dateera}{ce}
+      \field{pages}{77\bibrangedash 94}
+      \range{pages}{18}
+      \verb{doi}
+      \verb 10.1016/0167-2789(92)90102-S
+      \endverb
+    \endentry
+    \entry{usgs_ehp}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=443478d363b15c65a1ee517d1122e79b}{%
+           family={{U.S. Geological Survey}},
+           familyi={U\bibinitperiod}}}%
+      }
+      \strng{namehash}{443478d363b15c65a1ee517d1122e79b}
+      \strng{fullhash}{443478d363b15c65a1ee517d1122e79b}
+      \strng{fullhashraw}{443478d363b15c65a1ee517d1122e79b}
+      \strng{bibnamehash}{443478d363b15c65a1ee517d1122e79b}
+      \strng{authorbibnamehash}{443478d363b15c65a1ee517d1122e79b}
+      \strng{authornamehash}{443478d363b15c65a1ee517d1122e79b}
+      \strng{authorfullhash}{443478d363b15c65a1ee517d1122e79b}
+      \strng{authorfullhashraw}{443478d363b15c65a1ee517d1122e79b}
+      \field{extraname}{1}
+      \field{sortinit}{U}
+      \field{sortinithash}{6901a00e45705986ee5e7ca9fd39adca}
+      \field{extradate}{1}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{About the {Earthquake Hazards Program}}
+      \field{urlday}{8}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.usgs.gov/programs/earthquake-hazards/about
+      \endverb
+      \verb{url}
+      \verb https://www.usgs.gov/programs/earthquake-hazards/about
+      \endverb
+    \endentry
+    \entry{usgs_anss}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=443478d363b15c65a1ee517d1122e79b}{%
+           family={{U.S. Geological Survey}},
+           familyi={U\bibinitperiod}}}%
+      }
+      \strng{namehash}{443478d363b15c65a1ee517d1122e79b}
+      \strng{fullhash}{443478d363b15c65a1ee517d1122e79b}
+      \strng{fullhashraw}{443478d363b15c65a1ee517d1122e79b}
+      \strng{bibnamehash}{443478d363b15c65a1ee517d1122e79b}
+      \strng{authorbibnamehash}{443478d363b15c65a1ee517d1122e79b}
+      \strng{authornamehash}{443478d363b15c65a1ee517d1122e79b}
+      \strng{authorfullhash}{443478d363b15c65a1ee517d1122e79b}
+      \strng{authorfullhashraw}{443478d363b15c65a1ee517d1122e79b}
+      \field{extraname}{2}
+      \field{sortinit}{U}
+      \field{sortinithash}{6901a00e45705986ee5e7ca9fd39adca}
+      \field{extradate}{2}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{ANSS} -- {Advanced National Seismic System}}
+      \field{urlday}{8}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.usgs.gov/programs/earthquake-hazards/anss-advanced-national-seismic-system
+      \endverb
+      \verb{url}
+      \verb https://www.usgs.gov/programs/earthquake-hazards/anss-advanced-national-seismic-system
+      \endverb
+    \endentry
+    \entry{usgs_faq}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=443478d363b15c65a1ee517d1122e79b}{%
+           family={{U.S. Geological Survey}},
+           familyi={U\bibinitperiod}}}%
+      }
+      \strng{namehash}{443478d363b15c65a1ee517d1122e79b}
+      \strng{fullhash}{443478d363b15c65a1ee517d1122e79b}
+      \strng{fullhashraw}{443478d363b15c65a1ee517d1122e79b}
+      \strng{bibnamehash}{443478d363b15c65a1ee517d1122e79b}
+      \strng{authorbibnamehash}{443478d363b15c65a1ee517d1122e79b}
+      \strng{authornamehash}{443478d363b15c65a1ee517d1122e79b}
+      \strng{authorfullhash}{443478d363b15c65a1ee517d1122e79b}
+      \strng{authorfullhashraw}{443478d363b15c65a1ee517d1122e79b}
+      \field{extraname}{3}
+      \field{sortinit}{U}
+      \field{sortinithash}{6901a00e45705986ee5e7ca9fd39adca}
+      \field{extradate}{3}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{How do {I} sign up to receive {ShakeAlert}-powered alerts on my phone?}
+      \field{urlday}{8}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.usgs.gov/faqs/how-do-i-sign-shakealertr-earthquake-early-warning-system
+      \endverb
+      \verb{url}
+      \verb https://www.usgs.gov/faqs/how-do-i-sign-shakealertr-earthquake-early-warning-system
+      \endverb
+    \endentry
+    \entry{comcat}{dataset}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=36a4c862f661e5fb86b473583b97b40d}{%
+           family={{U.S. Geological Survey, Earthquake Hazards Program}},
+           familyi={U\bibinitperiod}}}%
+      }
+      \strng{namehash}{36a4c862f661e5fb86b473583b97b40d}
+      \strng{fullhash}{36a4c862f661e5fb86b473583b97b40d}
+      \strng{fullhashraw}{36a4c862f661e5fb86b473583b97b40d}
+      \strng{bibnamehash}{36a4c862f661e5fb86b473583b97b40d}
+      \strng{authorbibnamehash}{36a4c862f661e5fb86b473583b97b40d}
+      \strng{authornamehash}{36a4c862f661e5fb86b473583b97b40d}
+      \strng{authorfullhash}{36a4c862f661e5fb86b473583b97b40d}
+      \strng{authorfullhashraw}{36a4c862f661e5fb86b473583b97b40d}
+      \field{sortinit}{U}
+      \field{sortinithash}{6901a00e45705986ee5e7ca9fd39adca}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Advanced National Seismic System ({ANSS}) Comprehensive Catalog of Earthquake Events and Products}
+      \field{urlday}{22}
+      \field{urlmonth}{11}
+      \field{urlyear}{2026}
+      \field{year}{2017}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.5066/F7MS3QZH
+      \endverb
+    \endentry
+    \entry{welch1967}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=64b8b4f1ff80e770e409c8e9784015a6}{%
+           family={Welch},
+           familyi={W\bibinitperiod},
+           given={Peter\bibnamedelima D.},
+           giveni={P\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{64b8b4f1ff80e770e409c8e9784015a6}
+      \strng{fullhash}{64b8b4f1ff80e770e409c8e9784015a6}
+      \strng{fullhashraw}{64b8b4f1ff80e770e409c8e9784015a6}
+      \strng{bibnamehash}{64b8b4f1ff80e770e409c8e9784015a6}
+      \strng{authorbibnamehash}{64b8b4f1ff80e770e409c8e9784015a6}
+      \strng{authornamehash}{64b8b4f1ff80e770e409c8e9784015a6}
+      \strng{authorfullhash}{64b8b4f1ff80e770e409c8e9784015a6}
+      \strng{authorfullhashraw}{64b8b4f1ff80e770e409c8e9784015a6}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Audio and Electroacoustics}
+      \field{number}{2}
+      \field{title}{The use of fast {Fourier} transform for the estimation of power spectra: A method based on time averaging over short, modified periodograms}
+      \field{volume}{15}
+      \field{year}{1967}
+      \field{dateera}{ce}
+      \field{pages}{70\bibrangedash 73}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1109/TAU.1967.1161901
+      \endverb
+    \endentry
+    \entry{zhu2019}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=bc81214037214604a2918e8211a1307d}{%
+           family={Zhu},
+           familyi={Z\bibinitperiod},
+           given={Weiqiang},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=74313f02ee2a7b14dee753101d9e4e4b}{%
+           family={Mousavi},
+           familyi={M\bibinitperiod},
+           given={S.\bibnamedelimi Mostafa},
+           giveni={S\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=07a32099eef6927fda3905bb5800b621}{%
+           family={Beroza},
+           familyi={B\bibinitperiod},
+           given={Gregory\bibnamedelima C.},
+           giveni={G\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{c3efe70f2276bbbf9b23d98034f6f7a0}
+      \strng{fullhash}{4c1bd92b5205ac5fdca3c2719c1125d6}
+      \strng{fullhashraw}{4c1bd92b5205ac5fdca3c2719c1125d6}
+      \strng{bibnamehash}{4c1bd92b5205ac5fdca3c2719c1125d6}
+      \strng{authorbibnamehash}{4c1bd92b5205ac5fdca3c2719c1125d6}
+      \strng{authornamehash}{c3efe70f2276bbbf9b23d98034f6f7a0}
+      \strng{authorfullhash}{4c1bd92b5205ac5fdca3c2719c1125d6}
+      \strng{authorfullhashraw}{4c1bd92b5205ac5fdca3c2719c1125d6}
+      \field{sortinit}{Z}
+      \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Geoscience and Remote Sensing}
+      \field{number}{11}
+      \field{title}{Seismic signal denoising and decomposition using deep neural networks}
+      \field{volume}{57}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \field{pages}{9476\bibrangedash 9488}
+      \range{pages}{13}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
