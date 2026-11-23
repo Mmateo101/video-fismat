@@ -279,6 +279,8 @@
     cabeza(k, r) { document.querySelectorAll(".oir").forEach((b) => b.classList.toggle("sonando", b.dataset.a === k && r != null)); estado.cabeza = r == null ? {} : { [k]: r }; pintarOndas(); },
   };
   if (/video=1/.test(location.search)) document.documentElement.style.scrollBehavior = "auto";
+  // el video y el PDF solo se cargan fuera del modo video (dentro del video pesan y lo congelan)
+  else document.querySelectorAll("[data-src]").forEach((e) => { e.src = e.dataset.src; });
 
   (async function inicio() {
     indice = await (await fetch("data/indice.json")).json();
