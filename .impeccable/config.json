@@ -1,0 +1,50 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "overused-font",
+        "value": "fraunces",
+        "createdAt": "2026-11-23T02:03:11.755Z",
+        "reason": "assistant decision: Fraunces is the shared display face of the video and the web prototype (same brand)"
+      },
+      {
+        "rule": "cream-palette",
+        "value": "*",
+        "files": [
+          "web/public/index.html"
+        ],
+        "createdAt": "2026-11-23T02:03:12.498Z",
+        "reason": "assistant decision: cream paper tone is part of the TED-Ed-style palette shared by video and web"
+      },
+      {
+        "rule": "cream-palette",
+        "value": "*",
+        "files": [
+          "web/public/estilo.css"
+        ],
+        "createdAt": "2026-11-23T02:03:13.212Z",
+        "reason": "assistant decision: cream paper tone is part of the TED-Ed-style palette shared by video and web"
+      },
+      {
+        "rule": "cream-palette",
+        "value": "*",
+        "files": [
+          "video/js/escenas/equipo.js"
+        ],
+        "createdAt": "2026-11-23T02:03:14.011Z",
+        "reason": "assistant decision: cream paper tone is part of the TED-Ed-style palette shared by video and web"
+      },
+      {
+        "rule": "cream-palette",
+        "value": "*",
+        "files": [
+          "video/js/escenas/cierre.js"
+        ],
+        "createdAt": "2026-11-23T02:03:14.735Z",
+        "reason": "assistant decision: cream paper tone is part of the TED-Ed-style palette shared by video and web"
+      }
+    ]
+  }
+}
