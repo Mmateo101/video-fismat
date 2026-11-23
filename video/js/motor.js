@@ -85,12 +85,46 @@
       const pad = 12;
       const box = h("div", { class: "marco", style: { left: o.x - pad + "px", top: o.y - pad + "px", width: o.w + pad * 2 + "px", height: o.h + pad * 2 + "px", background: o.color || C.blanco } }, parent);
       const hueco = h("div", { class: "hueco", style: { left: pad + "px", top: pad + "px", width: o.w + "px", height: o.h + "px" } }, box);
+      const cur = N._cur;
+      const clips = (G.medios || []).filter((m) => m.video && m.cam === o.id && cur && m.escena === cur.id);
+      if (clips.length) {
+        const grupo = clips.map((m) => {
+          const v = h("video", { preload: "auto", playsinline: "", src: `media/${m.src}.mp4`, style: { position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", visibility: "hidden" } }, hueco);
+          v.muted = true;
+          return { v, m: Object.assign({ abs: cur.t0 + m.at }, m) };
+        });
+        N.videos.push({ grupo, desde: cur.t0 - 1, hastaT: cur.t1 + 1 });
+      }
       const rot = h("div", { class: "rot" }, hueco, `<div class="tipo">${o.tipo || "Cameo"} · ${o.id}</div><div class="quien">${o.quien || ""}</div>` + (o.linea ? `<div class="linea">${o.linea}</div>` : ""));
       if (o.inn !== false) tl.fromTo(box, { autoAlpha: 0, scale: 0.6, rotation: -6 }, { autoAlpha: 1, scale: 1, rotation: 0, duration: 0.7, ease: "back.out(1.8)" }, Math.max(0, o.t0 - 0.6));
       if (o.out !== false) tl.to(box, { autoAlpha: 0, scale: 0.7, rotation: 4, duration: 0.45, ease: "power2.in" }, o.t1);
       const base = N._cur ? N._cur.t0 : 0;
       N.cameos.push({ id: o.id, tipo: o.tipo || "Cameo", quien: o.quien || "", linea: o.linea || "", t0: +(base + o.t0).toFixed(2), t1: +(base + o.t1).toFixed(2), x: o.x, y: o.y, w: o.w, h: o.h });
       return { box, hueco, rot };
+    },
+
+    /* Grabaciones reales dentro de los marcos (ver GUION.medios) */
+    videos: [],
+    syncVideos(t, exacto) {
+      const esperas = [];
+      N.videos.forEach((V) => {
+        if (t < V.desde || t > V.hastaT) { V.grupo.forEach(({ v }) => { if (!v.paused) v.pause(); }); return; }
+        let act = V.grupo[0];
+        V.grupo.forEach((c) => { if (c.m.abs <= t) act = c; });
+        const m = act.m, local = Math.min(Math.max(m.ss + (t - m.abs), m.ss), m.hasta - 0.04);
+        V.grupo.forEach((c) => { const vis = c === act ? "visible" : "hidden"; if (c.v.style.visibility !== vis) c.v.style.visibility = vis; if (c !== act && !c.v.paused) c.v.pause(); });
+        const v = act.v;
+        const corriendo = !exacto && t >= m.abs && t < m.abs + (m.hasta - m.ss);
+        if (corriendo) { if (v.paused) { v.currentTime = local; v.play().catch(() => {}); } else if (Math.abs(v.currentTime - local) > 0.25) v.currentTime = local; }
+        else {
+          if (!v.paused) v.pause();
+          if (Math.abs(v.currentTime - local) > 0.001) {
+            esperas.push(new Promise((r) => { const fin = () => { v.removeEventListener("seeked", fin); r(); }; v.addEventListener("seeked", fin); setTimeout(fin, 4000); }));
+            v.currentTime = local;
+          }
+        }
+      });
+      return Promise.all(esperas);
     },
 
     /* Reacomodo: mueve elementos HTML/SVG a nuevas posiciones con resorte */
@@ -195,8 +229,10 @@
     lista.forEach((def, i) => { const prev = lista[i - 1]; if (!prev) gsap.set(def.el, { autoAlpha: 1 }); else transicion(M, prev, def); });
     M.to({}, { duration: 0.001 }, G.dur);
     document.getElementById("loading").remove();
+    const todosV = N.videos.flatMap((V) => V.grupo.map((c) => c.v));
+    await Promise.race([Promise.all(todosV.map((v) => (v.readyState >= 2 ? 1 : new Promise((r) => { v.addEventListener("loadeddata", r, { once: true }); v.addEventListener("error", r, { once: true }); })))), new Promise((r) => setTimeout(r, 15000))]);
 
-    async function syncAll(tt) { for (const def of lista) if (def.sync && tt >= def.t0 - 1 && tt <= def.t1 + 1) await def.sync(tt - def.t0); }
+    async function syncAll(tt) { await N.syncVideos(tt, N.render || N.M.paused()); for (const def of lista) if (def.sync && tt >= def.t0 - 1 && tt <= def.t1 + 1) await def.sync(tt - def.t0); }
     M.eventCallback("onUpdate", () => { guide(M.time()); if (!N.render) syncAll(M.time()); });
 
     const marks = document.querySelector("#barra .marks");

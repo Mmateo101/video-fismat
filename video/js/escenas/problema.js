@@ -73,7 +73,7 @@ N.add({
       s("path", { d: "M-15,-17 L0,-32 L15,-17Z", fill: C.sismo }, gi);
       casas.push(gi);
       const halo = s("circle", { r: 10, fill: "none", stroke: C.sismo, "stroke-width": 4, opacity: 0 }, g);
-      tl.fromTo(halo, { attr: { r: 10 }, opacity: 0.9 }, { attr: { r: 46 }, opacity: 0, duration: 1.2, repeat: 3, ease: "power1.out" }, 17.0 + i * 0.15);
+      tl.fromTo(halo, { attr: { r: 10 }, opacity: 0.9 }, { attr: { r: 46 }, opacity: 0, duration: 1.2, repeat: 3, ease: "power1.out", immediateRender: false }, 17.0 + i * 0.15);
     });
     N.pop(tl, casas, 16.6, { stagger: 0.12 });
     tl.to(mOut, { scale: 1.25, x: "-=60", y: "-=70", duration: 6, ease: "sine.inOut" }, 15);

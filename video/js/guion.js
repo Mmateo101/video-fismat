@@ -4,6 +4,12 @@
 window.GUION = {
   fps: 30,
   equipo: ["Mateo", "Víctor", "Sofía"],
+  /* Grabaciones reales (vacío hasta que el equipo mande sus archivos).
+     orig = archivo en video/grabaciones/ · src = nombre procesado (video en media/<src>.mp4, audio en render/medios/<src>.wav)
+     escena = id de la escena · at = segundo de la escena en que arranca · ss y hasta = recorte del archivo
+     cam = id del marco (A1, B, C, D, E1…) · video / audio = qué se usa. Ejemplo
+     { escena: "problema", orig: "Victor/03_cameo_problema.mp4", src: "victor/03_cameo_problema", cam: "B", at: 0.6, ss: 0.3, hasta: 13.4, video: true, audio: true } */
+  medios: [],
   escenas: [
     {
       id: "historia", nombre: "Historia · el sismo", dur: 33,

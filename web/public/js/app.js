@@ -271,6 +271,15 @@
 
   window.addEventListener("resize", () => { if (!actual) return; pintarOndas(); pintarEspectro(); pintarSg($("#sg-antes"), actual.sg_antes); pintarSg($("#sg-despues"), actual.sg_despues); layoutOndas(false); });
 
+  /* Modo video (?video=1): el video controla el reloj de GSAP y el audio simulado */
+  window.APP = {
+    elegir, cargar,
+    separar: () => $("#b-separar").click(),
+    verSg: (v) => verSg(v),
+    cabeza(k, r) { document.querySelectorAll(".oir").forEach((b) => b.classList.toggle("sonando", b.dataset.a === k && r != null)); estado.cabeza = r == null ? {} : { [k]: r }; pintarOndas(); },
+  };
+  if (/video=1/.test(location.search)) document.documentElement.style.scrollBehavior = "auto";
+
   (async function inicio() {
     indice = await (await fetch("data/indice.json")).json();
     indice.sort((a, b) => a.fecha.localeCompare(b.fecha));

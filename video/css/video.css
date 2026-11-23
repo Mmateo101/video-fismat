@@ -38,3 +38,13 @@ body.render #barra { display: none; }
 .marco .rot .linea { font: 700 26px/1.3 "Nunito"; margin-top: 12px; color: #FFD27A; }
 body.limpio .marco .rot { display: none; }
 body.limpio .marco .hueco { background-image: none; background: #00FF00; }
+.nav-mock { position: absolute; background: #fff; border-radius: 26px; box-shadow: 0 22px 0 rgba(29, 36, 64, .25); padding: 0 10px 10px; transform-origin: 50% 50%; }
+.nav-barra { height: 52px; display: flex; align-items: center; gap: 10px; padding: 0 12px; }
+.nav-barra i { width: 16px; height: 16px; border-radius: 50%; background: #E4572E; }
+.nav-barra i:nth-child(2) { background: #F6AE2D; }
+.nav-barra i:nth-child(3) { background: #3BB273; }
+.nav-url { flex: 1; margin-left: 18px; height: 34px; border-radius: 20px; background: #EEF0F5; display: flex; align-items: center; padding: 0 18px; font: 700 20px "Nunito"; color: #1D2440; }
+.nav-caret { display: inline-block; width: 2px; height: 22px; background: #1D2440; margin-left: 2px; }
+.nav-caja { position: relative; overflow: hidden; border-radius: 0 0 18px 18px; }
+.cursor { position: absolute; left: 0; top: 0; z-index: 60; filter: drop-shadow(0 4px 6px rgba(0, 0, 0, .3)); }
+.clic { position: absolute; left: 0; top: 0; width: 80px; height: 80px; border-radius: 50%; border: 8px solid #F6AE2D; z-index: 59; visibility: hidden; }

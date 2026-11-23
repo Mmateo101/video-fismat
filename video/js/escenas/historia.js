@@ -83,7 +83,7 @@ N.add({
     gsap.set(estallido, { scale: 0, opacity: 0, svgOrigin: "0 0" });
     tl.to(tension, { opacity: 0, duration: 0.15 }, 6.6);
     tl.to(borde, { attr: { d: "M740,318 L900,322 L860,420 L700,402 Z" }, duration: 0.25, ease: "back.out(4)" }, 6.65);
-    tl.fromTo(flash, { attr: { r: 20 }, opacity: 1 }, { attr: { r: 700 }, opacity: 0, duration: 0.9, ease: "expo.out" }, 6.6);
+    tl.fromTo(flash, { attr: { r: 20 }, opacity: 1 }, { attr: { r: 700 }, opacity: 0, duration: 0.9, ease: "expo.out", immediateRender: false }, 6.6);
     tl.to(estallido, { scale: 1, opacity: 1, duration: 0.5, ease: "back.out(3)" }, 6.65);
     tl.to(estallido.rot, { rotation: 180, svgOrigin: "0 0", duration: 12, ease: "none" }, 6.65);
     // sacudida
@@ -98,8 +98,8 @@ N.add({
     const P = [], S = [];
     for (let i = 0; i < 5; i++) P.push(s("circle", { r: 1, fill: "none", stroke: C.blanco, "stroke-width": 6, "stroke-dasharray": "3 16", "stroke-linecap": "round", opacity: 0 }, ondas));
     for (let i = 0; i < 4; i++) S.push(s("circle", { r: 1, fill: "none", stroke: C.sismo, "stroke-width": 18, opacity: 0 }, ondas));
-    P.forEach((c, i) => tl.fromTo(c, { attr: { r: 30 }, opacity: 1 }, { attr: { r: 1500 }, opacity: 0.1, duration: 4, ease: "none" }, 10.2 + i * 0.7));
-    S.forEach((c, i) => tl.fromTo(c, { attr: { r: 30 }, opacity: 1 }, { attr: { r: 1500 }, opacity: 0.15, duration: 7.5, ease: "none" }, 14.9 + i * 1.1));
+    P.forEach((c, i) => tl.fromTo(c, { attr: { r: 30 }, opacity: 1 }, { attr: { r: 1500 }, opacity: 0.1, duration: 4, ease: "none", immediateRender: false }, 10.2 + i * 0.7));
+    S.forEach((c, i) => tl.fromTo(c, { attr: { r: 30 }, opacity: 1 }, { attr: { r: 1500 }, opacity: 0.15, duration: 7.5, ease: "none", immediateRender: false }, 14.9 + i * 1.1));
     const chipP = N.t(root, "onda P", { x: 1310, y: 150, size: 44, color: C.tinta });
     chipP.className = "pill"; chipP.style.background = C.blanco;
     const chipS = N.t(root, "onda S", { x: 1310, y: 150, size: 44, color: C.blanco });
@@ -118,7 +118,7 @@ N.add({
     const RS = [];
     for (let i = 0; i < 5; i++) RS.push(s("circle", { r: 1, fill: "none", stroke: i % 2 ? C.sismo : C.blanco, "stroke-width": i % 2 ? 7 : 3, "stroke-dasharray": i % 2 ? null : "2 8", "stroke-linecap": "round", opacity: 0 }, ondasMapa));
     const t0B = 19.0, vel = 190; // px de mapa por segundo
-    RS.forEach((c, i) => tl.fromTo(c, { attr: { r: 4 }, opacity: 1 }, { attr: { r: vel * 7 }, opacity: 0, duration: 7, ease: "none" }, t0B + 0.4 + i * 0.9));
+    RS.forEach((c, i) => tl.fromTo(c, { attr: { r: 4 }, opacity: 1 }, { attr: { r: vel * 7 }, opacity: 0, duration: 7, ease: "none", immediateRender: false }, t0B + 0.4 + i * 0.9));
     const epi = sol(mapa, { x: E[0], y: E[1], r: 12, n: 12 });
     const estaciones = [[19.33, -99.18, 1], [17.55, -99.5], [16.86, -99.88], [19.04, -98.2], [17.07, -96.72], [19.7, -101.19], [20.67, -103.35], [19.17, -96.13], [20.97, -89.62], [25.67, -100.31], [29.07, -110.95], [16.75, -93.12], [21.88, -102.29], [22.15, -100.98], [24.02, -104.67], [32.5, -117.0], [18.5, -88.3], [23.2, -106.4], [27.5, -99.5]];
     estaciones.forEach(([la, lo, cu]) => {
@@ -127,7 +127,7 @@ N.add({
       gsap.set(g, { scale: 0, svgOrigin: `${x} ${y}` });
       tl.to(g, { scale: 1, duration: 0.4, ease: "back.out(3)" }, t0B + 0.2 + (la * 7) % 1.2 * 0.5);
       const halo = s("circle", { cx: x, cy: y - 4, r: 4, fill: "none", stroke: C.sol, "stroke-width": 4, opacity: 0 }, mapa);
-      tl.fromTo(halo, { attr: { r: 4 }, opacity: 1 }, { attr: { r: 40 }, opacity: 0, duration: 0.8, ease: "power2.out" }, at);
+      tl.fromTo(halo, { attr: { r: 4 }, opacity: 1 }, { attr: { r: 40 }, opacity: 0, duration: 0.8, ease: "power2.out", immediateRender: false }, at);
       tl.to(g, { scale: 1.5, duration: 0.15, yoyo: true, repeat: 1, ease: "power2.out" }, at);
     });
     // vuelo: del corte al mapa
