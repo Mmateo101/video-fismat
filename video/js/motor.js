@@ -91,15 +91,17 @@
         const grupo = clips.map((m) => {
           const v = h("video", { preload: "auto", playsinline: "", src: `media/${m.src}.mp4`, style: { position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", visibility: "hidden" } }, hueco);
           v.muted = true;
-          return { v, m: Object.assign({ abs: cur.t0 + m.at }, m) };
+          return { v, m: Object.assign({ abs: cur.t0 + (cur.warp ? cur.warp(m.at || 0) : m.at || 0) }, m) };
         });
         N.videos.push({ grupo, desde: cur.t0 - 1, hastaT: cur.t1 + 1 });
       }
       const rot = h("div", { class: "rot" }, hueco, `<div class="tipo">${o.tipo || "Cameo"} · ${o.id}</div><div class="quien">${o.quien || ""}</div>` + (o.linea ? `<div class="linea">${o.linea}</div>` : ""));
+      if (clips.length) rot.style.display = "none";
       if (o.inn !== false) tl.fromTo(box, { autoAlpha: 0, scale: 0.6, rotation: -6 }, { autoAlpha: 1, scale: 1, rotation: 0, duration: 0.7, ease: "back.out(1.8)" }, Math.max(0, o.t0 - 0.6));
       if (o.out !== false) tl.to(box, { autoAlpha: 0, scale: 0.7, rotation: 4, duration: 0.45, ease: "power2.in" }, o.t1);
       const base = N._cur ? N._cur.t0 : 0;
-      N.cameos.push({ id: o.id, tipo: o.tipo || "Cameo", quien: o.quien || "", linea: o.linea || "", t0: +(base + o.t0).toFixed(2), t1: +(base + o.t1).toFixed(2), x: o.x, y: o.y, w: o.w, h: o.h });
+      const wp = N._cur && N._cur.warp ? N._cur.warp : (x) => x;
+      N.cameos.push({ id: o.id, tipo: o.tipo || "Cameo", quien: o.quien || "", linea: o.linea || "", t0: +(base + wp(o.t0)).toFixed(2), t1: +(base + wp(o.t1)).toFixed(2), x: o.x, y: o.y, w: o.w, h: o.h });
       return { box, hueco, rot };
     },
 
@@ -216,6 +218,19 @@
     fit();
     try { await Promise.race([Promise.all(["800 50px Nunito", "700 50px Nunito", "400 30px Nunito", "700 50px Fraunces"].map((f) => document.fonts.load(f, "Aáñ¿"))), new Promise((r) => setTimeout(r, 4000))]); } catch (e) { /* fuentes del sistema */ }
 
+    // grabaciones del equipo y mapa de tiempo por escena (js/medios.js, generado)
+    const tramo = (nudos, x, de, a) => {
+      if (!nudos || x <= 0) return x;
+      for (let i = 1; i < nudos.length; i++) {
+        const p = nudos[i - 1], q = nudos[i];
+        if (x <= q[de]) return q[de] > p[de] ? p[a] + ((x - p[de]) * (q[a] - p[a])) / (q[de] - p[de]) : p[a];
+      }
+      return nudos[nudos.length - 1][a] + (x - nudos[nudos.length - 1][de]);
+    };
+    if (window.MEDIOS) {
+      G.medios = MEDIOS.medios;
+      G.escenas.forEach((e) => { const me = MEDIOS.escenas.find((x) => x.id === e.id); if (me) { e.durOrig = e.dur; e.dur = me.dur; e.voz = me.voz; e.nudos = me.nudos; } });
+    }
     let t = 0;
     G.escenas.forEach((e) => { e.t0 = t; e.t1 = t + e.dur; t += e.dur; });
     G.dur = t;
@@ -223,7 +238,9 @@
     const lista = G.escenas.map((g) => N.scenes.find((d) => d.id === g.id)).filter(Boolean);
     for (const def of lista) {
       const g = byId[def.id];
-      def.t0 = g.t0; def.t1 = g.t1; def.T = g.dur;
+      def.t0 = g.t0; def.t1 = g.t1; def.T = g.durOrig || g.dur;
+      def.warp = (x) => tramo(g.nudos, x, 0, 1);   // tiempo original de la escena → tiempo del video
+      def.inv = (x) => tramo(g.nudos, x, 1, 0);    // tiempo del video → tiempo original
       N._cur = def;
       def.el = h("div", { class: "escena", id: "e-" + def.id }, mundo);
       def.cam = h("div", { class: "cam" }, def.el);
@@ -232,7 +249,10 @@
       def.build(def.cam, def.tl, def.T, def);
       // la cámara respira: nunca hay un cuadro quieto
       if (!def.quieto) def.tl.fromTo(def.cam, { scale: 1.0 }, { scale: 1.045, duration: def.T, ease: "sine.inOut" }, 0);
-      M.add(def.tl, def.t0);
+      // la escena corre en su reloj original, deformado para quitar silencios
+      def.tl.pause();
+      const px = { v: 0 }, D = def.t1 - def.t0;
+      M.fromTo(px, { v: 0 }, { v: D, duration: D, ease: "none", immediateRender: false, onUpdate: () => def.tl.time(def.inv(px.v)) }, def.t0);
     }
     N._cur = null;
     lista.forEach((def, i) => { const prev = lista[i - 1]; if (!prev) gsap.set(def.el, { autoAlpha: 1 }); else transicion(M, prev, def); });
@@ -241,7 +261,7 @@
     const todosV = N.videos.flatMap((V) => V.grupo.map((c) => c.v));
     await Promise.race([Promise.all(todosV.map((v) => (v.readyState >= 2 ? 1 : new Promise((r) => { v.addEventListener("loadeddata", r, { once: true }); v.addEventListener("error", r, { once: true }); })))), new Promise((r) => setTimeout(r, 15000))]);
 
-    async function syncAll(tt) { await N.syncVideos(tt, N.render || N.M.paused()); for (const def of lista) if (def.sync && tt >= def.t0 - 1 && tt <= def.t1 + 1) await def.sync(tt - def.t0); }
+    async function syncAll(tt) { await N.syncVideos(tt, N.render || N.M.paused()); for (const def of lista) if (def.sync && tt >= def.t0 - 1 && tt <= def.t1 + 1) await def.sync(def.inv(tt - def.t0)); }
     M.eventCallback("onUpdate", () => { guide(M.time()); if (!N.render) syncAll(M.time()); });
 
     const marks = document.querySelector("#barra .marks");

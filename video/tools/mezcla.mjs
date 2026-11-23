@@ -10,10 +10,12 @@ import { readFileSync, existsSync, rmSync } from "node:fs";
 const here = dirname(fileURLToPath(import.meta.url));
 globalThis.window = {};
 new Function("window", readFileSync(join(here, "..", "js", "guion.js"), "utf8"))(globalThis.window);
+new Function("window", readFileSync(join(here, "..", "js", "medios.js"), "utf8"))(globalThis.window);
 const G = globalThis.window.GUION;
+G.medios = globalThis.window.MEDIOS.medios;
 let t = 0;
 const t0 = {};
-G.escenas.forEach((e) => { t0[e.id] = t; t += e.dur; });
+globalThis.window.MEDIOS.escenas.forEach((e) => { t0[e.id] = t; t += e.dur; });
 const DUR = t;
 const outDir = resolve(here, "..", "render"), medDir = join(outDir, "medios");
 const ff = (a) => spawnSync("ffmpeg", ["-hide_banner", "-nostats", ...a], { encoding: "utf8" });
@@ -24,7 +26,7 @@ const lufs = (f, ss = 0, hasta = null) => {
   const m = /I:\s+(-?[\d.]+) LUFS/.exec(r.stderr.split("Summary:").pop());
   return m ? +m[1] : -70;
 };
-const piezas = (G.medios || []).filter((m) => m.audio).map((m) => ({ f: join(medDir, m.src + ".wav"), ss: m.ss, hasta: m.hasta, abs: t0[m.escena] + m.at, meta: -20 }));
+const piezas = (G.medios || []).filter((m) => m.audio).map((m) => ({ f: join(medDir, m.src + ".wav"), ss: m.ss, hasta: m.hasta, abs: m.abs != null ? m.abs : t0[m.escena] + m.at, meta: -20 }));
 const musica = join(outDir, "musica.mp3");
 if (existsSync(musica)) piezas.push({ f: musica, ss: 0, hasta: DUR, abs: 0, meta: -30 });
 if (!piezas.length) { console.log("No hay grabaciones con audio en GUION.medios todavía."); process.exit(0); }

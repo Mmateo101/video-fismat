@@ -1,0 +1,324 @@
+{
+ "Mateo/WhatsApp Ptt 2026-11-22 at 10.03.12 PM.ogg": {
+  "quien": "Mateo",
+  "dur": 7.29,
+  "voz_ini": 0.72,
+  "voz_fin": 6.8,
+  "texto": "Después, restamos ese ruido en cada frecuencia y regresamos a la señal limpia."
+ },
+ "Mateo/WhatsApp Ptt 2026-11-22 at 10.03.20 PM.ogg": {
+  "quien": "Mateo",
+  "dur": 4.65,
+  "voz_ini": 0.43,
+  "voz_fin": 3.97,
+  "texto": "Lo probamos con datos sintéticos y con ruido real."
+ },
+ "Mateo/WhatsApp Ptt 2026-11-22 at 10.03.33 PM.ogg": {
+  "quien": "Mateo",
+  "dur": 5.49,
+  "voz_ini": 0.46,
+  "voz_fin": 4.2,
+  "texto": "Porque una alerta solo sirve si llega a todos."
+ },
+ "Mateo/WhatsApp Ptt 2026-11-22 at 9.50.32 PM.ogg": {
+  "quien": "Mateo",
+  "dur": 6.95,
+  "voz_ini": 0.46,
+  "voz_fin": 6.46,
+  "texto": "Somos Mateo, Víctor y Sofía, estudiantes de Profesional del Tecnológico de Monterrey."
+ },
+ "Mateo/WhatsApp Ptt 2026-11-22 at 9.50.43 PM.ogg": {
+  "quien": "Mateo",
+  "dur": 7.69,
+  "voz_ini": 0.43,
+  "voz_fin": 6.53,
+  "texto": "En la clase de análisis de métodos matemáticos para la física con el Dr. Luis Miguel Mendes Díaz."
+ },
+ "Mateo/WhatsApp Ptt 2026-11-22 at 9.51.21 PM.ogg": {
+  "quien": "Mateo",
+  "dur": 7.51,
+  "voz_ini": 0.91,
+  "voz_fin": 6.63,
+  "texto": "Desarrollamos un análisis de Fourier para separar los sismos del ruido."
+ },
+ "Mateo/WhatsApp Ptt 2026-11-22 at 9.52.05 PM.ogg": {
+  "quien": "Mateo",
+  "dur": 16.61,
+  "voz_ini": 1.46,
+  "voz_fin": 16.1,
+  "texto": "Empezamos con datos de prueba, dos registros cortos, un dato cada 0.4 segundos. Luego los llevamos a una base de datos real, 20 sismos de México de 1993 a 2026."
+ },
+ "Mateo/WhatsApp Ptt 2026-11-22 at 9.52.24 PM.ogg": {
+  "quien": "Mateo",
+  "dur": 7.95,
+  "voz_ini": 0.85,
+  "voz_fin": 7.51,
+  "texto": "Todos los sismos registrados en Ciudad Universitaria, no buscamos predecir sismos sino reconocerlos."
+ },
+ "Mateo/WhatsApp Ptt 2026-11-22 at 9.52.54 PM.ogg": {
+  "quien": "Mateo",
+  "dur": 7.19,
+  "voz_ini": 1.07,
+  "voz_fin": 6.39,
+  "texto": "Un solo armónico con periodo de cuatro segundos explica casi toda la señal."
+ },
+ "Mateo/WhatsApp Ptt 2026-11-22 at 9.53.08 PM.ogg": {
+  "quien": "Mateo",
+  "dur": 5.91,
+  "voz_ini": 0.53,
+  "voz_fin": 4.95,
+  "texto": "Para registros largos usamos la transformada de furier por ventanas."
+ },
+ "Mateo/WhatsApp Ptt 2026-11-22 at 9.53.19 PM.ogg": {
+  "quien": "Mateo",
+  "dur": 5.95,
+  "voz_ini": 0.53,
+  "voz_fin": 4.95,
+  "texto": "Cortamos la señal en pedazos y vemos qué frecuencias tiene cada uno."
+ },
+ "Mateo/WhatsApp Ptt 2026-11-22 at 9.59.42 PM.ogg": {
+  "quien": "Mateo",
+  "dur": 6.73,
+  "voz_ini": 0.27,
+  "voz_fin": 5.97,
+  "texto": "Antes de que llegue en la onda P solo hay ruido, ahí aprendemos cómo suena."
+ },
+ "Mateo/WhatsApp Video 2026-11-22 at 10.08.26 PM.mp4": {
+  "quien": "Mateo",
+  "dur": 5.69,
+  "voz_ini": 0.0,
+  "voz_fin": 5.4,
+  "texto": "una herramienta que acerque las alertas a donde hay menos sensores."
+ },
+ "Mateo/WhatsApp Video 2026-11-22 at 9.58.38 PM.mp4": {
+  "quien": "Mateo",
+  "dur": 4.92,
+  "voz_ini": 0.0,
+  "voz_fin": 4.48,
+  "texto": "Primero ajustamos una serie de Fourier a estos datos de prueba."
+ },
+ "Sofia/WhatsApp Ptt 2026-11-22 at 10.01.57 PM.ogg": {
+  "quien": "Sofia",
+  "dur": 4.87,
+  "voz_ini": 0.27,
+  "voz_fin": 4.51,
+  "texto": "Bajo la costa de Guerrero, dos placas de roca se empujan desde hace millones de años."
+ },
+ "Sofia/WhatsApp Ptt 2026-11-22 at 10.02.00 PM.ogg": {
+  "quien": "Sofia",
+  "dur": 2.41,
+  "voz_ini": 0.3,
+  "voz_fin": 1.84,
+  "texto": "hasta que las rocas se rompen."
+ },
+ "Sofia/WhatsApp Ptt 2026-11-22 at 10.02.06 PM.ogg": {
+  "quien": "Sofia",
+  "dur": 5.11,
+  "voz_ini": 0.11,
+  "voz_fin": 4.73,
+  "texto": "La energía viaja en ondas. Primero llega a la onda P rápida y débil."
+ },
+ "Sofia/WhatsApp Ptt 2026-11-22 at 10.02.11 PM.ogg": {
+  "quien": "Sofia",
+  "dur": 3.67,
+  "voz_ini": 0.3,
+  "voz_fin": 3.08,
+  "texto": "Después la onda S más lenta y más fuerte."
+ },
+ "Sofia/WhatsApp Ptt 2026-11-22 at 10.02.16 PM.ogg": {
+  "quien": "Sofia",
+  "dur": 4.07,
+  "voz_ini": 0.37,
+  "voz_fin": 3.41,
+  "texto": "Las estaciones sismológicas las escuchan en segundos."
+ },
+ "Sofia/WhatsApp Ptt 2026-11-22 at 10.02.23 PM.ogg": {
+  "quien": "Sofia",
+  "dur": 5.89,
+  "voz_ini": 0.34,
+  "voz_fin": 5.4,
+  "texto": "pero el suelo nunca está quieto, el mar, el viento y la ciudad también lo mueven."
+ },
+ "Sofia/WhatsApp Ptt 2026-11-22 at 10.02.27 PM.ogg": {
+  "quien": "Sofia",
+  "dur": 2.77,
+  "voz_ini": 0.11,
+  "voz_fin": 2.07,
+  "texto": "¿Cómo separar el sismo del ruido?"
+ },
+ "Sofia/WhatsApp Ptt 2026-11-22 at 10.12.53 PM.ogg": {
+  "quien": "Sofia",
+  "dur": 4.61,
+  "voz_ini": 0.08,
+  "voz_fin": 4.26,
+  "texto": "furirse para cualquier señal en ondas simples cada una con su frecuencia."
+ },
+ "Sofia/WhatsApp Ptt 2026-11-22 at 10.13.01 PM.ogg": {
+  "quien": "Sofia",
+  "dur": 6.79,
+  "voz_ini": 0.66,
+  "voz_fin": 6.38,
+  "texto": "Lo innovador es que no usa de inteligencia artificial, cuesta casi nada y funciona en cualquier navegador."
+ },
+ "Sofia/WhatsApp Ptt 2026-11-22 at 10.13.08 PM.ogg": {
+  "quien": "Sofia",
+  "dur": 5.47,
+  "voz_ini": 0.21,
+  "voz_fin": 5.11,
+  "texto": "Con todo esto construyemos sismo o ruido, una página web abierta para cualquiera."
+ },
+ "Sofia/WhatsApp Ptt 2026-11-22 at 10.13.14 PM.ogg": {
+  "quien": "Sofia",
+  "dur": 5.13,
+  "voz_ini": 0.27,
+  "voz_fin": 4.31,
+  "texto": "Elige un sismo en el mapa, por ejemplo, del de Puebla Morelos del 2017."
+ },
+ "Sofia/WhatsApp Ptt 2026-11-22 at 10.13.19 PM.ogg": {
+  "quien": "Sofia",
+  "dur": 4.19,
+  "voz_ini": 0.11,
+  "voz_fin": 3.63,
+  "texto": "Con un botón, la señal se separa en sismo y ruido."
+ },
+ "Sofia/WhatsApp Ptt 2026-11-22 at 10.13.25 PM.ogg": {
+  "quien": "Sofia",
+  "dur": 4.51,
+  "voz_ini": 0.21,
+  "voz_fin": 4.05,
+  "texto": "Ve sus frecuencias y cómo cambia la señal antes y después del filtro."
+ },
+ "Sofia/WhatsApp Ptt 2026-11-22 at 10.13.31 PM.ogg": {
+  "quien": "Sofia",
+  "dur": 4.07,
+  "voz_ini": 0.0,
+  "voz_fin": 3.4,
+  "texto": "Hasta puedes escuchar el sismo acelerando 400 veces."
+ },
+ "Sofia/WhatsApp Ptt 2026-11-22 at 10.13.35 PM.ogg": {
+  "quien": "Sofia",
+  "dur": 3.49,
+  "voz_ini": 0.05,
+  "voz_fin": 2.97,
+  "texto": "Es gratis, fácil usar y ya está en línea."
+ },
+ "Sofia/WhatsApp Video 2026-11-22 at 10.08.53 PM.mp4": {
+  "quien": "Sofia",
+  "dur": 4.51,
+  "voz_ini": 0.0,
+  "voz_fin": 4.51,
+  "texto": ""
+ },
+ "Sofia/WhatsApp Video 2026-11-22 at 10.12.41 PM.mp4": {
+  "quien": "Sofia",
+  "dur": 5.27,
+  "voz_ini": 0.02,
+  "voz_fin": 4.5,
+  "texto": "Nuestra idea fue usar las matemáticas de furiar como un prisma que separara luz en colores."
+ },
+ "Sofia/WhatsApp Video 2026-11-22 at 10.13.55 PM.mp4": {
+  "quien": "Sofia",
+  "dur": 4.16,
+  "voz_ini": 0.05,
+  "voz_fin": 3.25,
+  "texto": "Cuando comparten frecuencias como con el mar, también hay que ver el tiempo."
+ },
+ "Sofia/WhatsApp Video 2026-11-22 at 10.14.18 PM.mp4": {
+  "quien": "Sofia",
+  "dur": 2.98,
+  "voz_ini": 0.0,
+  "voz_fin": 2.98,
+  "texto": ""
+ },
+ "Victor/WhatsApp Ptt 2026-11-22 at 10.17.39 PM.ogg": {
+  "quien": "Victor",
+  "dur": 8.01,
+  "voz_ini": 2.35,
+  "voz_fin": 6.95,
+  "texto": "Esto afecta más a las comunidades con pocos sensores y poco tiempo para salir."
+ },
+ "Victor/WhatsApp Ptt 2026-11-22 at 10.17.48 PM.ogg": {
+  "quien": "Victor",
+  "dur": 4.57,
+  "voz_ini": 1.1,
+  "voz_fin": 3.28,
+  "texto": "Ahí, cada segundo cuenta."
+ },
+ "Victor/WhatsApp Ptt 2026-11-22 at 10.17.58 PM.ogg": {
+  "quien": "Victor",
+  "dur": 6.59,
+  "voz_ini": 0.82,
+  "voz_fin": 5.42,
+  "texto": "En el expediente, la onda del sensor es casi seis veces más alta que la del ruido."
+ },
+ "Victor/WhatsApp Ptt 2026-11-22 at 10.18.10 PM.ogg": {
+  "quien": "Victor",
+  "dur": 9.25,
+  "voz_ini": 1.41,
+  "voz_fin": 7.51,
+  "texto": "Eso es unas 35 veces más energía, con una longitud de onda de 18 kilómetros."
+ },
+ "Victor/WhatsApp Ptt 2026-11-22 at 10.18.24 PM.ogg": {
+  "quien": "Victor",
+  "dur": 7.19,
+  "voz_ini": 0.78,
+  "voz_fin": 6.02,
+  "texto": "pero cuatro segundos también es el ritmo de las olas del mar la frecuencia sola no basta"
+ },
+ "Victor/WhatsApp Ptt 2026-11-22 at 10.18.34 PM.ogg": {
+  "quien": "Victor",
+  "dur": 7.17,
+  "voz_ini": 0.72,
+  "voz_fin": 5.48,
+  "texto": "En los veinte sismos reales, la señal quedó en promedio once veces más clara."
+ },
+ "Victor/WhatsApp Ptt 2026-11-22 at 10.18.54 PM.ogg": {
+  "quien": "Victor",
+  "dur": 10.47,
+  "voz_ini": 1.94,
+  "voz_fin": 8.88,
+  "texto": "con ruido tan fuerte como el sismo el parecido con la onda real subió de 71 a 86 por ciento"
+ },
+ "Victor/WhatsApp Ptt 2026-11-22 at 10.19.04 PM.ogg": {
+  "quien": "Victor",
+  "dur": 7.85,
+  "voz_ini": 0.72,
+  "voz_fin": 6.08,
+  "texto": "En la ciudad domina el ruido rápido. El del mar llega en ondas de unos seis segundos."
+ },
+ "Victor/WhatsApp Video 2026-11-22 at 10.13.41 PM (1).mp4": {
+  "quien": "Victor",
+  "dur": 7.0,
+  "voz_ini": 0.14,
+  "voz_fin": 5.8,
+  "texto": "Las alertas sísmicas de 100 en segundos, si confunden el ruido con un sismo, suenan sin razón."
+ },
+ "Victor/WhatsApp Video 2026-11-22 at 10.13.41 PM (2).mp4": {
+  "quien": "Victor",
+  "dur": 3.9,
+  "voz_ini": 0.34,
+  "voz_fin": 3.28,
+  "texto": "y si el ruido tapa la onda P, el aviso llega tarde."
+ },
+ "Victor/WhatsApp Video 2026-11-22 at 10.13.41 PM (3).mp4": {
+  "quien": "Victor",
+  "dur": 5.56,
+  "voz_ini": 0.66,
+  "voz_fin": 5.08,
+  "texto": "furier si se para el sismo de ruido cuando sus frecuencias son distintas"
+ },
+ "Victor/WhatsApp Video 2026-11-22 at 10.13.41 PM (4).mp4": {
+  "quien": "Victor",
+  "dur": 2.38,
+  "voz_ini": 0.0,
+  "voz_fin": 2.38,
+  "texto": ""
+ },
+ "Victor/WhatsApp Video 2026-11-22 at 10.13.41 PM.mp4": {
+  "quien": "Victor",
+  "dur": 4.77,
+  "voz_ini": 0.0,
+  "voz_fin": 4.77,
+  "texto": ""
+ }
+}
