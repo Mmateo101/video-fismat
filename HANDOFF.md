@@ -8,11 +8,12 @@ Equipo: Mateo Rodolfo Flores Torres, Víctor Manuel Sánchez Chávez, Sofía Mar
 | Entregable | Dónde | Estado |
 |---|---|---|
 | Script de Fourier con datos reales | `analisis/sismos_fourier.py` | Listo y probado (`python sismos_fourier.py`, `--prueba` para la prueba sintética) |
-| Página web (prototipo) | `web/public/` → https://sismo-o-ruido.vercel.app | Desplegada con la CLI de Vercel (`cd web && npx vercel deploy --prod --yes`, proyecto `mateo-f101/sismo-o-ruido`) |
-| Reporte LaTeX final | `reporte/reporte.tex` → `reporte/Fismat_SismoORuido.pdf` | Listo. Compilar con `latexmk -pdf reporte.tex` |
+| Página web (prototipo, con video y reporte embebidos) | `web/public/` → https://sismo-o-ruido.vercel.app | Se despliega sola con cada push a main (vercel.json en la raíz sirve `web/public`). Al cambiar el video o el reporte, copiar a `web/public/media/sismo_o_ruido.mp4` (comprimido, ver comando en el historial) y `web/public/reporte.pdf` |
+| Reporte LaTeX final (artículo de investigación, 2 etapas) | `reporte/reporte.tex` → `reporte/Fismat_SismoORuido.pdf` | 18 páginas (13 de cuerpo), índice solo con secciones, sin mención a consultoría. Versión larga anterior en `reporte_v1_largo.tex`. Compilar con `latexmk -pdf reporte.tex` |
+| Póster científico A0 | `poster/poster.html` → `poster/Poster_SismoORuido.pdf` | `node poster/exportar.mjs` lo regenera |
 | Doc del equipo en Claude Docs | https://claude.ai/artifact/ExsbEa3Wq2KtkXoFXNiJXC | Ya tiene la fase 2 (secciones 6.8, 6.9, 9.7, 9.8, 13.6 a 13.9, figuras 7 a 13, Tabla 9) |
-| Video | `video/` (HTML + GSAP) → `video/render/*.mp4` | Animación completa, 4:45. Faltan las grabaciones del equipo |
-| Guion por persona | `guion/Guion_por_persona.md` | Generado desde `video/js/guion.js` (`node video/tools/guion_md.mjs`) |
+| Video | `video/` (HTML + GSAP) → `video/render/SismoORuido_Fismat.mp4` | 4:45. v2 con escena del sismo nueva (globo, rebote elástico, ondas P/S, tiempos de llegada) y capas técnicas (ecuaciones, ejes). Faltan las grabaciones del equipo |
+| Guion por persona | `guion/Guion_Grabacion_Cameos_y_Voz.docx` (Word, formato del de Estadística) y `guion/Guion_por_persona.md` | Generados desde `video/js/guion.js` (`guion/guion_docx.py`, `video/tools/guion_md.mjs`) |
 | Imágenes del perfil de Expo | `expo/` (ver `expo/LEEME.md`) | Listas |
 
 ## Video: cómo trabajar
