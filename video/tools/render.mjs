@@ -7,6 +7,7 @@
      node tools/render.mjs --salida=otro.mp4 --fps=30
    Necesita Node 22+, Google Chrome y ffmpeg en el PATH. */
 import { launch } from "./cdp.mjs";
+import { servidor } from "./servidor.mjs";
 import { spawn } from "node:child_process";
 import { pathToFileURL, fileURLToPath } from "node:url";
 import { writeFileSync, mkdirSync } from "node:fs";
@@ -15,12 +16,13 @@ import { dirname, join, resolve } from "node:path";
 const here = dirname(fileURLToPath(import.meta.url));
 const opt = Object.fromEntries(process.argv.slice(2).map((a) => { const [k, v] = a.replace(/^--/, "").split("="); return [k, v ?? "1"]; }));
 const final = opt.final === "1";
-const outDir = resolve(here, "..", "..", "render");
+const outDir = resolve(here, "..", "render");
 mkdirSync(outDir, { recursive: true });
-const pagina = opt.pagina || "nuevo.html";
+const pagina = opt.pagina || "index.html";
+const srv = await servidor(5601);
 const out = resolve(outDir, opt.salida || (final ? "Animacion_limpia.mp4" : "Animatic_guia.mp4"));
 const q = ["render=1", `guia=${opt.guia ?? (final ? 0 : 1)}`, `subs=${opt.subs ?? 1}`, `limpio=${opt.limpio ?? 0}`].join("&");
-const url = pathToFileURL(join(here, "..", pagina)).href + "?" + q;
+const url = `http://127.0.0.1:5601/video/${pagina}?` + q;
 
 const b = await launch(url, { port: +(opt.puerto || 9333) });
 try {
@@ -47,4 +49,5 @@ try {
 } finally {
   if (b.errors.length) console.log("ERRORES DE LA PÁGINA:\n" + [...new Set(b.errors)].join("\n"));
   await b.close();
+  if (srv) srv.kill();
 }
