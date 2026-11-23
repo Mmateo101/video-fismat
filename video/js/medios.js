@@ -613,6 +613,21 @@ window.MEDIOS = {
      "x": "Porque una alerta solo sirve si llega a todos."
     }
    ]
+  },
+  {
+   "id": "final",
+   "dur": 7,
+   "nudos": [
+    [
+     0.0,
+     0.0
+    ],
+    [
+     7,
+     7
+    ]
+   ],
+   "voz": []
   }
  ],
  "medios": [
@@ -708,11 +723,11 @@ window.MEDIOS = {
   },
   {
    "escena": "equipo",
-   "orig": "Mateo/WhatsApp Video 2026-11-22 at 9.58.38 PM.mp4",
-   "src": "mateo/foto",
+   "orig": "Mateo/saludo_despedida.mp4",
+   "src": "mateo/saludo",
    "abs": 30.015,
-   "ss": 4.6,
-   "hasta": 4.75,
+   "ss": 0.0,
+   "hasta": 5.0,
    "video": true,
    "cam": "A1"
   },
@@ -1040,11 +1055,11 @@ window.MEDIOS = {
   },
   {
    "escena": "cierre",
-   "orig": "Mateo/WhatsApp Video 2026-11-22 at 9.58.38 PM.mp4",
-   "src": "mateo/foto",
+   "orig": "Mateo/saludo_despedida.mp4",
+   "src": "mateo/saludo",
    "abs": 231.8,
-   "ss": 4.6,
-   "hasta": 4.75,
+   "ss": 0.0,
+   "hasta": 5.0,
    "video": true,
    "cam": "F1"
   },

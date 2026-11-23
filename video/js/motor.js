@@ -197,6 +197,15 @@
       M.to(prev.el, { scale: 1.6, opacity: 0, duration: D, ease: "expo.in" }, t - D / 2);
       M.set(prev.el, { autoAlpha: 0 }, t + D / 2);
       M.set(def.el, { zIndex: 1 }, t + D / 2);
+    } else if (tipo === "anillos") {
+      // anillos de colores que se expanden en cascada desde el centro; el último es el fondo de la escena nueva
+      const cols = def.anillosColores || [C.sismo, C.sol, C.ruido, C.morado, C.noche];
+      const ani = cols.map((c, i) => h("div", { class: "aro", style: { background: c, zIndex: 40 + i } }, mundo));
+      gsap.set(ani, { width: 0, height: 0, opacity: 1 });
+      ani.forEach((a, i) => M.fromTo(a, { width: 0, height: 0 }, { width: 4400, height: 4400, duration: 0.95, ease: "power3.in", immediateRender: false }, t - 1.25 + i * 0.13));
+      M.set(def.el, { autoAlpha: 1, zIndex: 1 }, t);
+      M.set(prev.el, { autoAlpha: 0 }, t);
+      M.set(ani, { opacity: 0 }, t + 0.02);
     } else if (tipo === "corte") {
       M.set(def.el, { autoAlpha: 1 }, t);
       M.set(prev.el, { autoAlpha: 0 }, t);

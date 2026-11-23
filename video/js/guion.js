@@ -99,5 +99,9 @@ window.GUION = {
         { t0: 18.8, t1: 23.0, q: "voz", rec: "Mateo", x: "Porque una alerta solo sirve si llega a todos." },
       ],
     },
+    {
+      id: "final", nombre: "Final", dur: 7,
+      voz: [],
+    },
   ],
 };

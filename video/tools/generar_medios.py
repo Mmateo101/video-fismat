@@ -28,12 +28,12 @@ TEXTO = {
     ("cierre", 1): "Cuando comparten frecuencias, como con el mar, también hay que ver el tiempo.",
     ("cierre", 2): "Una herramienta que acerque las alertas a donde hay menos sensores.",
 }
-# Clips sin hablar (saludo y despedida). A Mateo le faltan los dos: se usa un cuadro fijo de su cameo.
+# Clips sin hablar (saludo y despedida). Mateo usa el mismo clip para saludar y despedirse.
 MUDOS = [
-    ("equipo", "A1", "Mateo/WhatsApp Video 2026-11-22 at 9.58.38 PM.mp4", "mateo/foto", 4.6, 4.75),
+    ("equipo", "A1", "Mateo/saludo_despedida.mp4", "mateo/saludo", 0.0, 5.0),
     ("equipo", "A2", "Victor/WhatsApp Video 2026-11-22 at 10.13.41 PM (4).mp4", "victor/saludo", 0.0, 2.38),
     ("equipo", "A3", "Sofia/WhatsApp Video 2026-11-22 at 10.08.53 PM.mp4", "sofia/saludo", 0.0, 4.5),
-    ("cierre", "F1", "Mateo/WhatsApp Video 2026-11-22 at 9.58.38 PM.mp4", "mateo/foto", 4.6, 4.75),
+    ("cierre", "F1", "Mateo/saludo_despedida.mp4", "mateo/saludo", 0.0, 5.0),
     ("cierre", "F2", "Victor/WhatsApp Video 2026-11-22 at 10.13.41 PM.mp4", "victor/despedida", 0.0, 4.77),
     ("cierre", "F3", "Sofia/WhatsApp Video 2026-11-22 at 10.14.18 PM.mp4", "sofia/despedida", 0.0, 2.98),
 ]
@@ -74,7 +74,7 @@ for e in G["escenas"]:
     # cola: lo que queda de animación después de la última frase
     a_ult, b_ult = nudos[-1]
     cola = e["dur"] - a_ult
-    D = max(b_prev_fin + 0.8, b_ult + cola / VEL_MAX)
+    D = e["dur"] if b_prev_fin is None else max(b_prev_fin + 0.8, b_ult + cola / VEL_MAX)
     nudos.append((e["dur"], D))
 
     def warp(t):
@@ -112,7 +112,8 @@ for e in G["escenas"]:
         t0_esc = sum(x["dur"] for x in G["escenas"][:G["escenas"].index(e)])
         medios.append({"escena": eid, "orig": f, "src": src, "abs": round(t_abs + warp(c["t0"] - t0_esc), 3), "ss": ss, "hasta": hasta, "video": True, "cam": cam})
     salida_esc.append({"id": e["id"], "dur": round(D, 2), "nudos": [[round(a, 3), round(b, 3)] for a, b in nudos], "voz": vz})
-    print(f"{e['id']:10s} {e['dur']:5.1f} s → {D:5.1f} s   acel. máx ×{max((a1 - a0) / (b1 - b0) for (a0, b0), (a1, b1) in zip(nudos, nudos[1:]) if b1 > b0):.2f}")
+    acel = max([(a1 - a0) / (b1 - b0) for (a0, b0), (a1, b1) in zip(nudos, nudos[1:]) if b1 > b0] or [1])
+    print(f"{e['id']:10s} {e['dur']:5.1f} s → {D:5.1f} s   acel. máx ×{acel:.2f}")
     t_abs += D
 
 print(f"TOTAL {sum(e['dur'] for e in G['escenas']):.1f} s → {t_abs:.1f} s")

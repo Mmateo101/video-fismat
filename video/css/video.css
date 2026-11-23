@@ -48,3 +48,4 @@ body.limpio .marco .hueco { background-image: none; background: #00FF00; }
 .nav-caja { position: relative; overflow: hidden; border-radius: 0 0 18px 18px; }
 .cursor { position: absolute; left: 0; top: 0; z-index: 60; filter: drop-shadow(0 4px 6px rgba(0, 0, 0, .3)); }
 .clic { position: absolute; left: 0; top: 0; width: 80px; height: 80px; border-radius: 50%; border: 8px solid #F6AE2D; z-index: 59; visibility: hidden; }
+.aro { position: absolute; left: 960px; top: 540px; border-radius: 50%; transform: translate(-50%, -50%); pointer-events: none; }

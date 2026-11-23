@@ -21,7 +21,7 @@ export async function launch(url, { width = 1920, height = 1080, port = 9333 } =
   if (!exe) throw new Error("No encontré Chrome. Define la variable CHROME con la ruta al ejecutable.");
   const profile = mkdtempSync(join(tmpdir(), "equipo7-chrome-"));
   const proc = spawn(exe, [
-    "--headless=new", `--remote-debugging-port=${port}`, `--user-data-dir=${profile}`,
+    "--headless=new", `--remote-debugging-port=${port}`, ...(process.env.SIN_GPU ? [] : ["--enable-gpu", "--ignore-gpu-blocklist", "--use-angle=d3d11", "--enable-gpu-rasterization", "--enable-zero-copy"]), `--user-data-dir=${profile}`,
     `--window-size=${width},${height}`, "--force-device-scale-factor=1", "--hide-scrollbars",
     "--no-first-run", "--no-default-browser-check", "--disable-extensions", "--mute-audio",
     "--allow-file-access-from-files", "--autoplay-policy=no-user-gesture-required",
@@ -81,7 +81,7 @@ export async function launch(url, { width = 1920, height = 1080, port = 9333 } =
       throw new Error("Tiempo agotado esperando: " + expression);
     },
     async shot({ format = "jpeg", quality = 92 } = {}) {
-      const r = await send("Page.captureScreenshot", format === "png" ? { format } : { format, quality });
+      const r = await send("Page.captureScreenshot", format === "png" ? { format, optimizeForSpeed: true } : { format, quality, optimizeForSpeed: true });
       return Buffer.from(r.data, "base64");
     },
     async close() {
