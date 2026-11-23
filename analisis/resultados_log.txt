@@ -1,0 +1,61 @@
+Prueba sintetica
+  correlacion sismo estimado vs real (300-360 s): 0.996
+  SNR antes: 5.9 dB   despues: 22.6 dB
+  expediente: a0 = 0.0214, a2 = -0.147, b2 = 0.333 (FFT = serie de Fourier)
+Chiapas 1993 (usp0006030)
+   G.UNM  863 km  M7.2  SNR 41.2 -> 51.0 dB  T_ruido 9.8 s  f_sismo 0.03 Hz  R 13066
+Copala 1995 (usp00073c5)
+   G.UNM  289 km  M7.4  SNR 40.8 -> 43.5 dB  T_ruido 5.4 s  f_sismo 0.32 Hz  R 12002
+Manzanillo 1995 (usp00074vc)
+    G.UNM: No data available for request.
+    MX.MOIG: No data available for request.
+    MX.TLIG: No data available for request.
+    MX.SJQ: No data available for request.
+    MX.ZAIG: No data available for request.
+    IU.TEIG: No data available for request.
+   OMITIDO: Ninguna estacion tiene datos para usp00074vc
+Pinotepa 1996 (usp0007dv6)
+    G.UNM: No data available for request.
+    MX.MOIG: No data available for request.
+    MX.TLIG: No data available for request.
+    MX.SJQ: No data available for request.
+    MX.ZAIG: No data available for request.
+    IU.TEIG: No data available for request.
+   OMITIDO: Ninguna estacion tiene datos para usp0007dv6
+Michoacán 1997 (usp0007vrx)
+   G.UNM  397 km  M7.2  SNR 48.5 -> 51.7 dB  T_ruido 4.4 s  f_sismo 0.04 Hz  R 70774
+Tehuacán 1999 (usp00099y6)
+   G.UNM  211 km  M7.0  SNR 55.6 -> 58.5 dB  T_ruido 7.6 s  f_sismo 0.34 Hz  R 360492
+Oaxaca 1999 (usp0009f7v)
+   G.UNM  433 km  M7.5  SNR 19.3 -> 22.3 dB  T_ruido 3.5 s  f_sismo 0.02 Hz  R 84
+Tecomán 2003 (usp000bnyr)
+   G.UNM  522 km  M7.6  SNR 58.0 -> 61.1 dB  T_ruido 6.8 s  f_sismo 0.07 Hz  R 631409
+El Mayor-Cucapah 2010 (ci14607652)
+   G.UNM  2156 km  M7.2  SNR 35.7 -> 45.2 dB  T_ruido 6.5 s  f_sismo 0.12 Hz  R 3704
+Ometepec 2012 (usp000jghj)
+   G.UNM  330 km  M7.4  SNR 28.6 -> 32.3 dB  T_ruido 7.0 s  f_sismo 0.29 Hz  R 717
+Golfo de California 2012 (usp000jhr6)
+   G.UNM  1754 km  M7.0  SNR 8.3 -> 16.5 dB  T_ruido 9.5 s  f_sismo 0.33 Hz  R 5
+Papanoa 2014 (usb000pq41)
+   G.UNM  286 km  M7.2  SNR 35.4 -> 38.7 dB  T_ruido 3.0 s  f_sismo 0.32 Hz  R 3496
+Chiapas 2014 (usc000rr6a)
+   G.UNM  878 km  M6.9  SNR 54.8 -> 62.9 dB  T_ruido 7.8 s  f_sismo 0.26 Hz  R 303029
+Tehuantepec 2017 (us2000ahv0)
+   G.UNM  736 km  M8.2  SNR 40.2 -> 44.2 dB  T_ruido 3.7 s  f_sismo 0.09 Hz  R 10382
+Puebla-Morelos 2017 (us2000ar20)
+   G.UNM  113 km  M7.1  SNR 25.3 -> 27.9 dB  T_ruido 5.5 s  f_sismo 0.37 Hz  R 335
+Pinotepa 2018 (us2000d3km)
+   G.UNM  350 km  M7.2  SNR 35.1 -> 38.0 dB  T_ruido 7.0 s  f_sismo 0.28 Hz  R 3221
+Huatulco 2020 (us6000ah9t)
+   G.UNM  508 km  M7.4  SNR 36.7 -> 41.3 dB  T_ruido 7.6 s  f_sismo 0.36 Hz  R 4686
+Acapulco 2021 (us7000f93v)
+   G.UNM  271 km  M7.0  SNR 36.1 -> 40.6 dB  T_ruido 7.4 s  f_sismo 0.27 Hz  R 4035
+Michoacán 2022 (us7000i9bw)
+   G.UNM  410 km  M7.6  SNR 37.1 -> 41.2 dB  T_ruido 8.0 s  f_sismo 0.28 Hz  R 5155
+Chiapas 2026 (us7000t1bu)
+   G.UNM  846 km  M7.3  SNR 45.6 -> 51.5 dB  T_ruido 6.0 s  f_sismo 0.03 Hz  R 36303
+
+18 sismos analizados
+SNR medio: 37.9 dB -> 42.7 dB (mejora media 4.8 dB)
+Periodo del pico de microsismos: mediana 6.9 s (rango 3.0 a 9.8 s)
+Fraccion de la energia del ruido en la banda de microsismos: mediana 13 %
