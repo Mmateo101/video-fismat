@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sismo o ruido</title>
+  <meta name="description" content="Explora 20 sismos de México y mira cómo la transformada de Fourier separa la onda del sismo del ruido de la ciudad.">
+  <link rel="icon" href="icono.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+  <header class="barra">
+    <a class="marca" href="#">
+      <svg viewBox="0 0 40 40" class="logo" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#1D2440"/><path d="M4 20h7l3-9 4 18 4-24 4 22 3-7h7" fill="none" stroke="#F6AE2D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>Sismo <b>o</b> ruido</span>
+    </a>
+    <nav>
+      <a href="#explorar">Explorar</a>
+      <a href="#como">Cómo funciona</a>
+    </nav>
+  </header>
+
+  <section class="portada">
+    <div class="portada-txt">
+      <h1>Cuando tiembla, la Tierra habla.<br><span>La ciudad también.</span></h1>
+      <p>Elige un sismo y separa su voz del ruido.</p>
+    </div>
+    <div class="mapa-caja" id="explorar">
+      <svg id="mapa" viewBox="0 0 1000 627" role="img" aria-label="Mapa de México con 20 sismos"></svg>
+      <div id="tip" class="tip"></div>
+    </div>
+    <div class="lista" id="lista" role="list"></div>
+  </section>
+
+  <section class="ficha" id="ficha">
+    <div class="ficha-cab">
+      <div>
+        <div class="region" id="f-region"></div>
+        <h2 id="f-nombre"></h2>
+        <div class="fecha" id="f-fecha"></div>
+      </div>
+      <div class="datos">
+        <div><b id="f-mag"></b><span>magnitud</span></div>
+        <div><b id="f-dist"></b><span>km hasta CU</span></div>
+        <div><b id="f-prof"></b><span>km de profundidad</span></div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-cab">
+        <h3>La señal</h3>
+        <button class="boton" id="b-separar">Separar</button>
+      </div>
+      <div class="ondas" id="ondas">
+        <div class="onda" data-k="crudo"><canvas></canvas><div class="etiqueta"><i class="punto gris"></i>Lo que registró la estación<button class="oir" data-a="aud_crudo" aria-label="Escuchar el registro">▶</button></div></div>
+        <div class="onda" data-k="sismo"><canvas></canvas><div class="etiqueta"><i class="punto rojo"></i>Sismo<button class="oir" data-a="aud_sismo" aria-label="Escuchar el sismo">▶</button></div></div>
+        <div class="onda" data-k="ruido"><canvas></canvas><div class="etiqueta"><i class="punto azul"></i>Ruido <em id="f-zoom"></em><button class="oir" data-a="aud_ruido" aria-label="Escuchar el ruido">▶</button></div></div>
+      </div>
+      <div class="eje"><span>−5 min</span><span class="eje-p">llega la onda P</span><span>+10 min</span></div>
+    </div>
+
+    <div class="dos">
+      <div class="panel">
+        <div class="panel-cab"><h3>Sus frecuencias</h3></div>
+        <canvas id="espectro" class="lienzo"></canvas>
+        <div class="leyenda"><span><i class="punto rojo"></i>sismo</span><span><i class="punto azul"></i>ruido</span></div>
+      </div>
+      <div class="panel">
+        <div class="panel-cab"><h3>Antes y después</h3>
+          <div class="seg" id="seg"><button data-v="0" class="on">Antes</button><button data-v="1">Después</button></div></div>
+        <div class="sg" id="sg">
+          <canvas id="sg-antes"></canvas>
+          <canvas id="sg-despues"></canvas>
+          <div class="sg-p"></div>
+        </div>
+        <div class="leyenda"><span class="flecha">frecuencias en cada momento · tiempo →</span></div>
+      </div>
+    </div>
+
+    <div class="cifras">
+      <div class="cifra"><b id="c-claro"></b><span>veces más clara la señal</span></div>
+      <div class="cifra"><b id="c-energia"></b><span>veces más energía que el ruido</span></div>
+      <div class="cifra"><b id="c-mar"></b><span>segundos dura cada ola de ruido del mar</span></div>
+    </div>
+  </section>
+
+  <section class="como" id="como">
+    <h2>Tres pasos</h2>
+    <div class="pasos">
+      <div class="paso">
+        <svg viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="56" fill="#CFE8F3"/><path d="M18 60q6-10 12 0t12 0 12 0 12 0 12 0 12 0 12 0" fill="none" stroke="#2E86AB" stroke-width="6" stroke-linecap="round"/><circle cx="60" cy="60" r="10" fill="none" stroke="#1D2440" stroke-width="5" stroke-dasharray="4 5"/></svg>
+        <h4>Escuchar el silencio</h4>
+        <p>Antes de la onda P solo hay ruido. Ahí aprendemos cómo suena.</p>
+      </div>
+      <div class="paso">
+        <svg viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="56" fill="#FDE7C2"/><rect x="24" y="70" width="10" height="24" rx="3" fill="#2E86AB"/><rect x="40" y="46" width="10" height="48" rx="3" fill="#E4572E"/><rect x="56" y="30" width="10" height="64" rx="3" fill="#E4572E"/><rect x="72" y="54" width="10" height="40" rx="3" fill="#F6AE2D"/><rect x="88" y="76" width="10" height="18" rx="3" fill="#2E86AB"/></svg>
+        <h4>Descomponer con Fourier</h4>
+        <p>Cada instante se parte en frecuencias, como las notas de un acorde.</p>
+      </div>
+      <div class="paso">
+        <svg viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="56" fill="#F9D3C8"/><path d="M20 62l10-18 10 30 10-40 10 50 10-36 10 22 10-8 10 0" fill="none" stroke="#E4572E" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <h4>Restar el ruido</h4>
+        <p>Quitamos lo que ya sabíamos que era ruido. Lo que queda es el sismo.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="pie">
+    <div>
+      <b>Datos reales</b> del catálogo del USGS y de EarthScope (IRIS). Estación G.UNM en Ciudad Universitaria, red GEOSCOPE.
+    </div>
+    <div>
+      Proyecto del curso Análisis de Métodos Matemáticos para la Física · Tecnológico de Monterrey · Expo Ingenierías 2026.
+      Mateo Flores · Víctor Sánchez · Sofía Martínez.
+    </div>
+    <div><a href="https://github.com/Mmateo101/video-fismat">Código abierto</a></div>
+  </footer>
+
+  <script src="js/gsap.min.js"></script>
+  <script src="js/mexico.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

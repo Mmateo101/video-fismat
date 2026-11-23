@@ -1,0 +1,4 @@
+{ "version": "0.0.1", "configurations": [
+  { "name": "web", "runtimeExecutable": "python", "runtimeArgs": ["-m", "http.server", "5600", "-d", "web/public"], "port": 5600 },
+  { "name": "video", "runtimeExecutable": "python", "runtimeArgs": ["-m", "http.server", "5601", "-d", "video"], "port": 5601 }
+] }
